@@ -23,7 +23,7 @@ plataforma oficial de **SERFOR** (módulo SAMI) permanece inaccesible (desde el
 ### 2. Procesamiento ([`scripts/build_data.py`](scripts/build_data.py))
 
 1. Cada 30 min, una tarea de GitHub Actions descarga los CSV de los **últimos
-   3 días UTC** (el día en curso más los dos anteriores).
+   3 días UTC** (el día en curso más los dos anteriores); es lo que muestra la pestaña **Historial**.
 2. Conserva solo las filas con `pais = Peru` que además caen dentro de la caja
    geográfica del Perú.
 3. Elimina filas duplicadas por `id`.
@@ -64,7 +64,16 @@ VIIRS/MODIS no aparece en la vista por defecto hasta la siguiente pasada.
 
 ### 5. Ventanas de tiempo y estados vacíos
 
-- **24 h / 48 h / Todo** se calculan respecto a la hora actual del visitante.
+- **24 h / 48 h / Historial** se calculan respecto a la hora actual del
+  visitante. La página explica cada pestaña bajo los botones:
+  - **24 h:** lo más cercano a "activo ahora", sin confirmar que siga encendido.
+  - **48 h:** incluye focos que pueden haberse apagado.
+  - **Historial:** todo el archivo (~48–72 h). Es un historial, no incendios activos.
+- **Los puntos se desvanecen con la antigüedad** (más transparente = detección
+  más antigua), para no confundir historial con actividad actual.
+- **Que un foco no vuelva a detectarse no significa que se apagó.** Entre
+  pasadas no hay observación, y nubes, humo o fuego bajo el dosel pueden
+  ocultarlo. Solo la confirmación en terreno lo asegura.
 - Los satélites VIIRS y MODIS pasan sobre el Perú **unas dos veces al día**
   (aprox. 13:30 y 01:30 hora local), y INPE publica con 1–3 h de retraso.
   Puede haber horas sin detecciones nuevas aunque todo funcione bien.

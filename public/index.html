@@ -95,8 +95,10 @@
     <div class="filters" id="filters">
       <button data-h="24" aria-pressed="true">24 h</button>
       <button data-h="48">48 h</button>
-      <button data-h="0">Todo</button>
+      <button data-h="0">Historial</button>
     </div>
+    <div class="meta" id="winHelp" style="margin:8px 0 4px"></div>
+    <div class="meta" style="margin:0 0 8px">Cada punto es una detección en un momento. Si un foco no vuelve a aparecer, no significa que se apagó: puede haber nubes, humo o no pasó un satélite.</div>
     <label class="goes"><input type="checkbox" id="goes"> Incluir GOES (satélite geoestacionario, menor resolución)</label>
     <div class="legend">
       <span><i style="background:var(--hot1)"></i>bajo</span>
@@ -104,6 +106,7 @@
       <span><i style="background:var(--hot3)"></i>alto</span>
       <span><i style="background:var(--hot4)"></i>muy alto</span>
       <span>· intensidad = FRP (MW)</span>
+      <span>· más transparente = detección más antigua</span>
     </div>
     <h2>Por región</h2>
     <div id="regions"></div>
@@ -138,6 +141,7 @@
     </table>
     <ul class="cav">
       <li>Un foco de calor es un <b>indicio</b>, no un incendio confirmado.</li>
+      <li>Que un foco no vuelva a detectarse <b>no significa que el incendio se apagó</b>: puede haber nubes, humo, o no pasó un satélite (VIIRS y MODIS pasan ~2 veces al día). Solo la confirmación en terreno lo asegura.</li>
       <li>Contamos <b>focos distintos (~1 km)</b>: varios satélites detectan el mismo punto, así que agrupamos las detecciones cercanas. Es un mínimo, no un conteo de incendios.</li>
       <li>Por defecto ocultamos GOES: detecta cada ~10 min con píxeles de ~2 km y repite el mismo punto muchas veces.</li>
       <li>No filtramos fuentes de calor fijas como volcanes (Sabancaya, Ubinas) o quema de gas industrial (Talara, La Pampilla).</li>
@@ -205,7 +209,7 @@ const map = new maplibregl.Map({
 });
 map.addControl(new maplibregl.NavigationControl({showCompass:false}), "top-left");
 
-let ALL=[], windowH=24, generated=null, loaded=false, ready=false, showGoes=false;
+let RANGE="", ALL=[], windowH=24, generated=null, loaded=false, ready=false, showGoes=false;
 
 function parseUTC(s){ return new Date((s||"").replace(" ","T")+"Z"); }
 function lima(d){ return d.toLocaleString("es-PE",{timeZone:"America/Lima",hour12:false,day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"}); }
@@ -223,7 +227,7 @@ function ensureLayer(){
     paint:{
       "circle-color":["step",["coalesce",["get","frp"],-1],HOT[0],10,HOT[1],30,HOT[2],100,HOT[3]],
       "circle-radius":["interpolate",["linear"],["coalesce",["get","frp"],1],0,3,30,5.5,100,8,300,11],
-      "circle-opacity":0.82,"circle-stroke-width":0.6,"circle-stroke-color":"rgba(60,10,0,.5)"
+      "circle-opacity":["interpolate",["linear"],["coalesce",["get","a"],0],0,0.9,24,0.6,72,0.25],"circle-stroke-width":0.6,"circle-stroke-color":"rgba(60,10,0,.5)"
     }});
   map.on("click","focos",e=>{
     const p=e.features[0].properties;
@@ -240,6 +244,10 @@ function ensureLayer(){
 }
 
 function render(){
+  document.getElementById("winHelp").innerHTML=
+    windowH===24?"<b>24 h:</b> calor detectado en el último día. Es lo más cercano a “activo ahora”, pero no confirma que el fuego siga encendido.":
+    windowH===48?"<b>48 h:</b> calor detectado en los últimos 2 días. Incluye focos que pueden haberse apagado.":
+    `<b>Historial:</b> todas las detecciones disponibles${RANGE?" ("+RANGE+")":""}. Muchos de estos focos pueden estar ya apagados.`;
   const feats=ALL.filter(f=>vis(f)&&inWindow(f));
   document.getElementById("total").textContent=new Set(feats.map(cell)).size.toLocaleString("es-PE");
   document.getElementById("raw").textContent=feats.length.toLocaleString("es-PE")+" detecciones satelitales";
@@ -248,6 +256,7 @@ function render(){
   if(stale) st.textContent=`⚠ Datos sin actualizar desde hace ${Math.round(sh)} h. Puede haber un problema con la fuente de datos.`;
   if(loaded){
     ensureLayer();
+    feats.forEach(f=>f.properties.a=ageH(f)); // age in h, drives fading
     map.getSource("focos").setData({type:"FeatureCollection",features:feats});
   }
   const byReg={};
@@ -272,7 +281,8 @@ function setMeta(){
   const g=generated?new Date(generated):null;
   const ts=ALL.map(f=>parseUTC(f.properties.t).getTime()).filter(isFinite);
   const lo=ts.reduce((a,b)=>Math.min(a,b),Infinity), hi=ts.reduce((a,b)=>Math.max(a,b),-Infinity);
-  const rng=ts.length?` · detecciones del ${lima(new Date(lo)).replace(",","")} al ${lima(new Date(hi)).replace(",","")}`:"";
+  RANGE=ts.length?`del ${lima(new Date(lo)).replace(",","")} al ${lima(new Date(hi)).replace(",","")}`:"";
+  const rng=RANGE?` · detecciones ${RANGE}`:"";
   document.getElementById("meta").textContent=(g?`Datos generados: ${lima(g)} (hora Perú)`:"")+rng;
 }
 
