@@ -1,10 +1,18 @@
 {
-  // Static-assets Worker: serves the ./public folder on Cloudflare's edge.
-  // No server code — "assets" with no "main" makes this an assets-only Worker.
+  // Worker that serves the ./public folder on Cloudflare's edge, with a thin
+  // handler (src/worker.js) in front so the basemap .pmtiles file gets real
+  // HTTP Range (206) responses. Cloudflare's assets serving ignores Range, and
+  // the pmtiles client needs byte serving or the map won't render.
   "name": "incendios-peru",
   "compatibility_date": "2026-10-01",
+  "main": "src/worker.js",
   "assets": {
     "directory": "./public",
-    "not_found_handling": "single-page-application"
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    // By default assets are served before the Worker runs. Force the Worker to
+    // run first ONLY for the basemap, so it can add Range (206) support. Every
+    // other path still skips straight to fast static-asset serving.
+    "run_worker_first": ["/data/basemap-peru.pmtiles"]
   }
 }
