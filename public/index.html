@@ -121,7 +121,7 @@
     </div>
     <div class="meta" id="winHelp" style="margin:8px 0 4px"></div>
     <div class="meta" style="margin:0 0 8px">Cada punto es una detección en un momento. Si un foco no vuelve a aparecer, no significa que se apagó: puede haber nubes, humo o no pasó un satélite.</div>
-    <label class="goes"><input type="checkbox" id="goes"> Incluir GOES (satélite geoestacionario, menor resolución)</label>
+    <label class="goes"><input type="checkbox" id="goes"> Incluir GOES confirmados (satélite geoestacionario, menor resolución; solo si VIIRS/MODIS detectó calor a ≤5 km)</label>
     <div class="legend">
       <span><i style="background:var(--hot1)"></i>bajo</span>
       <span><i style="background:var(--hot2)"></i>medio</span>
@@ -165,7 +165,7 @@
       <li>Un foco de calor es un <b>indicio</b>, no un incendio confirmado.</li>
       <li>Que un foco no vuelva a detectarse <b>no significa que el incendio se apagó</b>: puede haber nubes, humo, o no pasó un satélite (VIIRS y MODIS pasan ~2 veces al día). Solo la confirmación en terreno lo asegura.</li>
       <li>Contamos <b>focos distintos (~1 km)</b>: varios satélites detectan el mismo punto, así que agrupamos las detecciones cercanas. Es un mínimo, no un conteo de incendios.</li>
-      <li>Por defecto ocultamos GOES: detecta cada ~10 min con píxeles de ~2 km y repite el mismo punto muchas veces.</li>
+      <li>Por defecto ocultamos GOES: detecta cada ~10 min con píxeles de ~2 km, repite el mismo punto muchas veces y en el desierto costero confunde el suelo caliente del mediodía con fuego. Aun activándolo, solo mostramos un punto GOES si VIIRS o MODIS detectaron calor a menos de 5 km en ±24 h.</li>
       <li>No filtramos fuentes de calor fijas como volcanes (Sabancaya, Ubinas) o quema de gas industrial (Talara, La Pampilla).</li>
       <li>La intensidad (FRP) no es directamente comparable entre sensores distintos.</li>
       <li>Puede haber focos no detectados: nubes, humo denso u horario de pasada del satélite.</li>
@@ -272,7 +272,8 @@ function parseUTC(s){ return new Date((s||"").replace(" ","T")+"Z"); }
 function lima(d){ return d.toLocaleString("es-PE",{timeZone:"America/Lima",hour12:false,day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"}); }
 function ageH(f){ return (Date.now()-parseUTC(f.properties.t).getTime())/3600000; }
 function inWindow(f){ return !windowH || ageH(f)<=windowH; }
-function vis(f){ return showGoes || !(f.properties.sat||"").startsWith("GOES"); }
+// GOES only ever shows when a polar orbiter confirmed it (c:1, set in build_data.py).
+function vis(f){ return !(f.properties.sat||"").startsWith("GOES") || (showGoes && f.properties.c===1); }
 function cell(f){ const c=f.geometry.coordinates; return Math.round(c[1]*100)+","+Math.round(c[0]*100); }
 function hh(h){ h=Math.max(0,h); return h<1?"menos de 1 h":Math.round(h)+" h"; }
 function staleH(){ return generated?(Date.now()-new Date(generated).getTime())/3600000:0; }

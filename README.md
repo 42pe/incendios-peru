@@ -28,7 +28,10 @@ plataforma oficial de **SERFOR** (módulo SAMI) permanece inaccesible (desde el
    geográfica del Perú.
 3. Elimina filas duplicadas por `id`.
 4. Unifica nombres de región inconsistentes (p. ej. "Lima Province" → "Lima").
-5. Publica `public/data/peru.geojson` como archivo estático.
+5. Marca qué detecciones GOES están confirmadas por un satélite polar (ver §4).
+6. Publica `public/data/peru.geojson` como archivo estático, y
+   `public/data/summary.json` con los totales por región (sin GOES, igual que
+   la vista por defecto) y cuántas detecciones GOES quedaron confirmadas.
 
 Como el corte es a medianoche UTC, el archivo cubre entre ~48 y ~72 h según la
 hora del día. La página muestra el rango real ("detecciones del … al …") en
@@ -51,16 +54,45 @@ Por eso:
 - **Es un mínimo, no un conteo de incendios.** Un incendio grande ocupa varias
   celdas, y dos fuegos vecinos pueden caer en la misma celda.
 
-### 4. GOES desactivado por defecto
+### 4. GOES: oculto por defecto y solo si está confirmado
 
 GOES es geoestacionario: observa cada ~10 min con píxeles de ~2 km. Repite el
-mismo punto muchas veces y es más propenso a falsos positivos. Entre el 19 y el
-20 oct, 286 de los 298 focos de Piura eran detecciones GOES, lo que la ponía
-primera en el ranking. Sin GOES, Piura no aparecía entre las 6 primeras.
+mismo punto muchas veces y es más propenso a falsos positivos. El caso más
+claro es el **desierto costero del norte**: al mediodía, la arena y la roca
+calientes reflejan y emiten en el infrarrojo de forma parecida a un fuego.
 
-Por eso GOES está **oculto por defecto** y se puede activar con una casilla.
-Hay una contrapartida: un incendio visto solo por GOES entre dos pasadas de
-VIIRS/MODIS no aparece en la vista por defecto hasta la siguiente pasada.
+Lo comprobamos con los datos del 19–21 oct:
+
+| Región | Detecciones GOES | Con VIIRS/MODIS a ≤5 km |
+|---|---|---|
+| Ucayali | 68 | 68 |
+| Cusco | 32 | 32 |
+| Puno | 32 | 31 |
+| Huancavelica | 22 | 22 |
+| **Piura** | **286** | **1** |
+| **Tumbes** | **51** | **0** |
+| Lambayeque | 15 | 0 |
+
+Las detecciones GOES de Piura y Tumbes caían todas entre las 12:00 y las 15:00
+(hora Perú), dispersas sobre el desierto de Sechura y el bosque seco, y no
+encontramos noticias de incendios ahí. En la Amazonía y la sierra, en cambio,
+GOES coincide con los satélites polares.
+
+Por eso:
+
+- **GOES está oculto por defecto.** La cifra principal y la lista "Por región"
+  usan solo satélites polares (VIIRS, MODIS, METOP).
+- **Al activar la casilla, solo aparecen detecciones GOES confirmadas**: las que
+  tienen una detección de un satélite polar a **≤5 km y ±24 h**. El script
+  marca cada una con `"c": 1` en el GeoJSON; las demás siguen en el archivo
+  pero la página no las muestra. En la muestra del 19–21 oct quedaron 192 de
+  564 detecciones GOES; Piura pasó de 286 a 1 y Tumbes de 51 a 0.
+- **Contrapartida:** un incendio visto solo por GOES entre dos pasadas de
+  VIIRS/MODIS no aparece hasta la siguiente pasada, aunque se active la
+  casilla. Es lo mismo que ya ocurre en la vista por defecto.
+
+Los umbrales (`CORROB_KM`, `CORROB_H`) están al inicio de
+[`scripts/build_data.py`](scripts/build_data.py).
 
 ### 5. Ventanas de tiempo y estados vacíos
 
