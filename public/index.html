@@ -172,6 +172,7 @@
       <li>Hay una latencia de ~1–3 h entre la pasada del satélite y su publicación.</li>
       <li>Las cifras pueden no coincidir con SENAMHI o SERFOR por distintos satélites y umbrales.</li>
       <li>En cada actualización del sitio <b>contrastamos a mano los focos con noticias</b> y reportes del COEN-INDECI, región por región (botón <b>Noticias por región</b>). Que no encontremos noticias no significa que no haya incendio.</li>
+      <li>Medimos visitas con <b>PostHog sin cookies</b>: no guardamos nada en tu navegador, no grabamos sesiones y no identificamos personas.</li>
       <li>No es una fuente oficial. Ante una emergencia, comunícate con el <b>INDECI (línea 115)</b>.</li>
     </ul>
     <p style="margin-bottom:0">Datos: <a href="https://terrabrasilis.dpi.inpe.br/queimadas/portal/" target="_blank" rel="noopener">INPE Queimadas</a> · NASA/LANCE (VIIRS, MODIS, NOAA, GOES). Código y metodología completa en <a href="https://github.com/42pe/incendios-peru#metodología" target="_blank" rel="noopener">GitHub</a>.</p>
@@ -194,7 +195,28 @@
   integrity="sha512-Kr1P20YSO8b9FU5+7xhvvqk5mZ13Mo4lmQ/drx3XUYAuaEsOAFZoHoG7Zt3dr5RlVmS853XKKYAtca4Tq8szvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.js"
   integrity="sha512-x8Bt/82VRs91xVTqHDpQ1t8c4qit3QCRbo9BVqnUsyw5yKqzvL4BAgcz7R34BDCiCwx9ypXPTnxPaNnazQz1ag==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/posthog-js@1.438.1/dist/array.no-external.js"
+  integrity="sha384-ftZmW40YOMwtRzjeT7lQQhb5Q3MAeqpRlRFaEEpYNx/tmoNgEu2D7zDSvckONnC/" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
+// Analytics (PostHog): cookieless, no session replay. Events go through our
+// Worker at /rx so ad blockers don't drop them. Off on localhost unless ?ph=1.
+const PH_KEY = "phc_tqvSn9KNo2kZYuCAqyysiWJ2sTHrWxGSm6VCZULNomdt";
+document.addEventListener("DOMContentLoaded",()=>{
+  const local=/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+  if(!window.posthog || (local && !/[?&]ph=1/.test(location.search))) return;
+  posthog.init(PH_KEY,{
+    api_host: location.origin+"/rx",
+    ui_host: "https://us.posthog.com",
+    cookieless_mode: "always",
+    person_profiles: "identified_only",
+    disable_session_recording: true,
+    disable_surveys: true,
+    capture_pageview: true,
+    capture_pageleave: true
+  });
+});
+function track(event, props){ try{ if(window.posthog&&posthog.__loaded) posthog.capture(event, props); }catch(e){} }
+
 const DATA_URL = "data/peru.geojson";
 const BASEMAP  = "pmtiles://data/basemap-peru.pmtiles";
 const GLYPHS   = "https://protomaps.github.io/basemaps-assets/fonts/{fontstack}/{range}.pbf";
@@ -338,9 +360,11 @@ document.getElementById("filters").addEventListener("click",e=>{
   windowH=+b.dataset.h;
   [...e.currentTarget.children].forEach(x=>x.setAttribute("aria-pressed", x===b));
   render();
+  track("window_changed",{window:windowH?windowH+"h":"historial"});
 });
 document.getElementById("regions").addEventListener("click",e=>{
   const el=e.target.closest(".region"); if(!el) return;
+  track("region_clicked",{region:el.dataset.r});
   const pts=ALL.filter(f=>vis(f)&&inWindow(f)).filter(f=>(f.properties.reg||"Sin región")===el.dataset.r)
     .map(f=>f.geometry.coordinates);
   if(!pts.length) return;
@@ -349,13 +373,13 @@ document.getElementById("regions").addEventListener("click",e=>{
   map.fitBounds([[b[0],b[1]],[b[2],b[3]]],{padding:50,maxZoom:8.9});
 });
 
-document.getElementById("goes").addEventListener("change",e=>{ showGoes=e.target.checked; render(); });
+document.getElementById("goes").addEventListener("change",e=>{ showGoes=e.target.checked; render(); track("goes_toggled",{enabled:showGoes}); });
 
 // help modal
 const modal=document.getElementById("modal");
 const openModal=()=>modal.classList.add("open");
 const closeModal=()=>document.querySelectorAll(".modal.open").forEach(m=>m.classList.remove("open"));
-document.getElementById("helpBtn").addEventListener("click",openModal);
+document.getElementById("helpBtn").addEventListener("click",()=>{ openModal(); track("help_opened"); });
 document.querySelectorAll(".modal").forEach(m=>{
   m.querySelector(".close").addEventListener("click",closeModal);
   m.addEventListener("click",e=>{if(e.target===m)closeModal();});
@@ -390,7 +414,7 @@ function renderNews(){
   h+=RANKED.map(([r,c])=>{
     const n=(NEWS.regions||{})[r]||{status:"sin_revisar",note:"Esta región no tenía focos en la última revisión de noticias.",links:[]};
     const st=STATUS[n.status]?n.status:"sin_revisar";
-    return `<div class="nreg"><div class="hd"><b>${esc(r)}</b><span class="c">${c} focos</span>`+
+    return `<div class="nreg" data-r="${esc(r)}"><div class="hd"><b>${esc(r)}</b><span class="c">${c} focos</span>`+
       `<span class="tag ${st}">${STATUS[st]}</span></div>`+
       (n.note?`<div class="note">${esc(n.note)}</div>`:"")+
       ((n.links||[]).length?`<ul>${n.links.map(linkLi).join("")}</ul>`:"")+`</div>`;
@@ -402,10 +426,15 @@ function renderNews(){
 const newsModal=document.getElementById("newsModal");
 document.getElementById("newsBtn").addEventListener("click",async()=>{
   newsModal.classList.add("open");
+  track("news_opened");
   if(!NEWS){
     try{ NEWS=await (await fetch(NEWS_URL+"?t="+Math.floor(Date.now()/60000))).json(); }catch(e){}
   }
   renderNews();
+});
+document.getElementById("newsBody").addEventListener("click",e=>{
+  const a=e.target.closest("a"); if(!a) return;
+  track("news_link_clicked",{region:a.closest(".nreg")?.dataset.r||"Panorama nacional",url:a.href});
 });
 
 // New-version check: data is cache-busted per fetch, but a tab left open keeps

@@ -148,6 +148,22 @@ noticia no confirma cada foco: confirma que hubo fuego en esa zona.
 Fuentes sobre SERFOR: [Andina](https://andina.pe/agencia/noticia-con-ayuda-del-satelite-serfor-intensifica-monitoreo-para-prevenir-incendios-forestales-993227.aspx),
 [SINIA – reporte Amazonas](https://sinia.minam.gob.pe/sites/default/files/archivos/public/docs/ANEXO%2001.%20REPORTE%20DE%20INCENDIOS_AMAZONAS.pdf).
 
+### 10. Analítica y privacidad
+
+Medimos el uso con [PostHog](https://posthog.com) en **modo sin cookies**
+(`cookieless_mode: "always"`): no se guarda nada en el navegador, no hay
+grabación de sesiones ni perfiles de personas, así que no hace falta banner de
+cookies. PostHog calcula un identificador diario con un hash en su servidor.
+
+- El SDK (`posthog-js`) se carga desde jsDelivr con versión fija y SRI.
+- Los eventos pasan por nuestro Worker en `/rx/*` (proxy a `us.i.posthog.com`)
+  para que los bloqueadores de anuncios no los descarten.
+- Eventos propios: `window_changed`, `goes_toggled`, `region_clicked`,
+  `help_opened`, `news_opened`, `news_link_clicked`, además de `$pageview` y
+  `$pageleave`.
+- En `localhost` la analítica está apagada (actívala con `?ph=1` para probar).
+- En modo sin cookies PostHog no guarda la IP ni infiere el país del visitante.
+
 ## Arquitectura
 
 Todo es estático: los visitantes solo descargan archivos pequeños desde la CDN,

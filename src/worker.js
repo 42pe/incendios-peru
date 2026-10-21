@@ -12,9 +12,39 @@
 
 const PMTILES_RE = /\.pmtiles$/;
 
+// PostHog reverse proxy: /rx/* is forwarded to PostHog's US ingestion host so
+// ad blockers that block posthog.com don't drop events. The SDK itself is
+// loaded from jsdelivr with SRI, so static assets are never proxied.
+const PROXY_PREFIX = "/rx/";
+const POSTHOG_HOST = "us.i.posthog.com";
+
+async function proxyPostHog(request, url) {
+  const target = new URL(request.url);
+  target.protocol = "https:";
+  target.hostname = POSTHOG_HOST;
+  target.port = "";
+  target.pathname = url.pathname.slice(PROXY_PREFIX.length - 1);
+  const headers = new Headers(request.headers);
+  headers.delete("cookie");
+  // Cookieless mode hashes the visitor's IP server-side: pass the real one,
+  // or every visitor would look like the Worker.
+  const ip = request.headers.get("CF-Connecting-IP");
+  if (ip) headers.set("X-Forwarded-For", ip);
+  return fetch(new Request(target.toString(), {
+    method: request.method,
+    headers,
+    body: ["GET", "HEAD"].includes(request.method) ? undefined : request.body,
+    redirect: "manual",
+  }));
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+
+    if (url.pathname.startsWith(PROXY_PREFIX)) {
+      return proxyPostHog(request, url);
+    }
 
     if (!PMTILES_RE.test(url.pathname)) {
       return env.ASSETS.fetch(request);

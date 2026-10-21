@@ -11,8 +11,8 @@
     "binding": "ASSETS",
     "not_found_handling": "single-page-application",
     // By default assets are served before the Worker runs. Force the Worker to
-    // run first ONLY for the basemap, so it can add Range (206) support. Every
-    // other path still skips straight to fast static-asset serving.
-    "run_worker_first": ["/data/basemap-peru.pmtiles"]
+    // run first ONLY for the basemap (Range/206 support) and the PostHog proxy
+    // (/rx/*). Every other path still skips straight to static-asset serving.
+    "run_worker_first": ["/data/basemap-peru.pmtiles", "/rx/*"]
   }
 }
