@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-21T16:55:49Z",
+  "generated": "2026-10-21T18:46:58Z",
   "days": 3,
   "total": 1805,
   "by_region": {
@@ -25,8 +25,7 @@
     "Ayacucho": 12,
     "Ica": 11,
     "Pasco": 11,
-    "Lima": 9,
-    "Lima Province": 1
+    "Lima": 10
   },
   "sources": [
     {
