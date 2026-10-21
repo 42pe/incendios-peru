@@ -115,8 +115,8 @@
     <div class="meta" id="raw" style="margin:2px 0 0"></div>
     <div class="meta" id="meta" style="margin-top:10px">Cargando…</div>
     <div class="filters" id="filters">
-      <button data-h="24" aria-pressed="true">24 h</button>
-      <button data-h="48">48 h</button>
+      <button data-h="24">24 h</button>
+      <button data-h="48" aria-pressed="true">48 h</button>
       <button data-h="0">Historial</button>
     </div>
     <div class="meta" id="winHelp" style="margin:8px 0 4px"></div>
@@ -266,7 +266,7 @@ const map = new maplibregl.Map({
 });
 map.addControl(new maplibregl.NavigationControl({showCompass:false}), "top-left");
 
-let RANKED=[], RANGE="", ALL=[], windowH=24, generated=null, loaded=false, ready=false, showGoes=false;
+let RANKED=[], RANGE="", ALL=[], windowH=48, generated=null, loaded=false, ready=false, showGoes=false;
 
 function parseUTC(s){ return new Date((s||"").replace(" ","T")+"Z"); }
 function lima(d){ return d.toLocaleString("es-PE",{timeZone:"America/Lima",hour12:false,day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"}); }

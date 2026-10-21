@@ -67,7 +67,9 @@ VIIRS/MODIS no aparece en la vista por defecto hasta la siguiente pasada.
 - **24 h / 48 h / Historial** se calculan respecto a la hora actual del
   visitante. La página explica cada pestaña bajo los botones:
   - **24 h:** lo más cercano a "activo ahora", sin confirmar que siga encendido.
-  - **48 h:** incluye focos que pueden haberse apagado.
+  - **48 h (por defecto):** incluye focos que pueden haberse apagado. Es la
+    vista inicial porque VIIRS/MODIS pasan solo ~2 veces al día y en 24 h
+    pueden faltar focos por nubes o por el horario de pasada.
   - **Historial:** todo el archivo (~48–72 h). Es un historial, no incendios activos.
 - **Los puntos se desvanecen con la antigüedad** (más transparente = detección
   más antigua), para no confundir historial con actividad actual.
