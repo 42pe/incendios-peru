@@ -25,6 +25,22 @@
   header{padding:10px 16px;background:var(--panel);border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline}
   header h1{font-size:16px;margin:0;font-weight:700}
   header .sub{color:var(--tx2);font-size:12px}
+  header .help{margin-left:auto;background:var(--panel2);color:var(--tx);border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12px;cursor:pointer}
+  header .help:hover{border-color:var(--accent);color:var(--accent)}
+  .modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:flex-start;justify-content:center;padding:5vh 16px;z-index:1000;overflow:auto}
+  .modal.open{display:flex}
+  .modal .box{background:var(--panel);border:1px solid var(--line);border-radius:12px;max-width:620px;width:100%;padding:22px 22px 18px}
+  .modal h2{margin:0 0 4px;font-size:18px;text-transform:none;letter-spacing:0;color:var(--tx)}
+  .modal p{color:var(--tx2);margin:6px 0 14px}
+  .modal .close{float:right;background:none;border:0;color:var(--tx2);font-size:22px;line-height:1;cursor:pointer;margin:-6px -6px 0 0}
+  .cmp{width:100%;border-collapse:collapse;font-size:13px;margin:4px 0 16px}
+  .cmp th,.cmp td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+  .cmp th{color:var(--tx2);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.03em}
+  .cmp td:first-child{color:var(--tx);width:42%}
+  .cmp .yes{color:#16a34a}.cmp .no{color:#dc2626}
+  .cav{list-style:none;padding:0;margin:0 0 6px}
+  .cav li{position:relative;padding:4px 0 4px 20px;color:var(--tx);font-size:13px}
+  .cav li::before{content:"⚠";position:absolute;left:0;color:var(--accent)}
   .banner{background:rgba(255,107,53,.12);border-bottom:1px solid var(--line);color:var(--tx);padding:7px 16px;font-size:12px}
   .banner b{color:var(--accent)}
   .wrap{flex:1;display:flex;min-height:0}
@@ -61,6 +77,7 @@
 <header>
   <h1>🔥 Monitor de Incendios Forestales — Perú</h1>
   <span class="sub">Focos de calor activos · datos satelitales INPE / NASA</span>
+  <button id="helpBtn" class="help" type="button">¿Cómo funciona?</button>
 </header>
 <div class="banner">
   Reconstrucción ciudadana independiente mientras la plataforma de <b>SERFOR</b> permanece inaccesible (desde el 14 oct 2026).
@@ -93,6 +110,33 @@
       <br>Hora mostrada: Perú (UTC−5). Actualización automática cada 15 min.
     </footer>
   </aside>
+</div>
+<div class="modal" id="modal">
+  <div class="box">
+    <button class="close" id="modalClose" aria-label="Cerrar">×</button>
+    <h2>¿Cómo funciona este mapa?</h2>
+    <p>Esta es una reconstrucción ciudadana e <b>independiente</b>, hecha mientras la
+    plataforma oficial de <b>SERFOR</b> está inaccesible (desde el 14 oct 2026). Muestra
+    <b>focos de calor</b>: detecciones de anomalías térmicas captadas por satélites.
+    Es la misma materia prima que usaba SERFOR, pero <b>sin su trabajo de validación</b>.</p>
+    <table class="cmp">
+      <tr><th>Función</th><th>Este mapa</th><th>Plataforma SERFOR</th></tr>
+      <tr><td>Focos de calor satelitales (VIIRS, MODIS, NOAA, GOES)</td><td class="yes">Sí</td><td class="yes">Sí</td></tr>
+      <tr><td>Confirmación en terreno (COEN, bomberos, GORE)</td><td class="no">No</td><td class="yes">Sí</td></tr>
+      <tr><td>Validación con imágenes satelitales</td><td class="no">No</td><td class="yes">Sí</td></tr>
+      <tr><td>Reporte de cicatriz / área quemada</td><td class="no">No</td><td class="yes">Sí</td></tr>
+      <tr><td>Alertas oficiales a autoridades</td><td class="no">No</td><td class="yes">Sí</td></tr>
+      <tr><td>Actualización</td><td>cada 30 min</td><td>reporte diario</td></tr>
+    </table>
+    <ul class="cav">
+      <li>Un foco de calor es un <b>indicio</b>, no un incendio confirmado.</li>
+      <li>Puede haber focos no detectados: nubes, humo denso u horario de pasada del satélite.</li>
+      <li>Hay una latencia de ~1–3 h entre la pasada del satélite y su publicación.</li>
+      <li>Las cifras pueden no coincidir con SENAMHI o SERFOR por distintos satélites y umbrales.</li>
+      <li>No es una fuente oficial. Ante una emergencia, comunícate con el <b>INDECI (línea 115)</b>.</li>
+    </ul>
+    <p style="margin-bottom:0">Datos: <a href="https://terrabrasilis.dpi.inpe.br/queimadas/portal/" target="_blank" rel="noopener">INPE Queimadas</a> · NASA/LANCE (VIIRS, MODIS, NOAA, GOES).</p>
+  </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"
   integrity="sha512-puJW3E/qXDqYp9IfhAI54BJEaWIfloJ7JWs7OeD5i6ruC9JZL1gERT1wjtwXFlh7CjE7ZJ+/vcRZRkIYIb6p4g==" crossorigin=""></script>
@@ -180,6 +224,17 @@ document.getElementById("regions").addEventListener("click",e=>{
     .map(f=>[f.geometry.coordinates[1],f.geometry.coordinates[0]]);
   if(pts.length) map.fitBounds(pts,{padding:[40,40],maxZoom:9});
 });
+
+// --- help modal ---
+const modal=document.getElementById("modal");
+const openModal=()=>modal.classList.add("open");
+const closeModal=()=>modal.classList.remove("open");
+document.getElementById("helpBtn").addEventListener("click",openModal);
+document.getElementById("modalClose").addEventListener("click",closeModal);
+modal.addEventListener("click",e=>{if(e.target===modal)closeModal();});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal();});
+// show once automatically on first visit
+try{ if(!localStorage.getItem("seenHelp")){openModal();localStorage.setItem("seenHelp","1");} }catch(e){}
 
 load();
 setInterval(load, 15*60*1000);
