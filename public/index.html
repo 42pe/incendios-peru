@@ -57,6 +57,10 @@
   .region .bar{flex:1;height:6px;align-self:center;background:var(--panel2);border-radius:3px;overflow:hidden;margin:0 8px}
   .region .bar i{display:block;height:100%;background:var(--accent)}
   .region .c{color:var(--tx2);font-variant-numeric:tabular-nums;min-width:34px;text-align:right}
+  .stale{background:rgba(239,68,68,.16);border-bottom:1px solid var(--line);color:var(--tx);padding:7px 16px;font-size:12px;font-weight:600}
+  .stale[hidden]{display:none}
+  .goes{display:flex;gap:6px;align-items:flex-start;font-size:11px;color:var(--tx2);margin:-6px 0 14px;cursor:pointer}
+  .goes input{margin:2px 0 0}
   .legend{display:flex;gap:10px;flex-wrap:wrap;font-size:11px;color:var(--tx2);margin-top:6px}
   .legend span{display:flex;align-items:center;gap:4px}
   .legend i{width:11px;height:11px;border-radius:50%;display:inline-block}
@@ -81,17 +85,19 @@
   Reconstrucción ciudadana independiente mientras la plataforma de <b style="color:var(--accent)">SERFOR</b> permanece inaccesible (desde el 14 oct 2026).
   No es una fuente oficial. Un <b style="color:var(--accent)">foco de calor</b> es un indicio satelital, no un incendio confirmado.
 </div>
+<div class="stale" id="stale" hidden></div>
 <div class="wrap">
   <div id="map"></div>
   <aside>
-    <div class="stat"><span class="n" id="total">—</span><span class="l">focos de calor<br>en el periodo</span></div>
-    <div class="meta" id="meta">Cargando…</div>
+    <div class="stat"><span class="n" id="total">—</span><span class="l">focos distintos (~1 km)</span></div>
+    <div class="meta" id="raw" style="margin:2px 0 0"></div>
+    <div class="meta" id="meta" style="margin-top:10px">Cargando…</div>
     <div class="filters" id="filters">
-      <button data-h="6">6 h</button>
       <button data-h="24" aria-pressed="true">24 h</button>
       <button data-h="48">48 h</button>
       <button data-h="0">Todo</button>
     </div>
+    <label class="goes"><input type="checkbox" id="goes"> Incluir GOES (satélite geoestacionario, menor resolución)</label>
     <div class="legend">
       <span><i style="background:var(--hot1)"></i>bajo</span>
       <span><i style="background:var(--hot2)"></i>medio</span>
@@ -107,7 +113,8 @@
       Focos: <a href="https://terrabrasilis.dpi.inpe.br/queimadas/portal/" target="_blank" rel="noopener">INPE Queimadas</a>
       (VIIRS, MODIS, NOAA, GOES vía NASA/LANCE). Latencia ~1–3 h.
       Las cifras pueden diferir de SENAMHI o SERFOR por distintos satélites y umbrales.
-      <br>Hora: Perú (UTC−5). Actualización automática cada 15 min.
+      <br>Hora: Perú (UTC−5). Actualización automática cada 30 min.
+      <br>Código abierto y metodología: <a href="https://github.com/42pe/incendios-peru" target="_blank" rel="noopener">GitHub</a>.
     </footer>
   </aside>
 </div>
@@ -124,19 +131,23 @@
       <tr><th>Función</th><th>Este mapa</th><th>Plataforma SERFOR</th></tr>
       <tr><td>Focos de calor satelitales (VIIRS, MODIS, NOAA, GOES)</td><td class="yes">Sí</td><td class="yes">Sí</td></tr>
       <tr><td>Confirmación en terreno (COEN, bomberos, GORE)</td><td class="no">No</td><td class="yes">Sí</td></tr>
-      <tr><td>Validación con imágenes satelitales</td><td class="no">No</td><td class="yes">Sí</td></tr>
-      <tr><td>Reporte de cicatriz / área quemada</td><td class="no">No</td><td class="yes">Sí</td></tr>
+      <tr><td>Validación con imágenes satelitales</td><td class="no">No</td><td class="yes">Sí (según reportes regionales)</td></tr>
+      <tr><td>Reporte de cicatriz / área quemada</td><td class="no">No</td><td class="yes">Sí (según reportes regionales)</td></tr>
       <tr><td>Alertas oficiales a autoridades</td><td class="no">No</td><td class="yes">Sí</td></tr>
       <tr><td>Actualización</td><td>cada 30 min</td><td>reporte diario</td></tr>
     </table>
     <ul class="cav">
       <li>Un foco de calor es un <b>indicio</b>, no un incendio confirmado.</li>
+      <li>Contamos <b>focos distintos (~1 km)</b>: varios satélites detectan el mismo punto, así que agrupamos las detecciones cercanas. Es un mínimo, no un conteo de incendios.</li>
+      <li>Por defecto ocultamos GOES: detecta cada ~10 min con píxeles de ~2 km y repite el mismo punto muchas veces.</li>
+      <li>No filtramos fuentes de calor fijas como volcanes (Sabancaya, Ubinas) o quema de gas industrial (Talara, La Pampilla).</li>
+      <li>La intensidad (FRP) no es directamente comparable entre sensores distintos.</li>
       <li>Puede haber focos no detectados: nubes, humo denso u horario de pasada del satélite.</li>
       <li>Hay una latencia de ~1–3 h entre la pasada del satélite y su publicación.</li>
       <li>Las cifras pueden no coincidir con SENAMHI o SERFOR por distintos satélites y umbrales.</li>
       <li>No es una fuente oficial. Ante una emergencia, comunícate con el <b>INDECI (línea 115)</b>.</li>
     </ul>
-    <p style="margin-bottom:0">Datos: <a href="https://terrabrasilis.dpi.inpe.br/queimadas/portal/" target="_blank" rel="noopener">INPE Queimadas</a> · NASA/LANCE (VIIRS, MODIS, NOAA, GOES).</p>
+    <p style="margin-bottom:0">Datos: <a href="https://terrabrasilis.dpi.inpe.br/queimadas/portal/" target="_blank" rel="noopener">INPE Queimadas</a> · NASA/LANCE (VIIRS, MODIS, NOAA, GOES). Código y metodología completa en <a href="https://github.com/42pe/incendios-peru#metodología" target="_blank" rel="noopener">GitHub</a>.</p>
   </div>
 </div>
 
@@ -156,7 +167,7 @@ maplibregl.addProtocol("pmtiles", protocol.tile);
 
 const map = new maplibregl.Map({
   container:"map",
-  center:[-75.0,-9.2], zoom:4.4, maxZoom:12, minZoom:3,
+  center:[-75.0,-9.2], zoom:4.4, maxZoom:8.9, minZoom:3,
   attributionControl:{compact:true},
   style:{
     version:8,
@@ -194,12 +205,16 @@ const map = new maplibregl.Map({
 });
 map.addControl(new maplibregl.NavigationControl({showCompass:false}), "top-left");
 
-let ALL=[], windowH=24, generated=null, loaded=false;
+let ALL=[], windowH=24, generated=null, loaded=false, ready=false, showGoes=false;
 
 function parseUTC(s){ return new Date((s||"").replace(" ","T")+"Z"); }
 function lima(d){ return d.toLocaleString("es-PE",{timeZone:"America/Lima",hour12:false,day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"}); }
 function ageH(f){ return (Date.now()-parseUTC(f.properties.t).getTime())/3600000; }
 function inWindow(f){ return !windowH || ageH(f)<=windowH; }
+function vis(f){ return showGoes || !(f.properties.sat||"").startsWith("GOES"); }
+function cell(f){ const c=f.geometry.coordinates; return Math.round(c[1]*100)+","+Math.round(c[0]*100); }
+function hh(h){ h=Math.max(0,h); return h<1?"menos de 1 h":Math.round(h)+" h"; }
+function staleH(){ return generated?(Date.now()-new Date(generated).getTime())/3600000:0; }
 
 function ensureLayer(){
   if(map.getSource("focos")) return;
@@ -225,33 +240,48 @@ function ensureLayer(){
 }
 
 function render(){
-  const feats=ALL.filter(inWindow);
-  document.getElementById("total").textContent=feats.length.toLocaleString("es-PE");
+  const feats=ALL.filter(f=>vis(f)&&inWindow(f));
+  document.getElementById("total").textContent=new Set(feats.map(cell)).size.toLocaleString("es-PE");
+  document.getElementById("raw").textContent=feats.length.toLocaleString("es-PE")+" detecciones satelitales";
+  const sh=staleH(), stale=sh>2, st=document.getElementById("stale");
+  st.hidden=!stale;
+  if(stale) st.textContent=`⚠ Datos sin actualizar desde hace ${Math.round(sh)} h. Puede haber un problema con la fuente de datos.`;
   if(loaded){
     ensureLayer();
     map.getSource("focos").setData({type:"FeatureCollection",features:feats});
   }
   const byReg={};
-  feats.forEach(f=>{byReg[f.properties.reg||"Sin región"]=(byReg[f.properties.reg||"Sin región"]||0)+1;});
-  const ranked=Object.entries(byReg).sort((a,b)=>b[1]-a[1]);
+  const cellReg={}; // each cell counts in one region only, so bars reconcile with the headline
+  feats.forEach(f=>{const k=cell(f); if(!(k in cellReg)) cellReg[k]=f.properties.reg||"Sin región";});
+  Object.entries(cellReg).forEach(([k,r])=>(byReg[r]=byReg[r]||new Set()).add(k));
+  const ranked=Object.entries(byReg).map(([r,s])=>[r,s.size]).sort((a,b)=>b[1]-a[1]);
   const max=ranked.length?ranked[0][1]:1;
+  let empty="";
+  if(ready&&!feats.length){
+    const v=ALL.filter(vis);
+    empty=!v.length?"Sin datos disponibles.":stale?"Sin detecciones en este periodo.":
+      `Sin detecciones en este periodo · última detección hace ${hh(v.reduce((m,f)=>Math.min(m,ageH(f)),Infinity))}`;
+  }
   document.getElementById("regions").innerHTML=ranked.map(([r,c])=>
     `<div class="region" data-r="${r}"><span>${r}</span>`+
     `<span class="bar"><i style="width:${Math.round(c/max*100)}%"></i></span>`+
-    `<span class="c">${c}</span></div>`).join("")||"<div class='meta'>Sin focos en este periodo.</div>";
+    `<span class="c">${c}</span></div>`).join("")||(empty&&`<div class='meta'>${empty}</div>`);
 }
 
 function setMeta(){
-  const g=generated?parseUTC(generated.replace("T"," ").replace("Z","")):null;
-  document.getElementById("meta").textContent=
-    (g?`Datos generados: ${lima(g)} (hora Perú)`:"")+` · ${ALL.length.toLocaleString("es-PE")} focos en 72 h`;
+  const g=generated?new Date(generated):null;
+  const ts=ALL.map(f=>parseUTC(f.properties.t).getTime()).filter(isFinite);
+  const lo=ts.reduce((a,b)=>Math.min(a,b),Infinity), hi=ts.reduce((a,b)=>Math.max(a,b),-Infinity);
+  const rng=ts.length?` · detecciones del ${lima(new Date(lo)).replace(",","")} al ${lima(new Date(hi)).replace(",","")}`:"";
+  document.getElementById("meta").textContent=(g?`Datos generados: ${lima(g)} (hora Perú)`:"")+rng;
 }
 
 async function load(){
   try{
     const r=await fetch(DATA_URL+"?t="+Math.floor(Date.now()/60000));
     const j=await r.json();
-    ALL=j.features||[]; generated=j.generated; setMeta(); render();
+    ALL=j.features||[]; ALL.forEach(f=>{ if(f.properties.reg==="Lima Province") f.properties.reg="Lima"; });
+    generated=j.generated; ready=true; setMeta(); render();
   }catch(e){ document.getElementById("meta").textContent="No se pudieron cargar los datos. Reintentando…"; }
 }
 
@@ -265,13 +295,15 @@ document.getElementById("filters").addEventListener("click",e=>{
 });
 document.getElementById("regions").addEventListener("click",e=>{
   const el=e.target.closest(".region"); if(!el) return;
-  const pts=ALL.filter(inWindow).filter(f=>(f.properties.reg||"Sin región")===el.dataset.r)
+  const pts=ALL.filter(f=>vis(f)&&inWindow(f)).filter(f=>(f.properties.reg||"Sin región")===el.dataset.r)
     .map(f=>f.geometry.coordinates);
   if(!pts.length) return;
   const b=pts.reduce((a,c)=>[Math.min(a[0],c[0]),Math.min(a[1],c[1]),Math.max(a[2],c[0]),Math.max(a[3],c[1])],
     [180,90,-180,-90]);
-  map.fitBounds([[b[0],b[1]],[b[2],b[3]]],{padding:50,maxZoom:9});
+  map.fitBounds([[b[0],b[1]],[b[2],b[3]]],{padding:50,maxZoom:8.9});
 });
+
+document.getElementById("goes").addEventListener("change",e=>{ showGoes=e.target.checked; render(); });
 
 // help modal
 const modal=document.getElementById("modal");

@@ -12,7 +12,7 @@ file, so end users only ever download the small Peru file from our CDN — never
 hitting INPE themselves. That keeps the app infinitely scalable and $0 to serve.
 
 Run:  python3 scripts/build_data.py [days]
-Out:  data/peru.geojson, data/summary.json
+Out:  public/data/peru.geojson, public/data/summary.json
 """
 import csv
 import io
@@ -23,8 +23,9 @@ from datetime import datetime, timedelta, timezone
 
 BASE = ("https://dataserver-coids.inpe.br/queimadas/queimadas/focos/"
         "csv/diario/America_Sul")
-DAYS = int(sys.argv[1]) if len(sys.argv) > 1 else 2
+DAYS = int(sys.argv[1]) if len(sys.argv) > 1 else 3
 TIMEOUT = 90
+REG_FIX = {"Lima Province": "Lima"}  # normalize region names
 
 # Peru bounding box, as a cheap sanity gate on top of the pais field.
 LAT_MIN, LAT_MAX = -18.5, 0.5
@@ -78,7 +79,7 @@ def main():
                 "properties": {
                     "t": (row.get("data_hora_gmt") or "").strip(),  # UTC
                     "sat": (row.get("satelite") or "").strip(),
-                    "reg": (row.get("estado") or "").strip(),
+                    "reg": REG_FIX.get((row.get("estado") or "").strip(), (row.get("estado") or "").strip()),
                     "mun": (row.get("municipio") or "").strip(),
                     "frp": num(row.get("frp")),
                     "biome": (row.get("bioma") or "").strip(),

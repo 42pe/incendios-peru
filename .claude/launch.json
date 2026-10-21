@@ -4,8 +4,23 @@
     {
       "name": "incendios",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8787"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8787"
+      ],
       "port": 8787
+    },
+    {
+      "name": "incendios-wrangler",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "wrangler",
+        "dev",
+        "--port",
+        "8788"
+      ],
+      "port": 8788
     }
   ]
 }
