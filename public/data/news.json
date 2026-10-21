@@ -1,74 +1,169 @@
 {
-  "checked": "2026-10-21T18:00:00Z",
-  "period": "19–21 oct 2026",
+  "checked": "2026-10-21T18:45:08Z",
+  "period": "18–21 oct 2026",
   "general": [
-    {"title": "Perú registra 12 incendios forestales activos en varias regiones, según Indeci", "source": "Infobae", "date": "2026-10-19", "url": "https://www.infobae.com/peru/2026/10/19/peru-registra-12-incendios-forestales-activos-en-varias-regiones-segun-indeci/"},
-    {"title": "Incendios forestales en Perú dejan 12 fallecidos y más de 800 afectados, informa Indeci", "source": "Gestión", "date": "2026-10-20", "url": "https://gestion.pe/peru/incendios-forestales-en-peru-dejan-12-fallecidos-y-mas-de-800-afectados-informa-indeci-noticia/"},
-    {"title": "Plataforma de monitoreo de SERFOR permanece inaccesible, mientras se reportan cientos de focos de calor", "source": "La República", "date": "2026-10-20", "url": "https://larepublica.pe/sociedad/2026/10/20/plataforma-de-monitoreo-de-incendio-forestales-de-serfor-permanece-inaccesible-mientras-se-reportan-cientos-de-focos-de-calor-744760"}
+    {
+      "title": "Perú registra 12 incendios forestales activos en varias regiones, según Indeci",
+      "source": "Infobae",
+      "date": "2026-10-19",
+      "url": "https://www.infobae.com/peru/2026/10/19/peru-registra-12-incendios-forestales-activos-en-varias-regiones-segun-indeci/"
+    },
+    {
+      "title": "Incendios forestales en Perú dejan 12 fallecidos y más de 800 afectados, informa Indeci",
+      "source": "Gestión",
+      "date": "2026-10-20",
+      "url": "https://gestion.pe/peru/incendios-forestales-en-peru-dejan-12-fallecidos-y-mas-de-800-afectados-informa-indeci-noticia/"
+    },
+    {
+      "title": "Plataforma de monitoreo de SERFOR permanece inaccesible, mientras se reportan cientos de focos de calor",
+      "source": "La República",
+      "date": "2026-10-20",
+      "url": "https://larepublica.pe/sociedad/2026/10/20/plataforma-de-monitoreo-de-incendio-forestales-de-serfor-permanece-inaccesible-mientras-se-reportan-cientos-de-focos-de-calor-744760"
+    }
   ],
   "regions": {
     "Junín": {
       "status": "coincide",
       "note": "Indeci señala a Río Tambo (Satipo) como la zona más crítica del país, con 4 incendios activos. La mayoría de nuestros focos en Junín están ahí.",
       "links": [
-        {"title": "Perú registra 12 incendios forestales activos; Río Tambo, el caso más crítico", "source": "Infobae", "date": "2026-10-19", "url": "https://www.infobae.com/peru/2026/10/19/peru-registra-12-incendios-forestales-activos-en-varias-regiones-segun-indeci/"},
-        {"title": "Incendio forestal arrasa más de mil hectáreas en Río Tambo y amenaza comunidades asháninkas", "source": "El Búho", "date": "2026-10", "url": "https://elbuho.pe/2026/10/incendio-forestal-arrasa-mas-de-mil-hectareas-en-rio-tambo-y-amenaza-comunidades-ashaninkas/"}
+        {
+          "title": "Perú registra 12 incendios forestales activos; Río Tambo, el caso más crítico",
+          "source": "Infobae",
+          "date": "2026-10-19",
+          "url": "https://www.infobae.com/peru/2026/10/19/peru-registra-12-incendios-forestales-activos-en-varias-regiones-segun-indeci/"
+        },
+        {
+          "title": "Incendio forestal arrasa más de mil hectáreas en Río Tambo y amenaza comunidades asháninkas",
+          "source": "El Búho",
+          "date": "2026-10",
+          "url": "https://elbuho.pe/2026/10/incendio-forestal-arrasa-mas-de-mil-hectareas-en-rio-tambo-y-amenaza-comunidades-ashaninkas/"
+        }
       ]
     },
     "Huánuco": {
       "status": "parcial",
       "note": "SENAMHI también registró muchos focos de calor en Huánuco (174 en su boletín del 19 oct), pero no encontramos reportes de incendios en terreno en octubre.",
       "links": [
-        {"title": "SERFOR inaccesible mientras se reportan cientos de focos de calor (cifras SENAMHI por región)", "source": "La República", "date": "2026-10-20", "url": "https://larepublica.pe/sociedad/2026/10/20/plataforma-de-monitoreo-de-incendio-forestales-de-serfor-permanece-inaccesible-mientras-se-reportan-cientos-de-focos-de-calor-744760"},
-        {"title": "El COER Huánuco reporta 40 incendios forestales en lo que va del 2026", "source": "Tu Diario Huánuco", "date": "2026-10", "url": "https://tudiariohuanuco.pe/actualidad/el-coer-huanuco-reporta-40-incendios-forestales-en-lo-que-va-del-2026/"}
+        {
+          "title": "SERFOR inaccesible mientras se reportan cientos de focos de calor (cifras SENAMHI por región)",
+          "source": "La República",
+          "date": "2026-10-20",
+          "url": "https://larepublica.pe/sociedad/2026/10/20/plataforma-de-monitoreo-de-incendio-forestales-de-serfor-permanece-inaccesible-mientras-se-reportan-cientos-de-focos-de-calor-744760"
+        },
+        {
+          "title": "El COER Huánuco reporta 40 incendios forestales en lo que va del 2026",
+          "source": "Tu Diario Huánuco",
+          "date": "2026-10",
+          "url": "https://tudiariohuanuco.pe/actualidad/el-coer-huanuco-reporta-40-incendios-forestales-en-lo-que-va-del-2026/"
+        }
       ]
     },
     "Ucayali": {
       "status": "anterior",
       "note": "Hubo incendios en Yarinacocha (Coronel Portillo) a inicios de octubre. No encontramos noticias sobre Atalaya, donde están la mayoría de nuestros focos.",
       "links": [
-        {"title": "Incendio forestal en el distrito de Yarinacocha (Reporte N.° 2)", "source": "COEN-INDECI", "date": "2026-10-08", "url": "https://portal.indeci.gob.pe/emergencias/reporte-complementario-n-o-13679-7-10-2026-coen-indeci-2215-horas-reporte-n-1-incendio-forestal-en-el-distrito-de-yarinacocha-ucayali/"}
+        {
+          "title": "Incendio forestal en el distrito de Yarinacocha (Reporte N.° 2)",
+          "source": "COEN-INDECI",
+          "date": "2026-10-08",
+          "url": "https://portal.indeci.gob.pe/emergencias/reporte-complementario-n-o-13679-7-10-2026-coen-indeci-2215-horas-reporte-n-1-incendio-forestal-en-el-distrito-de-yarinacocha-ucayali/"
+        }
       ]
     },
     "Cusco": {
       "status": "coincide",
       "note": "Incendios en Chumbivilcas (Santo Tomás, Velille) y Calca. Indeci reporta 4 fallecidos en la región y la menciona entre las zonas críticas al 19 oct.",
       "links": [
-        {"title": "Cusco: detienen a hombre acusado de provocar incendio forestal cerca del santuario del Señor de Huanca", "source": "RPP", "date": "2026-10", "url": "https://rpp.pe/peru/actualidad/cusco-detienen-a-hombre-acusado-de-provocar-incendio-forestal-en-inmediaciones-del-santuario-del-senor-de-huanca-noticia-1713459"},
-        {"title": "Cusco enfrenta seis incendios forestales simultáneos: Chumbivilcas es la provincia más afectada", "source": "El Tiempo", "date": "2026-10", "url": "https://eltiempo.pe/nacional/cusco-enfrenta-seis-incendios-forestales-simultaneos-chumbivilcas-es-la-provincia-mas-afectada/"},
-        {"title": "Incendio forestal en el distrito de Santo Tomás (Chumbivilcas)", "source": "COEN-INDECI", "date": "2026-10-13", "url": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.%C2%BA-14079-13OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-SANTO-TOMAS-CUSCO-1-1.pdf"}
+        {
+          "title": "Cusco: detienen a hombre acusado de provocar incendio forestal cerca del santuario del Señor de Huanca",
+          "source": "RPP",
+          "date": "2026-10",
+          "url": "https://rpp.pe/peru/actualidad/cusco-detienen-a-hombre-acusado-de-provocar-incendio-forestal-en-inmediaciones-del-santuario-del-senor-de-huanca-noticia-1713459"
+        },
+        {
+          "title": "Cusco enfrenta seis incendios forestales simultáneos: Chumbivilcas es la provincia más afectada",
+          "source": "El Tiempo",
+          "date": "2026-10",
+          "url": "https://eltiempo.pe/nacional/cusco-enfrenta-seis-incendios-forestales-simultaneos-chumbivilcas-es-la-provincia-mas-afectada/"
+        },
+        {
+          "title": "Incendio forestal en el distrito de Santo Tomás (Chumbivilcas)",
+          "source": "COEN-INDECI",
+          "date": "2026-10-13",
+          "url": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.%C2%BA-14079-13OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-SANTO-TOMAS-CUSCO-1-1.pdf"
+        }
       ]
     },
     "Ancash": {
       "status": "coincide",
       "note": "Incendio de ~150 ha en Pueblo Libre (Huaylas), activo el 18 y 19 oct. Tenemos focos en esa misma zona.",
       "links": [
-        {"title": "Incendio forestal en Pueblo Libre arrasa 150 hectáreas de cobertura natural", "source": "Ancash Noticias", "date": "2026-10-20", "url": "https://ancashnoticias.com/2026/10/20/ancash-incendio-forestal-en-pueblo-libre-arrasa-150-hectareas-de-cobertura-natural"},
-        {"title": "Áncash: incendio forestal afecta 150 hectáreas de pastizales y arbustos en Huaylas", "source": "RPP", "date": "2026-10-20", "url": "https://rpp.pe/peru/actualidad/ancash-incendio-forestal-afecta-150-hectareas-de-pastizales-y-arbustos-en-huaylas-noticia-1713456"}
+        {
+          "title": "Incendio forestal en Pueblo Libre arrasa 150 hectáreas de cobertura natural",
+          "source": "Ancash Noticias",
+          "date": "2026-10-20",
+          "url": "https://ancashnoticias.com/2026/10/20/ancash-incendio-forestal-en-pueblo-libre-arrasa-150-hectareas-de-cobertura-natural"
+        },
+        {
+          "title": "Áncash: incendio forestal afecta 150 hectáreas de pastizales y arbustos en Huaylas",
+          "source": "RPP",
+          "date": "2026-10-20",
+          "url": "https://rpp.pe/peru/actualidad/ancash-incendio-forestal-afecta-150-hectareas-de-pastizales-y-arbustos-en-huaylas-noticia-1713456"
+        }
       ]
     },
     "Arequipa": {
       "status": "coincide",
       "note": "Nueve incendios nuevos entre el 16 y el 18 oct; el caso más grave, en Toro (La Unión), donde está la mayoría de nuestros focos.",
       "links": [
-        {"title": "Arequipa: nueve incendios en un fin de semana elevan a 70 los siniestros forestales del 2026", "source": "HBA Noticias", "date": "2026-10", "url": "https://hbanoticias.pe/arequipa-nueve-incendios-en-un-fin-de-semana-elevan-a-70-los-siniestros-forestales-del-2026/"},
-        {"title": "Incendios forestales afectan más de 5 000 hectáreas en Arequipa", "source": "Diario El Pueblo", "date": "2026-10-20", "url": "https://diarioelpueblo.com.pe/2026/10/20/incendios-forestales-afectan-mas-de-5-000-hectareas-en-arequipa/"}
+        {
+          "title": "Arequipa: nueve incendios en un fin de semana elevan a 70 los siniestros forestales del 2026",
+          "source": "HBA Noticias",
+          "date": "2026-10",
+          "url": "https://hbanoticias.pe/arequipa-nueve-incendios-en-un-fin-de-semana-elevan-a-70-los-siniestros-forestales-del-2026/"
+        },
+        {
+          "title": "Incendios forestales afectan más de 5 000 hectáreas en Arequipa",
+          "source": "Diario El Pueblo",
+          "date": "2026-10-20",
+          "url": "https://diarioelpueblo.com.pe/2026/10/20/incendios-forestales-afectan-mas-de-5-000-hectareas-en-arequipa/"
+        }
       ]
     },
     "Apurímac": {
       "status": "coincide",
       "note": "Incendios en Abancay y Curahuasi durante más de 10 días, con pedido de helicópteros. Indeci reporta 2 fallecidos en la región.",
       "links": [
-        {"title": "Incendios forestales en Apurímac llevan más de 10 días: piden helicópteros", "source": "Infobae", "date": "2026-10-17", "url": "https://www.infobae.com/peru/2026/10/17/incendios-forestales-en-apurimac-llevan-mas-de-10-dias-piden-helicopteros-para-sofocar-las-llamas/"},
-        {"title": "Incendio forestal en el distrito de Abancay", "source": "COEN-INDECI", "date": "2026-10-20", "url": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.%C2%BA-14545-20OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-ABANCAY-APUR%C3%8DMAC-2.pdf"}
+        {
+          "title": "Incendios forestales en Apurímac llevan más de 10 días: piden helicópteros",
+          "source": "Infobae",
+          "date": "2026-10-17",
+          "url": "https://www.infobae.com/peru/2026/10/17/incendios-forestales-en-apurimac-llevan-mas-de-10-dias-piden-helicopteros-para-sofocar-las-llamas/"
+        },
+        {
+          "title": "Incendio forestal en el distrito de Abancay",
+          "source": "COEN-INDECI",
+          "date": "2026-10-20",
+          "url": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.%C2%BA-14545-20OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-ABANCAY-APUR%C3%8DMAC-2.pdf"
+        }
       ]
     },
     "Huancavelica": {
       "status": "coincide",
       "note": "Incendio en Anco (Churcampa) que dejó a un agricultor con quemaduras graves, y otro en Chupamarca (Castrovirreyna) con cuatro heridos.",
       "links": [
-        {"title": "Huancavelica: adulto mayor que se quemó por intentar apagar un incendio forestal requiere traslado urgente", "source": "RPP", "date": "2026-10", "url": "https://rpp.pe/rotafono/servicios-publicos/huancavelica-adulto-mayor-que-se-quemo-por-intentar-apagar-un-incendio-forestal-requiere-traslado-urgente-a-lima-minsa-ministerio-de-salud-video-noticia-1713029"},
-        {"title": "Huancavelica: incendio forestal arrasó la casa del alcalde de Chupamarca y dejó cuatro heridos", "source": "Infobae", "date": "2026-10-18", "url": "https://www.infobae.com/peru/2026/10/18/huancavelica-incendio-forestal-arraso-la-casa-del-alcalde-de-chupamarca-y-dejo-cuatro-heridos/"}
+        {
+          "title": "Huancavelica: adulto mayor que se quemó por intentar apagar un incendio forestal requiere traslado urgente",
+          "source": "RPP",
+          "date": "2026-10",
+          "url": "https://rpp.pe/rotafono/servicios-publicos/huancavelica-adulto-mayor-que-se-quemo-por-intentar-apagar-un-incendio-forestal-requiere-traslado-urgente-a-lima-minsa-ministerio-de-salud-video-noticia-1713029"
+        },
+        {
+          "title": "Huancavelica: incendio forestal arrasó la casa del alcalde de Chupamarca y dejó cuatro heridos",
+          "source": "Infobae",
+          "date": "2026-10-18",
+          "url": "https://www.infobae.com/peru/2026/10/18/huancavelica-incendio-forestal-arraso-la-casa-del-alcalde-de-chupamarca-y-dejo-cuatro-heridos/"
+        }
       ]
     },
     "Madre de Dios": {
@@ -80,31 +175,66 @@
       "status": "anterior",
       "note": "Incendios en Lamas (La Julao y Aucaloma, ~50 ha) el 16 y 17 oct, ya extinguidos. Nuestros focos actuales están sobre todo en otras provincias.",
       "links": [
-        {"title": "Alerta por un incendio forestal en el sector Aucaloma, cerca de Tarapoto", "source": "Infobae", "date": "2026-10-17", "url": "https://www.infobae.com/peru/2026/10/17/alerta-por-un-incendio-forestal-en-el-sector-aucaloma-cerca-de-tarapoto/"},
-        {"title": "Incendio forestal en el distrito de Lamas", "source": "COEN-INDECI", "date": "2026-10-17", "url": "https://portal.indeci.gob.pe/emergencias/reporte-complementario-n-14389-17-10-2026-coen-indeci-1504-horas-reporte-n-1-incendio-forestal-en-el-distrito-de-lamas-san-martin/"}
+        {
+          "title": "Alerta por un incendio forestal en el sector Aucaloma, cerca de Tarapoto",
+          "source": "Infobae",
+          "date": "2026-10-17",
+          "url": "https://www.infobae.com/peru/2026/10/17/alerta-por-un-incendio-forestal-en-el-sector-aucaloma-cerca-de-tarapoto/"
+        },
+        {
+          "title": "Incendio forestal en el distrito de Lamas",
+          "source": "COEN-INDECI",
+          "date": "2026-10-17",
+          "url": "https://portal.indeci.gob.pe/emergencias/reporte-complementario-n-14389-17-10-2026-coen-indeci-1504-horas-reporte-n-1-incendio-forestal-en-el-distrito-de-lamas-san-martin/"
+        }
       ]
     },
     "Puno": {
       "status": "anterior",
       "note": "Incendios graves entre el 10 y el 16 oct (2 fallecidos, ~28 000 ha de pastos), en zonas distintas de nuestros focos actuales.",
       "links": [
-        {"title": "Incendio forestal en Puno deja dos muertos, 22 heridos y arrasa con 28 mil hectáreas de pastos", "source": "Infobae", "date": "2026-10-15", "url": "https://www.infobae.com/peru/2026/10/15/incendio-forestal-en-puno-deja-dos-muertos-22-heridos-y-arrasa-con-28-mil-hectareas-de-pastos/"},
-        {"title": "Incendios forestales en Puno dejan dos fallecidos, 22 heridos y arrasan casi 30.000 hectáreas", "source": "La República", "date": "2026-10-16", "url": "https://larepublica.pe/sociedad/2026/10/16/incendios-forestales-en-puno-dejan-dos-fallecidos-22-heridos-y-arrasan-casi-30000-hectareas-815168"}
+        {
+          "title": "Incendio forestal en Puno deja dos muertos, 22 heridos y arrasa con 28 mil hectáreas de pastos",
+          "source": "Infobae",
+          "date": "2026-10-15",
+          "url": "https://www.infobae.com/peru/2026/10/15/incendio-forestal-en-puno-deja-dos-muertos-22-heridos-y-arrasa-con-28-mil-hectareas-de-pastos/"
+        },
+        {
+          "title": "Incendios forestales en Puno dejan dos fallecidos, 22 heridos y arrasan casi 30.000 hectáreas",
+          "source": "La República",
+          "date": "2026-10-16",
+          "url": "https://larepublica.pe/sociedad/2026/10/16/incendios-forestales-en-puno-dejan-dos-fallecidos-22-heridos-y-arrasan-casi-30000-hectareas-815168"
+        }
       ]
     },
     "Cajamarca": {
       "status": "anterior",
       "note": "Indeci reporta 3 fallecidos en la región por incendios de inicios de octubre (p. ej. Cajabamba). No encontramos noticias recientes sobre Jaén, donde están la mayoría de nuestros focos.",
       "links": [
-        {"title": "Cajamarca: incendios forestales en la región dejan tres fallecidos", "source": "SOLTV Perú", "date": "2026-10", "url": "https://soltvperu.com/incendios-forestales-en-cajamarca/"},
-        {"title": "Cajamarca: adulto mayor murió calcinado durante un incendio forestal en Cajabamba", "source": "RPP", "date": "2026-10", "url": "https://rpp.pe/peru/cajamarca/cajamarca-adulto-mayor-murio-calcinado-durante-un-incendio-forestal-en-cajabamba-noticia-1710583"}
+        {
+          "title": "Cajamarca: incendios forestales en la región dejan tres fallecidos",
+          "source": "SOLTV Perú",
+          "date": "2026-10",
+          "url": "https://soltvperu.com/incendios-forestales-en-cajamarca/"
+        },
+        {
+          "title": "Cajamarca: adulto mayor murió calcinado durante un incendio forestal en Cajabamba",
+          "source": "RPP",
+          "date": "2026-10",
+          "url": "https://rpp.pe/peru/cajamarca/cajamarca-adulto-mayor-murio-calcinado-durante-un-incendio-forestal-en-cajabamba-noticia-1710583"
+        }
       ]
     },
     "Loreto": {
       "status": "anterior",
       "note": "Un balance nacional de mediados de octubre menciona 2 incendios en Loreto, sin indicar dónde. Nada específico sobre Alto Amazonas.",
       "links": [
-        {"title": "Incendios forestales se incrementan a 66 en 16 regiones", "source": "El Búho", "date": "2026-10", "url": "https://elbuho.pe/2026/10/incendios-forestales-se-incrementan-a-66-en-14-regiones-y-no-hay-respuesta-efectiva-del-gobierno/"}
+        {
+          "title": "Incendios forestales se incrementan a 66 en 16 regiones",
+          "source": "El Búho",
+          "date": "2026-10",
+          "url": "https://elbuho.pe/2026/10/incendios-forestales-se-incrementan-a-66-en-14-regiones-y-no-hay-respuesta-efectiva-del-gobierno/"
+        }
       ]
     },
     "La Libertad": {
@@ -116,16 +246,36 @@
       "status": "anterior",
       "note": "Hubo incendios en Utcubamba en septiembre. Al 19 oct, Indeci reportaba los incendios de Amazonas como controlados.",
       "links": [
-        {"title": "Perú registra 12 incendios forestales activos; Amazonas, entre los controlados", "source": "Infobae", "date": "2026-10-19", "url": "https://www.infobae.com/peru/2026/10/19/peru-registra-12-incendios-forestales-activos-en-varias-regiones-segun-indeci/"},
-        {"title": "Solo Amazonas ha registrado 8 incendios forestales en lo que va de septiembre", "source": "Infobae", "date": "2026-09-24", "url": "https://www.infobae.com/peru/2026/09/24/solo-amazonas-ha-registrado-8-incendios-forestales-en-lo-que-va-de-septiembre-426-hectareas-fueron-afectadas/"}
+        {
+          "title": "Perú registra 12 incendios forestales activos; Amazonas, entre los controlados",
+          "source": "Infobae",
+          "date": "2026-10-19",
+          "url": "https://www.infobae.com/peru/2026/10/19/peru-registra-12-incendios-forestales-activos-en-varias-regiones-segun-indeci/"
+        },
+        {
+          "title": "Solo Amazonas ha registrado 8 incendios forestales en lo que va de septiembre",
+          "source": "Infobae",
+          "date": "2026-09-24",
+          "url": "https://www.infobae.com/peru/2026/09/24/solo-amazonas-ha-registrado-8-incendios-forestales-en-lo-que-va-de-septiembre-426-hectareas-fueron-afectadas/"
+        }
       ]
     },
     "Moquegua": {
       "status": "anterior",
       "note": "Varios incendios en San Cristóbal (Mariscal Nieto) entre el 1 y el 15 oct. Nuestros focos están en la misma provincia, pero no hay noticias de estos días.",
       "links": [
-        {"title": "Incendios forestales en Ayacucho, Moquegua y Puno se mantienen activos", "source": "RPP", "date": "2026-10-11", "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-las-regiones-de-ayacucho-moquegua-y-puno-se-mantienen-activos-y-arrasan-cobertura-natural-noticia-1711990"},
-        {"title": "Incendio forestal en el distrito de San Cristóbal", "source": "COEN-INDECI", "date": "2026-10-15", "url": "https://portal.indeci.gob.pe/emergencias/incendio-forestal-en-el-distrito-de-san-cristobal-moquegua/"}
+        {
+          "title": "Incendios forestales en Ayacucho, Moquegua y Puno se mantienen activos",
+          "source": "RPP",
+          "date": "2026-10-11",
+          "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-las-regiones-de-ayacucho-moquegua-y-puno-se-mantienen-activos-y-arrasan-cobertura-natural-noticia-1711990"
+        },
+        {
+          "title": "Incendio forestal en el distrito de San Cristóbal",
+          "source": "COEN-INDECI",
+          "date": "2026-10-15",
+          "url": "https://portal.indeci.gob.pe/emergencias/incendio-forestal-en-el-distrito-de-san-cristobal-moquegua/"
+        }
       ]
     },
     "Piura": {
@@ -133,17 +283,22 @@
       "note": "No encontramos noticias de incendios. Casi todas las detecciones de Piura vienen de GOES al mediodía sobre el desierto, probablemente falsos positivos por suelo caliente.",
       "links": []
     },
-    "Tumbes": {
-      "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios. Todas las detecciones de Tumbes vienen de GOES, probablemente falsos positivos.",
-      "links": []
-    },
     "Ayacucho": {
       "status": "anterior",
       "note": "120 incendios en la temporada y 58 solo en octubre (al 14 oct), sobre todo por quemas agrícolas. No encontramos noticias de estos días.",
       "links": [
-        {"title": "Ayacucho registra 120 incendios forestales y cerca de 3.000 hectáreas afectadas", "source": "El Búho", "date": "2026-10", "url": "https://elbuho.pe/2026/10/ayacucho-registra-120-incendios-forestales-y-cerca-de-3-000-hectareas-de-cobertura-natural-afectadas/"},
-        {"title": "Ayacucho, Huancavelica, Cusco, Pasco y San Martín registran nuevos incendios forestales", "source": "Infobae", "date": "2026-10-14", "url": "https://www.infobae.com/peru/2026/10/14/ayacucho-huancavelica-cusco-pasco-y-san-martin-registran-nuevos-incendios-forestales-mientras-otros-focos-siguen-activos/"}
+        {
+          "title": "Ayacucho registra 120 incendios forestales y cerca de 3.000 hectáreas afectadas",
+          "source": "El Búho",
+          "date": "2026-10",
+          "url": "https://elbuho.pe/2026/10/ayacucho-registra-120-incendios-forestales-y-cerca-de-3-000-hectareas-de-cobertura-natural-afectadas/"
+        },
+        {
+          "title": "Ayacucho, Huancavelica, Cusco, Pasco y San Martín registran nuevos incendios forestales",
+          "source": "Infobae",
+          "date": "2026-10-14",
+          "url": "https://www.infobae.com/peru/2026/10/14/ayacucho-huancavelica-cusco-pasco-y-san-martin-registran-nuevos-incendios-forestales-mientras-otros-focos-siguen-activos/"
+        }
       ]
     },
     "Ica": {
@@ -155,7 +310,12 @@
       "status": "anterior",
       "note": "Incendio de más de 1 000 ha en Huayllay (4–9 oct). Indeci reporta 2 fallecidos en la región. Nuestros focos actuales están en Oxapampa, sin noticias.",
       "links": [
-        {"title": "Incendio forestal arrasa más de 1.000 hectáreas y amenaza el Bosque de Piedras de Huayllay", "source": "La República", "date": "2026-10-09", "url": "https://larepublica.pe/sociedad/2026/10/09/incendio-forestal-arrasa-mas-de-1000-hectareas-y-amenaza-el-bosque-de-piedras-de-huayllay-en-pasco-784611"}
+        {
+          "title": "Incendio forestal arrasa más de 1.000 hectáreas y amenaza el Bosque de Piedras de Huayllay",
+          "source": "La República",
+          "date": "2026-10-09",
+          "url": "https://larepublica.pe/sociedad/2026/10/09/incendio-forestal-arrasa-mas-de-1000-hectareas-y-amenaza-el-bosque-de-piedras-de-huayllay-en-pasco-784611"
+        }
       ]
     },
     "Lima": {
