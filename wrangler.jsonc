@@ -1,0 +1,10 @@
+{
+  // Static-assets Worker: serves the ./public folder on Cloudflare's edge.
+  // No server code — "assets" with no "main" makes this an assets-only Worker.
+  "name": "incendios-peru",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "single-page-application"
+  }
+}

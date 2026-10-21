@@ -30,7 +30,7 @@ jobs:
         run: |
           git config user.name  "incendios-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add data/peru.geojson data/summary.json
+          git add public/data/peru.geojson public/data/summary.json
           if git diff --cached --quiet; then
             echo "No change."
           else

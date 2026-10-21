@@ -106,9 +106,9 @@ def main():
         "sources": sources,
     }
 
-    with open("data/peru.geojson", "w") as fh:
+    with open("public/data/peru.geojson", "w") as fh:
         json.dump(fc, fh, separators=(",", ":"))
-    with open("data/summary.json", "w") as fh:
+    with open("public/data/summary.json", "w") as fh:
         json.dump(summary, fh, indent=2)
 
     print(f"Wrote {len(features)} Peru hotspots over {DAYS} day(s).")

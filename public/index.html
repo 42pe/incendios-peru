@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Monitor de Incendios Perú</title>
 <meta name="description" content="Mapa independiente de focos de calor activos en el Perú, con datos satelitales abiertos de INPE/NASA.">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"
-  integrity="sha512-h9FcoyWjHcOcmEVkxOfTLnmZFWIH0iZhZT1H2TbOq55xssQGEJHEaIm+PgoUaZbRvQTNTluNOEfb1ZRy6D3BOw==" crossorigin="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.css"
+  integrity="sha512-6AYkNPc8EvA9WwC0CvbRQHWpK1zV1+QeW+lVBfYqN2zTfG9IfWMRMyUDOw6GdF5US0poI/C/pz8tkiL+nfmYHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 <style>
   :root{
     --bg:#0d1117; --panel:#161b22; --panel2:#1c232c; --line:#2d333b;
@@ -41,10 +41,8 @@
   .cav{list-style:none;padding:0;margin:0 0 6px}
   .cav li{position:relative;padding:4px 0 4px 20px;color:var(--tx);font-size:13px}
   .cav li::before{content:"⚠";position:absolute;left:0;color:var(--accent)}
-  .banner{background:rgba(255,107,53,.12);border-bottom:1px solid var(--line);color:var(--tx);padding:7px 16px;font-size:12px}
-  .banner b{color:var(--accent)}
   .wrap{flex:1;display:flex;min-height:0}
-  #map{flex:1;min-width:0;background:var(--panel2)}
+  #map{flex:1;min-width:0;background:#aadaff}
   aside{width:300px;max-width:42vw;background:var(--panel);border-left:1px solid var(--line);overflow:auto;padding:14px}
   .stat{display:flex;align-items:baseline;gap:8px;margin-bottom:2px}
   .stat .n{font-size:30px;font-weight:800;color:var(--accent);line-height:1}
@@ -64,7 +62,7 @@
   .legend i{width:11px;height:11px;border-radius:50%;display:inline-block}
   footer{font-size:11px;color:var(--tx2);margin-top:16px;border-top:1px solid var(--line);padding-top:10px}
   footer a{color:var(--accent)}
-  .leaflet-popup-content{font:13px/1.4 system-ui,sans-serif}
+  .maplibregl-popup-content{font:13px/1.4 system-ui,sans-serif;padding:9px 12px;border-radius:8px}
   .pop b{color:#c2410c}
   @media (max-width:720px){
     .wrap{flex-direction:column}
@@ -79,9 +77,9 @@
   <span class="sub">Focos de calor activos · datos satelitales INPE / NASA</span>
   <button id="helpBtn" class="help" type="button">¿Cómo funciona?</button>
 </header>
-<div class="banner">
-  Reconstrucción ciudadana independiente mientras la plataforma de <b>SERFOR</b> permanece inaccesible (desde el 14 oct 2026).
-  No es una fuente oficial. Un <b>foco de calor</b> es un indicio satelital, no un incendio confirmado.
+<div class="banner" style="background:rgba(255,107,53,.12);border-bottom:1px solid var(--line);color:var(--tx);padding:7px 16px;font-size:12px">
+  Reconstrucción ciudadana independiente mientras la plataforma de <b style="color:var(--accent)">SERFOR</b> permanece inaccesible (desde el 14 oct 2026).
+  No es una fuente oficial. Un <b style="color:var(--accent)">foco de calor</b> es un indicio satelital, no un incendio confirmado.
 </div>
 <div class="wrap">
   <div id="map"></div>
@@ -104,13 +102,16 @@
     <h2>Por región</h2>
     <div id="regions"></div>
     <footer>
-      Fuente: <a href="https://terrabrasilis.dpi.inpe.br/queimadas/portal/" target="_blank" rel="noopener">INPE Queimadas</a>
-      (sensores VIIRS, MODIS, NOAA, GOES vía NASA/LANCE). Latencia ~1–3 h.
+      Mapa base: <a href="https://protomaps.com" target="_blank" rel="noopener">Protomaps</a> ·
+      &copy; <a href="https://openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>.
+      Focos: <a href="https://terrabrasilis.dpi.inpe.br/queimadas/portal/" target="_blank" rel="noopener">INPE Queimadas</a>
+      (VIIRS, MODIS, NOAA, GOES vía NASA/LANCE). Latencia ~1–3 h.
       Las cifras pueden diferir de SENAMHI o SERFOR por distintos satélites y umbrales.
-      <br>Hora mostrada: Perú (UTC−5). Actualización automática cada 15 min.
+      <br>Hora: Perú (UTC−5). Actualización automática cada 15 min.
     </footer>
   </aside>
 </div>
+
 <div class="modal" id="modal">
   <div class="box">
     <button class="close" id="modalClose" aria-label="Cerrar">×</button>
@@ -138,56 +139,100 @@
     <p style="margin-bottom:0">Datos: <a href="https://terrabrasilis.dpi.inpe.br/queimadas/portal/" target="_blank" rel="noopener">INPE Queimadas</a> · NASA/LANCE (VIIRS, MODIS, NOAA, GOES).</p>
   </div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"
-  integrity="sha512-puJW3E/qXDqYp9IfhAI54BJEaWIfloJ7JWs7OeD5i6ruC9JZL1gERT1wjtwXFlh7CjE7ZJ+/vcRZRkIYIb6p4g==" crossorigin=""></script>
+
+<script src="https://cdn.jsdelivr.net/npm/pmtiles@3.0.6/dist/pmtiles.js"
+  integrity="sha512-Kr1P20YSO8b9FU5+7xhvvqk5mZ13Mo4lmQ/drx3XUYAuaEsOAFZoHoG7Zt3dr5RlVmS853XKKYAtca4Tq8szvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.js"
+  integrity="sha512-x8Bt/82VRs91xVTqHDpQ1t8c4qit3QCRbo9BVqnUsyw5yKqzvL4BAgcz7R34BDCiCwx9ypXPTnxPaNnazQz1ag==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
 const DATA_URL = "data/peru.geojson";
-const map = L.map("map",{zoomControl:true}).setView([-9.2,-75.0],5);
-L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}",{
-  attribution:'Tiles &copy; Esri', maxZoom:16
-}).addTo(map);
+const BASEMAP  = "pmtiles://data/basemap-peru.pmtiles";
+const GLYPHS   = "https://protomaps.github.io/basemaps-assets/fonts/{fontstack}/{range}.pbf";
+const HOT=["#ffd166","#ff8c42","#ef4444","#b91c1c"];
 
-let ALL=[], windowH=24, layer=L.layerGroup().addTo(map), generated=null;
+// register pmtiles protocol so MapLibre can read the bundled archive
+const protocol = new pmtiles.Protocol();
+maplibregl.addProtocol("pmtiles", protocol.tile);
 
-function frpColor(frp){
-  if(frp==null) return getCSS("--hot1");
-  if(frp>=100) return getCSS("--hot4");
-  if(frp>=30)  return getCSS("--hot3");
-  if(frp>=10)  return getCSS("--hot2");
-  return getCSS("--hot1");
-}
-function frpRadius(frp){ if(frp==null) return 3.5; return Math.max(3.5,Math.min(11,3.5+Math.sqrt(frp)/2)); }
-function getCSS(v){ return getComputedStyle(document.documentElement).getPropertyValue(v).trim(); }
+const map = new maplibregl.Map({
+  container:"map",
+  center:[-75.0,-9.2], zoom:4.4, maxZoom:12, minZoom:3,
+  attributionControl:{compact:true},
+  style:{
+    version:8,
+    glyphs:GLYPHS,
+    sources:{
+      proto:{type:"vector", url:BASEMAP, attribution:'&copy; OpenStreetMap · Protomaps'}
+    },
+    layers:[
+      {id:"bg", type:"background", paint:{"background-color":"#aadaff"}},
+      {id:"earth", type:"fill", source:"proto", "source-layer":"earth",
+        paint:{"fill-color":"#efece3"}},
+      {id:"landuse", type:"fill", source:"proto", "source-layer":"landuse",
+        paint:{"fill-color":["match",["get","kind"],
+          ["park","forest","wood","nature_reserve","protected_area"],"#dfe8d4",
+          ["farmland","farm"],"#eceadd","#eceadd"],"fill-opacity":0.5}},
+      {id:"water", type:"fill", source:"proto", "source-layer":"water",
+        paint:{"fill-color":"#9fc4e8"}},
+      {id:"roads", type:"line", source:"proto", "source-layer":"roads",
+        filter:["match",["get","kind"],["highway","major_road","medium_road"],true,false],
+        paint:{"line-color":"#ffffff","line-width":["interpolate",["linear"],["zoom"],5,0.4,9,1.2,12,3]}},
+      {id:"boundaries", type:"line", source:"proto", "source-layer":"boundaries",
+        paint:{"line-color":"#a79e92","line-dasharray":[3,2],
+          "line-width":["interpolate",["linear"],["zoom"],4,0.5,8,1.1]}},
+      {id:"places", type:"symbol", source:"proto", "source-layer":"places",
+        filter:["match",["get","kind"],["locality","region","country"],true,false],
+        layout:{
+          "text-field":["coalesce",["get","name:es"],["get","name"]],
+          "text-font":["Noto Sans Regular"],
+          "text-size":["match",["get","kind"],"country",14,"region",12,["step",["get","population_rank"],9,10,12,13,14]],
+          "text-max-width":7
+        },
+        paint:{"text-color":"#4a443f","text-halo-color":"#fff","text-halo-width":1.4}}
+    ]
+  }
+});
+map.addControl(new maplibregl.NavigationControl({showCompass:false}), "top-left");
+
+let ALL=[], windowH=24, generated=null, loaded=false;
 
 function parseUTC(s){ return new Date((s||"").replace(" ","T")+"Z"); }
 function lima(d){ return d.toLocaleString("es-PE",{timeZone:"America/Lima",hour12:false,day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"}); }
+function ageH(f){ return (Date.now()-parseUTC(f.properties.t).getTime())/3600000; }
+function inWindow(f){ return !windowH || ageH(f)<=windowH; }
 
-function inWindow(f){
-  if(!windowH) return true;
-  const t=parseUTC(f.properties.t).getTime();
-  return (Date.now()-t) <= windowH*3600*1000;
+function ensureLayer(){
+  if(map.getSource("focos")) return;
+  map.addSource("focos",{type:"geojson",data:{type:"FeatureCollection",features:[]}});
+  map.addLayer({id:"focos",type:"circle",source:"focos",
+    paint:{
+      "circle-color":["step",["coalesce",["get","frp"],-1],HOT[0],10,HOT[1],30,HOT[2],100,HOT[3]],
+      "circle-radius":["interpolate",["linear"],["coalesce",["get","frp"],1],0,3,30,5.5,100,8,300,11],
+      "circle-opacity":0.82,"circle-stroke-width":0.6,"circle-stroke-color":"rgba(60,10,0,.5)"
+    }});
+  map.on("click","focos",e=>{
+    const p=e.features[0].properties;
+    new maplibregl.Popup({closeButton:false})
+      .setLngLat(e.lngLat)
+      .setHTML(`<div class="pop"><b>${p.reg||"—"}</b>${p.mun?" · "+p.mun:""}<br>`+
+        `${lima(parseUTC(p.t))} (hora Perú)<br>Satélite: ${p.sat||"—"}<br>`+
+        `FRP: ${p.frp==null||p.frp===""?"n/d":(+p.frp).toLocaleString("es-PE")+" MW"}`+
+        `${p.biome?"<br>Bioma: "+p.biome:""}</div>`)
+      .addTo(map);
+  });
+  map.on("mouseenter","focos",()=>map.getCanvas().style.cursor="pointer");
+  map.on("mouseleave","focos",()=>map.getCanvas().style.cursor="");
 }
 
 function render(){
-  layer.clearLayers();
   const feats=ALL.filter(inWindow);
   document.getElementById("total").textContent=feats.length.toLocaleString("es-PE");
-
+  if(loaded){
+    ensureLayer();
+    map.getSource("focos").setData({type:"FeatureCollection",features:feats});
+  }
   const byReg={};
-  feats.forEach(f=>{
-    const p=f.properties, frp=p.frp;
-    byReg[p.reg||"Sin región"]=(byReg[p.reg||"Sin región"]||0)+1;
-    L.circleMarker([f.geometry.coordinates[1],f.geometry.coordinates[0]],{
-      radius:frpRadius(frp), color:frpColor(frp), weight:1, fillColor:frpColor(frp), fillOpacity:.75
-    }).bindPopup(
-      `<div class="pop"><b>${p.reg||"—"}</b>${p.mun?" · "+p.mun:""}<br>`+
-      `${lima(parseUTC(p.t))} (hora Perú)<br>`+
-      `Satélite: ${p.sat||"—"}<br>`+
-      `FRP: ${frp==null?"n/d":frp.toLocaleString("es-PE")+" MW"}`+
-      `${p.biome?"<br>Bioma: "+p.biome:""}</div>`
-    ).addTo(layer);
-  });
-
+  feats.forEach(f=>{byReg[f.properties.reg||"Sin región"]=(byReg[f.properties.reg||"Sin región"]||0)+1;});
   const ranked=Object.entries(byReg).sort((a,b)=>b[1]-a[1]);
   const max=ranked.length?ranked[0][1]:1;
   document.getElementById("regions").innerHTML=ranked.map(([r,c])=>
@@ -197,7 +242,7 @@ function render(){
 }
 
 function setMeta(){
-  const g=generated?parseUTC(generated.replace("Z","").replace("T"," ")):null;
+  const g=generated?parseUTC(generated.replace("T"," ").replace("Z","")):null;
   document.getElementById("meta").textContent=
     (g?`Datos generados: ${lima(g)} (hora Perú)`:"")+` · ${ALL.length.toLocaleString("es-PE")} focos en 72 h`;
 }
@@ -207,10 +252,10 @@ async function load(){
     const r=await fetch(DATA_URL+"?t="+Math.floor(Date.now()/60000));
     const j=await r.json();
     ALL=j.features||[]; generated=j.generated; setMeta(); render();
-  }catch(e){
-    document.getElementById("meta").textContent="No se pudieron cargar los datos. Reintentando…";
-  }
+  }catch(e){ document.getElementById("meta").textContent="No se pudieron cargar los datos. Reintentando…"; }
 }
+
+map.on("load",()=>{ loaded=true; ensureLayer(); render(); });
 
 document.getElementById("filters").addEventListener("click",e=>{
   const b=e.target.closest("button"); if(!b) return;
@@ -221,11 +266,14 @@ document.getElementById("filters").addEventListener("click",e=>{
 document.getElementById("regions").addEventListener("click",e=>{
   const el=e.target.closest(".region"); if(!el) return;
   const pts=ALL.filter(inWindow).filter(f=>(f.properties.reg||"Sin región")===el.dataset.r)
-    .map(f=>[f.geometry.coordinates[1],f.geometry.coordinates[0]]);
-  if(pts.length) map.fitBounds(pts,{padding:[40,40],maxZoom:9});
+    .map(f=>f.geometry.coordinates);
+  if(!pts.length) return;
+  const b=pts.reduce((a,c)=>[Math.min(a[0],c[0]),Math.min(a[1],c[1]),Math.max(a[2],c[0]),Math.max(a[3],c[1])],
+    [180,90,-180,-90]);
+  map.fitBounds([[b[0],b[1]],[b[2],b[3]]],{padding:50,maxZoom:9});
 });
 
-// --- help modal ---
+// help modal
 const modal=document.getElementById("modal");
 const openModal=()=>modal.classList.add("open");
 const closeModal=()=>modal.classList.remove("open");
@@ -233,7 +281,6 @@ document.getElementById("helpBtn").addEventListener("click",openModal);
 document.getElementById("modalClose").addEventListener("click",closeModal);
 modal.addEventListener("click",e=>{if(e.target===modal)closeModal();});
 document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal();});
-// show once automatically on first visit
 try{ if(!localStorage.getItem("seenHelp")){openModal();localStorage.setItem("seenHelp","1");} }catch(e){}
 
 load();
