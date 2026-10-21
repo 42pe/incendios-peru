@@ -1,0 +1,39 @@
+name: Refresh fire data
+
+# Regenerates data/peru.geojson from INPE every 30 min and commits it.
+# Hosting (Cloudflare Pages / GitHub Pages / Netlify) redeploys on the push.
+# This is the only moving part — a free cron, no server, no per-request cost.
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"   # every 30 minutes (UTC)
+  workflow_dispatch: {}        # manual run button
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build Peru hotspot data (last 3 days)
+        run: python3 scripts/build_data.py 3
+      - name: Commit if changed
+        run: |
+          git config user.name  "incendios-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/peru.geojson data/summary.json
+          if git diff --cached --quiet; then
+            echo "No change."
+          else
+            git commit -m "data: refresh hotspots $(date -u +%FT%TZ)"
+            git push
+          fi
