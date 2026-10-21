@@ -100,7 +100,40 @@ distinto tamaño de píxel.
   públicamente su método exacto de conteo (satélite de referencia o
   deduplicación), así que no afirmamos equivalencia.
 
-### 8. Diferencias con la plataforma de SERFOR
+### 8. Contraste con noticias (botón "Noticias por región")
+
+Un foco de calor no confirma un incendio, así que en **cada despliegue del
+sitio** contrastamos a mano los focos con noticias y reportes del COEN-INDECI,
+región por región. El resultado vive en
+[`public/data/news.json`](public/data/news.json) y se muestra en el modal
+**Noticias por región**.
+
+Cómo lo hacemos:
+
+1. Tomamos las regiones con focos en el archivo de datos vigente (sin GOES).
+2. Para cada región buscamos noticias de los últimos ~7 días en medios
+   nacionales y regionales, y reportes del COEN-INDECI, priorizando las
+   provincias donde se concentran los focos.
+3. Clasificamos cada región:
+   - **Coincide con noticias:** hay reportes de incendios en la misma zona
+     durante el periodo del mapa o pocos días antes.
+   - **Solo otras fuentes satelitales:** SENAMHI u otra fuente satelital
+     también registra focos, pero no encontramos reportes en terreno.
+   - **Noticias de días anteriores:** hubo incendios en la región, pero antes
+     del periodo del mapa o en otras provincias.
+   - **Sin reportes en medios:** no encontramos noticias.
+4. Guardamos la fecha y hora de la revisión. Si tiene más de 2 días, el modal
+   lo advierte.
+
+La lista del modal sale de los datos en vivo, no de la revisión: si aparece
+una región con focos que no estaba en la última revisión, se muestra como
+**Aún sin revisar**.
+
+Que no encontremos noticias **no significa que no haya incendio**: muchas
+quemas agrícolas, sobre todo en la Amazonía, nunca llegan a la prensa. Y una
+noticia no confirma cada foco: confirma que hubo fuego en esa zona.
+
+### 9. Diferencias con la plataforma de SERFOR
 
 | Función | Este mapa | SERFOR |
 |---|---|---|
@@ -132,8 +165,9 @@ public/index.html (MapLibre GL + pmtiles)
 
 | Ruta | Función |
 |---|---|
-| `public/index.html` | Toda la app: mapa, panel, conteo, modal "¿Cómo funciona?". |
+| `public/index.html` | Toda la app: mapa, panel, conteo, modales "¿Cómo funciona?" y "Noticias por región". |
 | `public/data/peru.geojson` | Focos de calor, regenerados por el cron. No editar a mano. |
+| `public/data/news.json` | Contraste con noticias por región. Se edita a mano en cada despliegue (ver Metodología §8). |
 | `public/data/basemap-peru.pmtiles` | Mapa base del Perú (zoom 0–10). El mapa se limita a zoom 8,9 porque los niveles 9–10 del extracto actual tienen artefactos en polígonos de agua. |
 | `scripts/build_data.py` | Descarga INPE, filtra Perú, escribe `public/data/`. |
 | `.github/workflows/refresh-data.yml` | Cron cada 30 min; hace commit si los datos cambian. |

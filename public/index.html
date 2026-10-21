@@ -25,7 +25,8 @@
   header{padding:10px 16px;background:var(--panel);border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline}
   header h1{font-size:16px;margin:0;font-weight:700}
   header .sub{color:var(--tx2);font-size:12px}
-  header .help{margin-left:auto;background:var(--panel2);color:var(--tx);border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12px;cursor:pointer}
+  header .actions{margin-left:auto;display:flex;gap:6px}
+  header .help{background:var(--panel2);color:var(--tx);border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12px;cursor:pointer}
   header .help:hover{border-color:var(--accent);color:var(--accent)}
   .modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:flex-start;justify-content:center;padding:5vh 16px;z-index:1000;overflow:auto}
   .modal.open{display:flex}
@@ -41,6 +42,21 @@
   .cav{list-style:none;padding:0;margin:0 0 6px}
   .cav li{position:relative;padding:4px 0 4px 20px;color:var(--tx);font-size:13px}
   .cav li::before{content:"⚠";position:absolute;left:0;color:var(--accent)}
+  .nwarn{background:rgba(239,68,68,.16);border-radius:7px;padding:7px 10px;font-size:12px;margin:0 0 12px}
+  .nreg{border-top:1px solid var(--line);padding:10px 0}
+  .nreg .hd{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .nreg .hd b{font-size:14px}
+  .nreg .hd .c{color:var(--tx2);font-size:12px;font-variant-numeric:tabular-nums}
+  .tag{font-size:11px;font-weight:600;border-radius:999px;padding:1px 8px;margin-left:auto;white-space:nowrap}
+  .tag.coincide{background:rgba(22,163,74,.16);color:#16a34a}
+  .tag.parcial{background:rgba(234,179,8,.18);color:#b45309}
+  .tag.anterior{background:rgba(59,130,246,.16);color:#3b82f6}
+  .tag.sin_reportes,.tag.sin_revisar{background:var(--panel2);color:var(--tx2)}
+  .nreg .note{color:var(--tx2);font-size:13px;margin:4px 0 0}
+  .nreg ul,.ngen{list-style:none;padding:0;margin:4px 0 0}
+  .nreg li,.ngen li{font-size:12px;padding:2px 0}
+  .nreg a,.ngen a,.modal a{color:var(--accent)}
+  .nreg .src,.ngen .src{color:var(--tx2)}
   .wrap{flex:1;display:flex;min-height:0}
   #map{flex:1;min-width:0;background:#aadaff}
   aside{width:300px;max-width:42vw;background:var(--panel);border-left:1px solid var(--line);overflow:auto;padding:14px}
@@ -81,7 +97,10 @@
 <header>
   <h1>🔥 Monitor de Incendios Forestales — Perú</h1>
   <span class="sub">Focos de calor activos · datos satelitales INPE / NASA</span>
-  <button id="helpBtn" class="help" type="button">¿Cómo funciona?</button>
+  <div class="actions">
+    <button id="helpBtn" class="help" type="button">¿Cómo funciona?</button>
+    <button id="newsBtn" class="help" type="button">Noticias por región</button>
+  </div>
 </header>
 <div class="banner" style="background:rgba(255,107,53,.12);border-bottom:1px solid var(--line);color:var(--tx);padding:7px 16px;font-size:12px">
   Reconstrucción ciudadana independiente mientras la plataforma de <b style="color:var(--accent)">SERFOR</b> permanece inaccesible (desde el 14 oct 2026).
@@ -152,9 +171,22 @@
       <li>Puede haber focos no detectados: nubes, humo denso u horario de pasada del satélite.</li>
       <li>Hay una latencia de ~1–3 h entre la pasada del satélite y su publicación.</li>
       <li>Las cifras pueden no coincidir con SENAMHI o SERFOR por distintos satélites y umbrales.</li>
+      <li>En cada actualización del sitio <b>contrastamos a mano los focos con noticias</b> y reportes del COEN-INDECI, región por región (botón <b>Noticias por región</b>). Que no encontremos noticias no significa que no haya incendio.</li>
       <li>No es una fuente oficial. Ante una emergencia, comunícate con el <b>INDECI (línea 115)</b>.</li>
     </ul>
     <p style="margin-bottom:0">Datos: <a href="https://terrabrasilis.dpi.inpe.br/queimadas/portal/" target="_blank" rel="noopener">INPE Queimadas</a> · NASA/LANCE (VIIRS, MODIS, NOAA, GOES). Código y metodología completa en <a href="https://github.com/42pe/incendios-peru#metodología" target="_blank" rel="noopener">GitHub</a>.</p>
+  </div>
+</div>
+
+<div class="modal" id="newsModal">
+  <div class="box">
+    <button class="close" aria-label="Cerrar">×</button>
+    <h2>Noticias por región</h2>
+    <p>Contrastamos a mano los focos de calor con noticias y reportes del COEN-INDECI.
+    La lista sigue la pestaña y los filtros elegidos en el panel. Que no encontremos
+    noticias <b>no significa que no haya incendio</b>: muchas quemas agrícolas nunca
+    llegan a la prensa.</p>
+    <div id="newsBody" class="meta">Cargando…</div>
   </div>
 </div>
 
@@ -212,7 +244,7 @@ const map = new maplibregl.Map({
 });
 map.addControl(new maplibregl.NavigationControl({showCompass:false}), "top-left");
 
-let RANGE="", ALL=[], windowH=24, generated=null, loaded=false, ready=false, showGoes=false;
+let RANKED=[], RANGE="", ALL=[], windowH=24, generated=null, loaded=false, ready=false, showGoes=false;
 
 function parseUTC(s){ return new Date((s||"").replace(" ","T")+"Z"); }
 function lima(d){ return d.toLocaleString("es-PE",{timeZone:"America/Lima",hour12:false,day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"}); }
@@ -267,6 +299,7 @@ function render(){
   feats.forEach(f=>{const k=cell(f); if(!(k in cellReg)) cellReg[k]=f.properties.reg||"Sin región";});
   Object.entries(cellReg).forEach(([k,r])=>(byReg[r]=byReg[r]||new Set()).add(k));
   const ranked=Object.entries(byReg).map(([r,s])=>[r,s.size]).sort((a,b)=>b[1]-a[1]);
+  RANKED=ranked; if(document.getElementById("newsModal").classList.contains("open")) renderNews();
   const max=ranked.length?ranked[0][1]:1;
   let empty="";
   if(ready&&!feats.length){
@@ -321,12 +354,59 @@ document.getElementById("goes").addEventListener("change",e=>{ showGoes=e.target
 // help modal
 const modal=document.getElementById("modal");
 const openModal=()=>modal.classList.add("open");
-const closeModal=()=>modal.classList.remove("open");
+const closeModal=()=>document.querySelectorAll(".modal.open").forEach(m=>m.classList.remove("open"));
 document.getElementById("helpBtn").addEventListener("click",openModal);
-document.getElementById("modalClose").addEventListener("click",closeModal);
-modal.addEventListener("click",e=>{if(e.target===modal)closeModal();});
+document.querySelectorAll(".modal").forEach(m=>{
+  m.querySelector(".close").addEventListener("click",closeModal);
+  m.addEventListener("click",e=>{if(e.target===m)closeModal();});
+});
 document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal();});
 try{ if(!localStorage.getItem("seenHelp")){openModal();localStorage.setItem("seenHelp","1");} }catch(e){}
+
+// News modal: public/data/news.json is curated by hand on every deploy (see
+// README › Contraste con noticias). Regions come from the live data, so a
+// region with fires that wasn't in the last review shows as "Aún sin revisar".
+const NEWS_URL="data/news.json";
+const STATUS={
+  coincide:"Coincide con noticias",
+  parcial:"Solo otras fuentes satelitales",
+  anterior:"Noticias de días anteriores",
+  sin_reportes:"Sin reportes en medios",
+  sin_revisar:"Aún sin revisar"
+};
+let NEWS=null;
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const safeUrl=u=>/^https:\/\//.test(u||"")?u:"#";
+const linkLi=l=>`<li><a href="${esc(safeUrl(l.url))}" target="_blank" rel="noopener">${esc(l.title)}</a>`+
+  ` <span class="src">· ${esc(l.source)}${l.date?" · "+esc(l.date):""}</span></li>`;
+function renderNews(){
+  const body=document.getElementById("newsBody");
+  if(!NEWS){ body.textContent="No se pudo cargar la revisión de noticias."; return; }
+  const ck=new Date(NEWS.checked), ageD=(Date.now()-ck.getTime())/86400000;
+  let h=`<div class="meta" style="margin:0 0 10px">Última revisión: ${esc(lima(ck))} (hora Perú)`+
+    `${NEWS.period?" · focos del "+esc(NEWS.period):""}</div>`;
+  if(ageD>2) h+=`<div class="nwarn">⚠ Esta revisión tiene ${Math.floor(ageD)} días. Puede no reflejar la situación actual.</div>`;
+  if(!RANKED.length) h+=`<div class="meta">No hay focos en el periodo seleccionado.</div>`;
+  h+=RANKED.map(([r,c])=>{
+    const n=(NEWS.regions||{})[r]||{status:"sin_revisar",note:"Esta región no tenía focos en la última revisión de noticias.",links:[]};
+    const st=STATUS[n.status]?n.status:"sin_revisar";
+    return `<div class="nreg"><div class="hd"><b>${esc(r)}</b><span class="c">${c} focos</span>`+
+      `<span class="tag ${st}">${STATUS[st]}</span></div>`+
+      (n.note?`<div class="note">${esc(n.note)}</div>`:"")+
+      ((n.links||[]).length?`<ul>${n.links.map(linkLi).join("")}</ul>`:"")+`</div>`;
+  }).join("");
+  if((NEWS.general||[]).length)
+    h+=`<div class="nreg"><div class="hd"><b>Panorama nacional</b></div><ul class="ngen">${NEWS.general.map(linkLi).join("")}</ul></div>`;
+  body.innerHTML=h;
+}
+const newsModal=document.getElementById("newsModal");
+document.getElementById("newsBtn").addEventListener("click",async()=>{
+  newsModal.classList.add("open");
+  if(!NEWS){
+    try{ NEWS=await (await fetch(NEWS_URL+"?t="+Math.floor(Date.now()/60000))).json(); }catch(e){}
+  }
+  renderNews();
+});
 
 // New-version check: data is cache-busted per fetch, but a tab left open keeps
 // the old page. Compare a hash of the live index.html against the one we booted

@@ -112,6 +112,22 @@ end-to-end), repo, wrangler config. Verified rendering locally with real data.
 - **GEOSERFOR's own WMS layers** — `geo.serfor.gob.pe` is up, but INPE already
   gives the same upstream data without depending on SERFOR's fragile infra.
 
+## On every launch: refresh `public/data/news.json`
+
+The "Noticias por región" modal reads `public/data/news.json`, which is
+**curated by hand, not by the cron**. Refresh it on every deploy:
+
+1. List regions with detections in `public/data/peru.geojson` (exclude `GOES*`).
+2. Search news (last ~7 days) + COEN-INDECI reports per region, focusing on the
+   provinces (`mun`) where detections cluster.
+3. Per region set `status` — `coincide` | `parcial` | `anterior` |
+   `sin_reportes` — plus a one-sentence Spanish `note` and `links`
+   (`title`, `source`, `date`, `url`; https only). Methodology: README §8.
+4. Update `checked` (UTC ISO) and `period`. The modal warns once it's >2 days old.
+
+Keys in `regions` must match INPE's region names exactly (e.g. `Ancash`, no
+accent). Regions with live detections but no entry show as "Aún sin revisar".
+
 ## Gotchas for the next agent
 
 - **The bot pushes to `main` every 30 min** (data refresh). Always
