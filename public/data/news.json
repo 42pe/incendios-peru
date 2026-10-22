@@ -1,6 +1,6 @@
 {
-  "checked": "2026-10-21T18:45:08Z",
-  "period": "18–21 oct 2026",
+  "checked": "2026-10-22T12:12:42Z",
+  "period": "19–21 oct 2026",
   "general": [
     {
       "title": "Perú registra 12 incendios forestales activos en varias regiones, según Indeci",
@@ -19,6 +19,12 @@
       "source": "La República",
       "date": "2026-10-20",
       "url": "https://larepublica.pe/sociedad/2026/10/20/plataforma-de-monitoreo-de-incendio-forestales-de-serfor-permanece-inaccesible-mientras-se-reportan-cientos-de-focos-de-calor-744760"
+    },
+    {
+      "title": "Incendio forestal amenaza las turísticas islas peruanas de los Uros, en el lago Titicaca",
+      "source": "ABC Color",
+      "date": "2026-10-21",
+      "url": "https://www.abc.com.py/internacionales/2026/10/21/incendio-forestal-amenaza-las-turisticas-islas-peruanas-de-los-uros-en-el-lago-titicaca/"
     }
   ],
   "regions": {
@@ -190,20 +196,26 @@
       ]
     },
     "Puno": {
-      "status": "anterior",
-      "note": "Incendios graves entre el 10 y el 16 oct (2 fallecidos, ~28 000 ha de pastos), en zonas distintas de nuestros focos actuales.",
+      "status": "coincide",
+      "note": "Incendio de ~200 ha de totorales cerca de las islas de los Uros (lago Titicaca), iniciado el 20 oct y extinguido la noche del 21 oct; coincide con nuestros focos en Lago Titicaca.",
       "links": [
         {
-          "title": "Incendio forestal en Puno deja dos muertos, 22 heridos y arrasa con 28 mil hectáreas de pastos",
-          "source": "Infobae",
-          "date": "2026-10-15",
-          "url": "https://www.infobae.com/peru/2026/10/15/incendio-forestal-en-puno-deja-dos-muertos-22-heridos-y-arrasa-con-28-mil-hectareas-de-pastos/"
+          "title": "COEN-Indeci reporta que incendio forestal cerca a las islas de los Uros fue extinguido",
+          "source": "RPP",
+          "date": "2026-10-21",
+          "url": "https://rpp.pe/peru/puno/coen-indeci-reporta-que-incendio-forestal-cerca-a-las-islas-de-los-uros-fue-extinguido-noticia-1713836"
         },
         {
-          "title": "Incendios forestales en Puno dejan dos fallecidos, 22 heridos y arrasan casi 30.000 hectáreas",
+          "title": "Puno: incendio de grandes proporciones consume totorales de la Reserva Nacional del Titicaca cerca de los Uros",
           "source": "La República",
-          "date": "2026-10-16",
-          "url": "https://larepublica.pe/sociedad/2026/10/16/incendios-forestales-en-puno-dejan-dos-fallecidos-22-heridos-y-arrasan-casi-30000-hectareas-815168"
+          "date": "2026-10-21",
+          "url": "https://larepublica.pe/sociedad/2026/10/21/puno-incendio-de-grandes-proporciones-consume-totorales-de-la-reserva-nacional-del-titicaca-cerca-de-los-uros-1866207"
+        },
+        {
+          "title": "Incendio de grandes dimensiones arrasa los totorales de los Uros y amenaza con alcanzar viviendas de las islas en Puno",
+          "source": "Infobae",
+          "date": "2026-10-21",
+          "url": "https://www.infobae.com/peru/2026/10/21/incendio-de-grandes-dimensiones-arrasa-los-totorales-de-los-uros-y-amenaza-con-alcanzar-viviendas-de-las-islas-en-puno/"
         }
       ]
     },
@@ -326,6 +338,11 @@
     "Lambayeque": {
       "status": "sin_reportes",
       "note": "No encontramos noticias de incendios en octubre de 2026.",
+      "links": []
+    },
+    "Tacna": {
+      "status": "sin_reportes",
+      "note": "No encontramos noticias de incendios forestales en Candarave ni en Tacna en octubre de 2026.",
       "links": []
     }
   }
