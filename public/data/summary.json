@@ -1,10 +1,10 @@
 {
-  "generated": "2026-10-22T01:40:54Z",
+  "generated": "2026-10-22T06:41:15Z",
   "days": 3,
-  "total": 796,
+  "total": 807,
   "by_region": {
-    "Madre de Dios": 166,
-    "Ucayali": 161,
+    "Madre de Dios": 175,
+    "Ucayali": 163,
     "Jun\u00edn": 122,
     "Arequipa": 45,
     "Pasco": 38,
@@ -40,7 +40,7 @@
     {
       "day": "20261021",
       "ok": true,
-      "peru_rows": 395
+      "peru_rows": 406
     },
     {
       "day": "20261020",
