@@ -1,7 +1,7 @@
 {
-  "generated": "2026-10-23T17:31:33Z",
+  "generated": "2026-10-23T20:41:21Z",
   "days": 3,
-  "total": 503,
+  "total": 608,
   "by_region": {
     "Madre de Dios": 138,
     "Ucayali": 125,
@@ -24,14 +24,14 @@
     "Ayacucho": 1
   },
   "goes": {
-    "total": 31,
+    "total": 136,
     "corroborated": 11
   },
   "sources": [
     {
       "day": "20261023",
       "ok": true,
-      "peru_rows": 11
+      "peru_rows": 116
     },
     {
       "day": "20261022",
