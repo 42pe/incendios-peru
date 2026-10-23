@@ -1,6 +1,6 @@
 {
-  "checked": "2026-10-22T12:12:42Z",
-  "period": "19–21 oct 2026",
+  "checked": "2026-10-23T12:10:39Z",
+  "period": "20–22 oct 2026",
   "general": [
     {
       "title": "Perú registra 12 incendios forestales activos en varias regiones, según Indeci",
@@ -136,42 +136,6 @@
         }
       ]
     },
-    "Apurímac": {
-      "status": "coincide",
-      "note": "Incendios en Abancay y Curahuasi durante más de 10 días, con pedido de helicópteros. Indeci reporta 2 fallecidos en la región.",
-      "links": [
-        {
-          "title": "Incendios forestales en Apurímac llevan más de 10 días: piden helicópteros",
-          "source": "Infobae",
-          "date": "2026-10-17",
-          "url": "https://www.infobae.com/peru/2026/10/17/incendios-forestales-en-apurimac-llevan-mas-de-10-dias-piden-helicopteros-para-sofocar-las-llamas/"
-        },
-        {
-          "title": "Incendio forestal en el distrito de Abancay",
-          "source": "COEN-INDECI",
-          "date": "2026-10-20",
-          "url": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.%C2%BA-14545-20OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-ABANCAY-APUR%C3%8DMAC-2.pdf"
-        }
-      ]
-    },
-    "Huancavelica": {
-      "status": "coincide",
-      "note": "Incendio en Anco (Churcampa) que dejó a un agricultor con quemaduras graves, y otro en Chupamarca (Castrovirreyna) con cuatro heridos.",
-      "links": [
-        {
-          "title": "Huancavelica: adulto mayor que se quemó por intentar apagar un incendio forestal requiere traslado urgente",
-          "source": "RPP",
-          "date": "2026-10",
-          "url": "https://rpp.pe/rotafono/servicios-publicos/huancavelica-adulto-mayor-que-se-quemo-por-intentar-apagar-un-incendio-forestal-requiere-traslado-urgente-a-lima-minsa-ministerio-de-salud-video-noticia-1713029"
-        },
-        {
-          "title": "Huancavelica: incendio forestal arrasó la casa del alcalde de Chupamarca y dejó cuatro heridos",
-          "source": "Infobae",
-          "date": "2026-10-18",
-          "url": "https://www.infobae.com/peru/2026/10/18/huancavelica-incendio-forestal-arraso-la-casa-del-alcalde-de-chupamarca-y-dejo-cuatro-heridos/"
-        }
-      ]
-    },
     "Madre de Dios": {
       "status": "sin_reportes",
       "note": "No encontramos noticias de incendios en octubre de 2026. En temporada seca son comunes las quemas agrícolas que no llegan a la prensa.",
@@ -197,7 +161,7 @@
     },
     "Puno": {
       "status": "coincide",
-      "note": "Incendio de ~200 ha de totorales cerca de las islas de los Uros (lago Titicaca), iniciado el 20 oct y extinguido la noche del 21 oct; coincide con nuestros focos en Lago Titicaca.",
+      "note": "Incendio de unas 200 ha de totorales en la Reserva Nacional del Titicaca, cerca de los Uros, iniciado el 20 oct, reactivado el 21 y controlado según reportes del 22 oct.",
       "links": [
         {
           "title": "COEN-Indeci reporta que incendio forestal cerca a las islas de los Uros fue extinguido",
@@ -206,16 +170,16 @@
           "url": "https://rpp.pe/peru/puno/coen-indeci-reporta-que-incendio-forestal-cerca-a-las-islas-de-los-uros-fue-extinguido-noticia-1713836"
         },
         {
-          "title": "Puno: incendio de grandes proporciones consume totorales de la Reserva Nacional del Titicaca cerca de los Uros",
-          "source": "La República",
-          "date": "2026-10-21",
-          "url": "https://larepublica.pe/sociedad/2026/10/21/puno-incendio-de-grandes-proporciones-consume-totorales-de-la-reserva-nacional-del-titicaca-cerca-de-los-uros-1866207"
+          "title": "Incendio cerca a turísticas islas peruanas deja 200 hectáreas y 4 hospedajes afectados",
+          "source": "Infobae",
+          "date": "2026-10-22",
+          "url": "https://www.infobae.com/america/agencias/2026/10/22/incendio-cerca-a-turisticas-islas-peruanas-deja-200-hectareas-y-4-hospedajes-afectados/"
         },
         {
-          "title": "Incendio de grandes dimensiones arrasa los totorales de los Uros y amenaza con alcanzar viviendas de las islas en Puno",
-          "source": "Infobae",
-          "date": "2026-10-21",
-          "url": "https://www.infobae.com/peru/2026/10/21/incendio-de-grandes-dimensiones-arrasa-los-totorales-de-los-uros-y-amenaza-con-alcanzar-viviendas-de-las-islas-en-puno/"
+          "title": "Puno entre el fuego y el paro: incendio arrasa 200 hectáreas y transportistas paralizan la ciudad",
+          "source": "La República",
+          "date": "2026-10-22",
+          "url": "https://larepublica.pe/sociedad/2026/10/22/puno-entre-el-fuego-y-el-paro-incendio-arrasa-200-hectareas-y-transportistas-paralizan-la-ciudad-752510"
         }
       ]
     },
@@ -246,29 +210,6 @@
           "source": "El Búho",
           "date": "2026-10",
           "url": "https://elbuho.pe/2026/10/incendios-forestales-se-incrementan-a-66-en-14-regiones-y-no-hay-respuesta-efectiva-del-gobierno/"
-        }
-      ]
-    },
-    "La Libertad": {
-      "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios en octubre. Los últimos reportes (Usquil, Cachicadán, Chugay) son de septiembre.",
-      "links": []
-    },
-    "Amazonas": {
-      "status": "anterior",
-      "note": "Hubo incendios en Utcubamba en septiembre. Al 19 oct, Indeci reportaba los incendios de Amazonas como controlados.",
-      "links": [
-        {
-          "title": "Perú registra 12 incendios forestales activos; Amazonas, entre los controlados",
-          "source": "Infobae",
-          "date": "2026-10-19",
-          "url": "https://www.infobae.com/peru/2026/10/19/peru-registra-12-incendios-forestales-activos-en-varias-regiones-segun-indeci/"
-        },
-        {
-          "title": "Solo Amazonas ha registrado 8 incendios forestales en lo que va de septiembre",
-          "source": "Infobae",
-          "date": "2026-09-24",
-          "url": "https://www.infobae.com/peru/2026/09/24/solo-amazonas-ha-registrado-8-incendios-forestales-en-lo-que-va-de-septiembre-426-hectareas-fueron-afectadas/"
         }
       ]
     },
