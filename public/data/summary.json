@@ -1,7 +1,7 @@
 {
-  "generated": "2026-10-24T16:06:01Z",
+  "generated": "2026-10-24T18:52:07Z",
   "days": 3,
-  "total": 304,
+  "total": 320,
   "by_region": {
     "Ucayali": 37,
     "Piura": 22,
@@ -21,14 +21,14 @@
     "Arequipa": 1
   },
   "goes": {
-    "total": 150,
+    "total": 166,
     "corroborated": 0
   },
   "sources": [
     {
       "day": "20261024",
       "ok": true,
-      "peru_rows": 16
+      "peru_rows": 32
     },
     {
       "day": "20261023",
