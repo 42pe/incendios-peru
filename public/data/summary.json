@@ -1,12 +1,12 @@
 {
-  "generated": "2026-10-25T15:04:58Z",
+  "generated": "2026-10-25T18:28:18Z",
   "days": 3,
-  "total": 660,
+  "total": 789,
   "by_region": {
-    "Madre de Dios": 137,
-    "Ucayali": 92,
-    "Loreto": 62,
-    "Jun\u00edn": 36,
+    "Madre de Dios": 138,
+    "Ucayali": 96,
+    "Loreto": 63,
+    "Jun\u00edn": 38,
     "Cusco": 32,
     "Hu\u00e1nuco": 27,
     "La Libertad": 22,
@@ -24,14 +24,14 @@
     "Lima": 1
   },
   "goes": {
-    "total": 174,
-    "corroborated": 26
+    "total": 295,
+    "corroborated": 45
   },
   "sources": [
     {
       "day": "20261025",
       "ok": true,
-      "peru_rows": 64
+      "peru_rows": 193
     },
     {
       "day": "20261024",
