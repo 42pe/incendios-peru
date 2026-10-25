@@ -1,21 +1,15 @@
 {
-  "checked": "2026-10-24T12:07:39Z",
-  "period": "22–23 oct 2026",
+  "checked": "2026-10-25T12:08:55Z",
+  "period": "23–25 oct 2026",
   "general": [
     {
-      "title": "Perú registra 12 incendios forestales activos en varias regiones, según Indeci",
+      "title": "Más de cinco millones de peruanos viven en distritos con riesgo alto ante incendios forestales",
       "source": "Infobae",
-      "date": "2026-10-19",
-      "url": "https://www.infobae.com/peru/2026/10/19/peru-registra-12-incendios-forestales-activos-en-varias-regiones-segun-indeci/"
+      "date": "2026-10-24",
+      "url": "https://www.infobae.com/peru/2026/10/24/mas-de-cinco-millones-de-peruanos-viven-en-distritos-con-riesgo-alto-ante-incendios-forestales/"
     },
     {
-      "title": "Incendios forestales en Perú dejan 12 fallecidos y más de 800 afectados, informa Indeci",
-      "source": "Gestión",
-      "date": "2026-10-20",
-      "url": "https://gestion.pe/peru/incendios-forestales-en-peru-dejan-12-fallecidos-y-mas-de-800-afectados-informa-indeci-noticia/"
-    },
-    {
-      "title": "Perú registra cero incendios forestales activos tras intervención de brigadas y lluvias",
+      "title": "Perú registra cero incendios forestales activos: Apurímac, Cusco y Junín reportan graves daños, según el Ministerio de Defensa",
       "source": "El Comercio",
       "date": "2026-10",
       "url": "https://elcomercio.pe/peru/peru-registra-cero-incendios-forestales-activos-apurimac-cusco-y-junin-reportan-graves-danos-segun-el-ministerio-de-defensa-ultimas-noticia/"
@@ -25,6 +19,12 @@
       "source": "RPP",
       "date": "2026-10",
       "url": "https://rpp.pe/peru/actualidad/mindef-lluvias-en-la-sierra-y-selva-terminan-de-extinguir-el-fuego-y-el-pais-no-reporta-incendios-activos-noticia-1714202"
+    },
+    {
+      "title": "Perú registra 12 incendios forestales activos en varias regiones, según Indeci",
+      "source": "Infobae",
+      "date": "2026-10-19",
+      "url": "https://www.infobae.com/peru/2026/10/19/peru-registra-12-incendios-forestales-activos-en-varias-regiones-segun-indeci/"
     }
   ],
   "regions": {
@@ -51,21 +51,33 @@
         }
       ]
     },
-    "Arequipa": {
-      "status": "anterior",
-      "note": "Nueve incendios nuevos entre el 16 y el 18 oct, el más grave en Toro (La Unión); nuestro único foco está en Castilla, sin noticias.",
+    "Apurímac": {
+      "status": "coincide",
+      "note": "Un incendio forestal se reactivó el 24–25 oct en Curahuasi (Abancay), en los sectores de Larata, Vilcabamba y Vista Alegre, donde están nuestros focos.",
       "links": [
         {
-          "title": "Arequipa: nueve incendios en un fin de semana elevan a 70 los siniestros forestales del 2026",
-          "source": "HBA Noticias",
-          "date": "2026-10",
-          "url": "https://hbanoticias.pe/arequipa-nueve-incendios-en-un-fin-de-semana-elevan-a-70-los-siniestros-forestales-del-2026/"
+          "title": "Incendio forestal se reactiva en Apurímac: pobladores de Curahuasi piden ayuda urgente para frenar el avance de las llamas",
+          "source": "Infobae",
+          "date": "2026-10-25",
+          "url": "https://www.infobae.com/peru/2026/10/25/incendio-forestal-se-reactiva-en-apurimac-pobladores-de-curahuasi-piden-ayuda-urgente-para-frenar-el-avance-de-las-llamas/"
         },
         {
-          "title": "Incendios forestales afectan más de 5 000 hectáreas en Arequipa",
-          "source": "Diario El Pueblo",
-          "date": "2026-10-20",
-          "url": "https://diarioelpueblo.com.pe/2026/10/20/incendios-forestales-afectan-mas-de-5-000-hectareas-en-arequipa/"
+          "title": "Perú registra 12 incendios forestales activos en varias regiones, según Indeci",
+          "source": "Infobae",
+          "date": "2026-10-19",
+          "url": "https://www.infobae.com/peru/2026/10/19/peru-registra-12-incendios-forestales-activos-en-varias-regiones-segun-indeci/"
+        }
+      ]
+    },
+    "Ayacucho": {
+      "status": "anterior",
+      "note": "Indeci reportó incendios activos en Ayacucho a mediados de octubre; no encontramos noticias de La Mar de los días de la detección.",
+      "links": [
+        {
+          "title": "Indeci alerta que incendios forestales en Ayacucho, Moquegua y Puno siguen activos y destruyen cobertura natural",
+          "source": "La República",
+          "date": "2026-10-11",
+          "url": "https://larepublica.pe/sociedad/2026/10/11/indeci-alerta-que-incendios-forestales-en-ayacucho-moquegua-y-puno-siguen-activos-y-destruyen-cobertura-natural-354046"
         }
       ]
     },
@@ -136,7 +148,7 @@
     },
     "Junín": {
       "status": "coincide",
-      "note": "Indeci señaló a Río Tambo (Satipo) como la zona más crítica el 19 oct, con incendios activos en Cutivireni; el Mindef reporta que a fines de semana los incendios de Junín estaban bajo control.",
+      "note": "Indeci señaló a Río Tambo (Satipo) como zona crítica el 19 oct, con incendios en Cutivireni; el Mindef indicó el 23 oct que los incendios de Junín estaban bajo control.",
       "links": [
         {
           "title": "Perú registra 12 incendios forestales activos; Río Tambo, el caso más crítico",
@@ -187,7 +199,12 @@
     },
     "Madre de Dios": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios en Tambopata ni Manu en octubre de 2026; en temporada seca son comunes las quemas agrícolas que no llegan a la prensa.",
+      "note": "No encontramos noticias de incendios en Tambopata, Manu ni Tahuamanu en octubre de 2026; en temporada seca son comunes las quemas agrícolas que no llegan a la prensa.",
+      "links": []
+    },
+    "Pasco": {
+      "status": "anterior",
+      "note": "Andina informó que incendios del 15–16 oct en Pasco fueron extinguidos; no encontramos noticias de Oxapampa de los días de la detección.",
       "links": []
     },
     "Piura": {
@@ -196,8 +213,8 @@
       "links": []
     },
     "Puno": {
-      "status": "coincide",
-      "note": "Incendio de unas 200 ha de totorales en la Reserva Nacional del Titicaca, cerca de los Uros, iniciado el 20 oct y extinguido según reportes del 22 oct.",
+      "status": "anterior",
+      "note": "Incendio de unas 200 ha de totorales cerca de los Uros (Titicaca), iniciado el 20 oct y extinguido el 21–22 oct; nuestros focos son posteriores.",
       "links": [
         {
           "title": "COEN-Indeci reporta que incendio forestal cerca a las islas de los Uros fue extinguido",
@@ -218,6 +235,11 @@
           "url": "https://larepublica.pe/sociedad/2026/10/22/puno-entre-el-fuego-y-el-paro-incendio-arrasa-200-hectareas-y-transportistas-paralizan-la-ciudad-752510"
         }
       ]
+    },
+    "San Martín": {
+      "status": "sin_reportes",
+      "note": "No encontramos noticias de incendios forestales en Bellavista, Huallaga ni Lamas en octubre de 2026 (los reportes hallados son de otros años o sin fecha).",
+      "links": []
     },
     "Ucayali": {
       "status": "anterior",
