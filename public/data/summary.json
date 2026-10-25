@@ -1,7 +1,7 @@
 {
-  "generated": "2026-10-25T18:28:18Z",
+  "generated": "2026-10-25T21:02:18Z",
   "days": 3,
-  "total": 789,
+  "total": 1030,
   "by_region": {
     "Madre de Dios": 138,
     "Ucayali": 96,
@@ -24,14 +24,14 @@
     "Lima": 1
   },
   "goes": {
-    "total": 295,
-    "corroborated": 45
+    "total": 536,
+    "corroborated": 70
   },
   "sources": [
     {
       "day": "20261025",
       "ok": true,
-      "peru_rows": 193
+      "peru_rows": 434
     },
     {
       "day": "20261024",
