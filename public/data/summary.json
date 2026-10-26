@@ -1,7 +1,7 @@
 {
-  "generated": "2026-10-26T13:24:39Z",
+  "generated": "2026-10-26T19:25:46Z",
   "days": 3,
-  "total": 2224,
+  "total": 2707,
   "by_region": {
     "Madre de Dios": 386,
     "Ucayali": 324,
@@ -13,7 +13,7 @@
     "Cusco": 87,
     "Pasco": 78,
     "Arequipa": 74,
-    "Cajamarca": 59,
+    "Cajamarca": 61,
     "Apur\u00edmac": 31,
     "La Libertad": 17,
     "Piura": 17,
@@ -26,14 +26,14 @@
     "Huancavelica": 1
   },
   "goes": {
-    "total": 454,
-    "corroborated": 422
+    "total": 935,
+    "corroborated": 625
   },
   "sources": [
     {
       "day": "20261026",
       "ok": true,
-      "peru_rows": 72
+      "peru_rows": 555
     },
     {
       "day": "20261025",
