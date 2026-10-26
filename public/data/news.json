@@ -1,5 +1,5 @@
 {
-  "checked": "2026-10-25T12:08:55Z",
+  "checked": "2026-10-26T12:09:23Z",
   "period": "23–25 oct 2026",
   "general": [
     {
@@ -9,15 +9,21 @@
       "url": "https://www.infobae.com/peru/2026/10/24/mas-de-cinco-millones-de-peruanos-viven-en-distritos-con-riesgo-alto-ante-incendios-forestales/"
     },
     {
+      "title": "Perú registra cero incendios forestales activos tras semanas de emergencia",
+      "source": "El Peruano",
+      "date": "2026-10-23",
+      "url": "https://elperuano.pe/noticia/307491-peru-registra-cero-incendios-forestales-activos-tras-semanas-de-emergencia"
+    },
+    {
       "title": "Perú registra cero incendios forestales activos: Apurímac, Cusco y Junín reportan graves daños, según el Ministerio de Defensa",
       "source": "El Comercio",
-      "date": "2026-10",
+      "date": "2026-10-23",
       "url": "https://elcomercio.pe/peru/peru-registra-cero-incendios-forestales-activos-apurimac-cusco-y-junin-reportan-graves-danos-segun-el-ministerio-de-defensa-ultimas-noticia/"
     },
     {
       "title": "Mindef: Lluvias en la sierra y selva terminan de extinguir el fuego y el país no reporta incendios activos",
       "source": "RPP",
-      "date": "2026-10",
+      "date": "2026-10-23",
       "url": "https://rpp.pe/peru/actualidad/mindef-lluvias-en-la-sierra-y-selva-terminan-de-extinguir-el-fuego-y-el-pais-no-reporta-incendios-activos-noticia-1714202"
     },
     {
@@ -35,7 +41,7 @@
     },
     "Ancash": {
       "status": "anterior",
-      "note": "Se reportó un incendio de unas 150 ha en Pueblo Libre (Huaylas) el 18–19 oct; nuestros focos están en Santa y Huari, sin noticias de esos días.",
+      "note": "Se reportó un incendio de unas 150 ha en Pueblo Libre (Huaylas) el 18–19 oct; nuestros focos están en Antonio Raymondi, Pallasca y Pomabamba, sin noticias de esos lugares.",
       "links": [
         {
           "title": "Incendio forestal en Pueblo Libre arrasa 150 hectáreas de cobertura natural",
@@ -101,8 +107,14 @@
     },
     "Cusco": {
       "status": "anterior",
-      "note": "Los incendios reportados en octubre son de Chumbivilcas (Santo Tomás) y Calca, no de Canas ni La Convención, donde están nuestros focos; Cusco suma 4 fallecidos según Indeci.",
+      "note": "Los incendios de octubre reportados fueron en Calca (Rayampata, hasta el 12–14 oct), Chumbivilcas, Limatambo y La Convención, antes del periodo de detección; no hallamos reportes de los días 24–26 oct.",
       "links": [
+        {
+          "title": "Gobierno central articula acciones para reforzar la respuesta ante incendios forestales en Cusco",
+          "source": "El Peruano",
+          "date": "2026-10",
+          "url": "https://elperuano.pe/noticia/306588-gobierno-central-articula-acciones-para-reforzar-la-respuesta-ante-incendios-forestales-en-cusco"
+        },
         {
           "title": "Cusco: detienen a hombre acusado de provocar incendio forestal cerca del santuario del Señor de Huanca",
           "source": "RPP",
@@ -114,12 +126,6 @@
           "source": "El Tiempo",
           "date": "2026-10",
           "url": "https://eltiempo.pe/nacional/cusco-enfrenta-seis-incendios-forestales-simultaneos-chumbivilcas-es-la-provincia-mas-afectada/"
-        },
-        {
-          "title": "Incendio forestal en el distrito de Santo Tomás (Chumbivilcas)",
-          "source": "COEN-INDECI",
-          "date": "2026-10-13",
-          "url": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.%C2%BA-14079-13OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-SANTO-TOMAS-CUSCO-1-1.pdf"
         }
       ]
     },
@@ -177,12 +183,7 @@
     },
     "Lambayeque": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios en octubre de 2026; la mitad de las detecciones de Lambayeque son de GOES, probablemente falsos positivos.",
-      "links": []
-    },
-    "Lima": {
-      "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios en octubre en Yauyos o Huaura.",
+      "note": "No encontramos noticias de incendios en Ferreñafe ni Lambayeque en octubre de 2026 (3 focos detectados).",
       "links": []
     },
     "Loreto": {
@@ -209,7 +210,7 @@
     },
     "Piura": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios en Ayabaca ni Huancabamba; la mayoría de las detecciones de Piura (72 de 89) vienen de GOES sobre zona árida, probablemente falsos positivos.",
+      "note": "No encontramos noticias de incendios en Ayabaca ni Huancabamba; 12 de las 29 detecciones de Piura vienen de GOES, probable falso positivo en zona árida.",
       "links": []
     },
     "Puno": {
@@ -252,6 +253,35 @@
           "url": "https://portal.indeci.gob.pe/emergencias/reporte-complementario-n-o-13679-7-10-2026-coen-indeci-2215-horas-reporte-n-1-incendio-forestal-en-el-distrito-de-yarinacocha-ucayali/"
         }
       ]
+    },
+    "Arequipa": {
+      "status": "anterior",
+      "note": "Hubo incendios en Cerro Lojojoy (La Unión) y alertas en Caylloma en setiembre; no hallamos reportes de octubre en la provincia de Arequipa, donde están nuestros focos.",
+      "links": [
+        {
+          "title": "Arequipa: incendio forestal en cerro Lojojoy destruye 500 hectáreas y ocho casas en La Unión",
+          "source": "El Búho",
+          "date": "2026-09",
+          "url": "https://elbuho.pe/2026/09/arequipa-incendio-forestal-en-cerro-lojojoy-destruye-500-hectareas-y-ocho-casas-en-la-union/"
+        }
+      ]
+    },
+    "Moquegua": {
+      "status": "anterior",
+      "note": "El Comercio informó incendios activos en Moquegua, Ayacucho y Puno en octubre, sin precisar fecha ni provincia; no hallamos reportes de General Sánchez Cerro.",
+      "links": [
+        {
+          "title": "Incendios forestales se mantienen activos en otras tres regiones de Perú: Ayacucho, Moquegua y Puno",
+          "source": "El Comercio",
+          "date": "2026-10",
+          "url": "https://elcomercio.pe/peru/incendios-forestales-se-mantienen-activos-en-otras-tres-regiones-de-peru-ayacucho-moquegua-puno-ultimas-noticia/"
+        }
+      ]
+    },
+    "Huancavelica": {
+      "status": "sin_reportes",
+      "note": "No encontramos noticias de incendios forestales en Tayacaja ni Huancavelica en octubre de 2026 (1 foco detectado).",
+      "links": []
     }
   }
 }
