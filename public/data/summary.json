@@ -1,19 +1,19 @@
 {
-  "generated": "2026-10-26T01:22:48Z",
+  "generated": "2026-10-26T06:28:10Z",
   "days": 3,
-  "total": 2151,
+  "total": 2160,
   "by_region": {
     "Madre de Dios": 384,
     "Ucayali": 309,
-    "Loreto": 225,
-    "San Mart\u00edn": 103,
+    "Loreto": 226,
+    "San Mart\u00edn": 104,
     "Hu\u00e1nuco": 98,
     "Amazonas": 95,
-    "Jun\u00edn": 91,
-    "Cusco": 85,
+    "Jun\u00edn": 94,
+    "Cusco": 86,
     "Pasco": 78,
     "Arequipa": 74,
-    "Cajamarca": 49,
+    "Cajamarca": 51,
     "Apur\u00edmac": 31,
     "La Libertad": 17,
     "Piura": 17,
@@ -26,19 +26,19 @@
     "Huancavelica": 1
   },
   "goes": {
-    "total": 453,
-    "corroborated": 393
+    "total": 454,
+    "corroborated": 394
   },
   "sources": [
     {
       "day": "20261026",
       "ok": true,
-      "peru_rows": 1
+      "peru_rows": 8
     },
     {
       "day": "20261025",
       "ok": true,
-      "peru_rows": 1756
+      "peru_rows": 1758
     },
     {
       "day": "20261024",
