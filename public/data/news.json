@@ -1,7 +1,13 @@
 {
-  "checked": "2026-10-26T12:09:23Z",
-  "period": "23–25 oct 2026",
+  "checked": "2026-10-27T12:30:54Z",
+  "period": "24–26 oct 2026",
   "general": [
+    {
+      "title": "Perú registra cero incendios forestales activos tras semanas de emergencia",
+      "source": "Mindef (gob.pe)",
+      "date": "2026-10-23",
+      "url": "https://www.gob.pe/institucion/mindef/noticias/1461550-peru-registra-cero-incendios-forestales-activos-tras-semanas-de-emergencia"
+    },
     {
       "title": "Más de cinco millones de peruanos viven en distritos con riesgo alto ante incendios forestales",
       "source": "Infobae",
@@ -25,12 +31,6 @@
       "source": "RPP",
       "date": "2026-10-23",
       "url": "https://rpp.pe/peru/actualidad/mindef-lluvias-en-la-sierra-y-selva-terminan-de-extinguir-el-fuego-y-el-pais-no-reporta-incendios-activos-noticia-1714202"
-    },
-    {
-      "title": "Perú registra 12 incendios forestales activos en varias regiones, según Indeci",
-      "source": "Infobae",
-      "date": "2026-10-19",
-      "url": "https://www.infobae.com/peru/2026/10/19/peru-registra-12-incendios-forestales-activos-en-varias-regiones-segun-indeci/"
     }
   ],
   "regions": {
@@ -41,7 +41,7 @@
     },
     "Ancash": {
       "status": "anterior",
-      "note": "Se reportó un incendio de unas 150 ha en Pueblo Libre (Huaylas) el 18–19 oct; nuestros focos están en Antonio Raymondi, Pallasca y Pomabamba, sin noticias de esos lugares.",
+      "note": "Se reportó un incendio de unas 150 ha en Pueblo Libre (Huaylas) el 18–19 oct; nuestros focos están en Santa, Pallasca y Yungay, sin noticias de esos lugares.",
       "links": [
         {
           "title": "Incendio forestal en Pueblo Libre arrasa 150 hectáreas de cobertura natural",
@@ -59,7 +59,7 @@
     },
     "Apurímac": {
       "status": "coincide",
-      "note": "Un incendio forestal se reactivó el 24–25 oct en Curahuasi (Abancay), en los sectores de Larata, Vilcabamba y Vista Alegre, donde están nuestros focos.",
+      "note": "Un incendio forestal se reactivó el 24–25 oct en Curahuasi (Abancay), en los sectores de Larata, Vilcabamba y Vista Alegre; nuestros focos están en Abancay y Chincheros.",
       "links": [
         {
           "title": "Incendio forestal se reactiva en Apurímac: pobladores de Curahuasi piden ayuda urgente para frenar el avance de las llamas",
@@ -77,7 +77,7 @@
     },
     "Ayacucho": {
       "status": "anterior",
-      "note": "Indeci reportó incendios activos en Ayacucho a mediados de octubre; no encontramos noticias de La Mar de los días de la detección.",
+      "note": "Indeci reportó incendios activos en Ayacucho a mediados de octubre; no encontramos noticias de La Mar, Huamanga ni Huanta de los días de la detección.",
       "links": [
         {
           "title": "Indeci alerta que incendios forestales en Ayacucho, Moquegua y Puno siguen activos y destruyen cobertura natural",
@@ -205,12 +205,12 @@
     },
     "Pasco": {
       "status": "anterior",
-      "note": "Andina informó que incendios del 15–16 oct en Pasco fueron extinguidos; no encontramos noticias de Oxapampa de los días de la detección.",
+      "note": "Indeci informó que incendios del 15–16 oct en Pasco (incl. Yanahuanca) fueron extinguidos; no encontramos noticias de Oxapampa de los días de la detección.",
       "links": []
     },
     "Piura": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios en Ayabaca ni Huancabamba; 12 de las 29 detecciones de Piura vienen de GOES, probable falso positivo en zona árida.",
+      "note": "No encontramos noticias de incendios en Ayabaca ni Huancabamba; 8 de las 21 detecciones de Piura en el geojson vienen de GOES, probable falso positivo en zona árida.",
       "links": []
     },
     "Puno": {
@@ -244,7 +244,7 @@
     },
     "Ucayali": {
       "status": "anterior",
-      "note": "Hubo un incendio en Yarinacocha (Coronel Portillo) a inicios de octubre; no encontramos noticias sobre Atalaya, donde están la mayoría de nuestros focos.",
+      "note": "Hubo un incendio en Yarinacocha (Coronel Portillo) a inicios de octubre; no encontramos noticias de los días de la detección en Coronel Portillo, Atalaya ni Padre Abad.",
       "links": [
         {
           "title": "Incendio forestal en el distrito de Yarinacocha (Reporte N.° 2)",
