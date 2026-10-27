@@ -1,12 +1,12 @@
 {
-  "generated": "2026-10-27T08:03:24Z",
+  "generated": "2026-10-27T14:42:01Z",
   "days": 3,
-  "total": 4109,
+  "total": 4123,
   "by_region": {
     "Ucayali": 784,
-    "Loreto": 592,
+    "Loreto": 604,
     "San Mart\u00edn": 271,
-    "Madre de Dios": 259,
+    "Madre de Dios": 261,
     "Hu\u00e1nuco": 200,
     "Amazonas": 199,
     "Cajamarca": 122,
@@ -33,7 +33,7 @@
     {
       "day": "20261027",
       "ok": true,
-      "peru_rows": 1
+      "peru_rows": 15
     },
     {
       "day": "20261026",
