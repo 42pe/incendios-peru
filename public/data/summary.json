@@ -1,7 +1,7 @@
 {
-  "generated": "2026-10-27T14:42:01Z",
+  "generated": "2026-10-27T19:42:23Z",
   "days": 3,
-  "total": 4123,
+  "total": 4131,
   "by_region": {
     "Ucayali": 784,
     "Loreto": 604,
@@ -26,14 +26,14 @@
     "Huancavelica": 1
   },
   "goes": {
-    "total": 1271,
-    "corroborated": 1206
+    "total": 1279,
+    "corroborated": 1212
   },
   "sources": [
     {
       "day": "20261027",
       "ok": true,
-      "peru_rows": 15
+      "peru_rows": 23
     },
     {
       "day": "20261026",
