@@ -1,15 +1,15 @@
 {
-  "generated": "2026-10-28T15:31:19Z",
+  "generated": "2026-10-28T20:37:05Z",
   "days": 3,
-  "total": 2514,
+  "total": 2597,
   "by_region": {
     "Ucayali": 538,
     "Loreto": 460,
     "San Mart\u00edn": 186,
     "Hu\u00e1nuco": 134,
     "Amazonas": 104,
-    "Cajamarca": 98,
-    "Ancash": 25,
+    "Cajamarca": 101,
+    "Ancash": 38,
     "Jun\u00edn": 25,
     "La Libertad": 9,
     "Arequipa": 9,
@@ -24,14 +24,14 @@
     "Apur\u00edmac": 1
   },
   "goes": {
-    "total": 900,
-    "corroborated": 843
+    "total": 967,
+    "corroborated": 850
   },
   "sources": [
     {
       "day": "20261028",
       "ok": true,
-      "peru_rows": 36
+      "peru_rows": 119
     },
     {
       "day": "20261027",
