@@ -1,6 +1,6 @@
 {
-  "checked": "2026-10-29T12:23:31Z",
-  "period": "27–28 oct 2026",
+  "checked": "2026-10-30T12:28:23Z",
+  "period": "27–30 oct 2026",
   "general": [
     {
       "title": "Perú registra cero incendios forestales activos tras semanas de emergencia",
@@ -54,6 +54,18 @@
           "source": "RPP",
           "date": "2026-10-20",
           "url": "https://rpp.pe/peru/actualidad/ancash-incendio-forestal-afecta-150-hectareas-de-pastizales-y-arbustos-en-huaylas-noticia-1713456"
+        }
+      ]
+    },
+    "Apurímac": {
+      "status": "anterior",
+      "note": "El COEN-INDECI reportó a mediados de octubre incendios activos con Apurímac como región más afectada; no hallamos reportes de Andahuaylas ni Abancay para el 27–30 oct.",
+      "links": [
+        {
+          "title": "Monitoreo de Amenazas Naturales - 16 de octubre del 2026",
+          "source": "OPS/OMS",
+          "date": "2026-10-16",
+          "url": "https://www.paho.org/es/monitoreo-amenazas-naturales/monitoreo-amenazas-naturales-16-octubre-2026"
         }
       ]
     },
@@ -199,6 +211,11 @@
       "note": "No encontramos noticias de incendios forestales en Pataz ni Chepén en octubre de 2026.",
       "links": []
     },
+    "Lambayeque": {
+      "status": "sin_reportes",
+      "note": "No encontramos noticias de incendios forestales en Lambayeque, Chiclayo ni Ferreñafe en octubre de 2026; al ser zona de costa/desierto, parte de los focos podría ser falsa detección.",
+      "links": []
+    },
     "Lima": {
       "status": "sin_reportes",
       "note": "No encontramos noticias de incendios forestales en Yauyos, Cañete ni Huarochirí en octubre de 2026.",
@@ -253,6 +270,11 @@
     "San Martín": {
       "status": "sin_reportes",
       "note": "No encontramos noticias de incendios forestales en Moyobamba, Bellavista ni Mariscal Cáceres en octubre de 2026 (los reportes hallados son de otros años o sin fecha).",
+      "links": []
+    },
+    "Tacna": {
+      "status": "sin_reportes",
+      "note": "No encontramos noticias de incendios forestales en Candarave ni en Tacna en octubre de 2026.",
       "links": []
     },
     "Ucayali": {
