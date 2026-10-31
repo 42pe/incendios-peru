@@ -1,12 +1,12 @@
 {
-  "generated": "2026-10-31T05:58:40Z",
+  "generated": "2026-10-31T11:37:45Z",
   "days": 3,
-  "total": 405,
+  "total": 411,
   "by_region": {
-    "Ancash": 69,
-    "Jun\u00edn": 43,
+    "Ancash": 73,
+    "Jun\u00edn": 44,
     "Lima": 37,
-    "La Libertad": 35,
+    "La Libertad": 36,
     "Puno": 28,
     "Ayacucho": 24,
     "Huancavelica": 19,
@@ -33,7 +33,7 @@
     {
       "day": "20261031",
       "ok": true,
-      "peru_rows": 1
+      "peru_rows": 7
     },
     {
       "day": "20261030",
