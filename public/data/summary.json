@@ -1,7 +1,7 @@
 {
-  "generated": "2026-10-31T16:21:37Z",
+  "generated": "2026-10-31T20:07:16Z",
   "days": 3,
-  "total": 420,
+  "total": 472,
   "by_region": {
     "Ancash": 79,
     "Jun\u00edn": 44,
@@ -26,14 +26,14 @@
     "Ucayali": 1
   },
   "goes": {
-    "total": 31,
+    "total": 83,
     "corroborated": 27
   },
   "sources": [
     {
       "day": "20261031",
       "ok": true,
-      "peru_rows": 16
+      "peru_rows": 68
     },
     {
       "day": "20261030",
