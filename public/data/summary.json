@@ -1,10 +1,10 @@
 {
-  "generated": "2026-10-31T00:11:06Z",
+  "generated": "2026-10-31T05:58:40Z",
   "days": 3,
-  "total": 394,
+  "total": 405,
   "by_region": {
-    "Ancash": 68,
-    "Jun\u00edn": 38,
+    "Ancash": 69,
+    "Jun\u00edn": 43,
     "Lima": 37,
     "La Libertad": 35,
     "Puno": 28,
@@ -14,11 +14,11 @@
     "Apur\u00edmac": 16,
     "Loreto": 15,
     "Amazonas": 14,
+    "Hu\u00e1nuco": 13,
     "Lambayeque": 13,
-    "Hu\u00e1nuco": 12,
-    "Ica": 7,
-    "Cajamarca": 6,
-    "San Mart\u00edn": 5,
+    "Cajamarca": 8,
+    "Ica": 8,
+    "San Mart\u00edn": 6,
     "Arequipa": 3,
     "Tacna": 3,
     "Cusco": 2,
@@ -33,12 +33,12 @@
     {
       "day": "20261031",
       "ok": true,
-      "peru_rows": 0
+      "peru_rows": 1
     },
     {
       "day": "20261030",
       "ok": true,
-      "peru_rows": 200
+      "peru_rows": 210
     },
     {
       "day": "20261029",
