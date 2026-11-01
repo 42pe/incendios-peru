@@ -1,6 +1,6 @@
 {
-  "checked": "2026-10-30T12:28:23Z",
-  "period": "27–30 oct 2026",
+  "checked": "2026-11-01T12:08:27Z",
+  "period": "30 oct–1 nov 2026",
   "general": [
     {
       "title": "Perú registra cero incendios forestales activos tras semanas de emergencia",
@@ -41,7 +41,7 @@
     },
     "Ancash": {
       "status": "anterior",
-      "note": "Se reportó un incendio de unas 150 ha en Pueblo Libre (Huaylas) el 18–19 oct; nuestros focos están sobre todo en Yungay, sin noticias de esa provincia en los días de la detección.",
+      "note": "Se reportó un incendio de unas 150 ha en Pueblo Libre (Huaylas) el 18–19 oct; nuestros focos están en Mariscal Luzuriaga, Pallasca y Carhuaz, sin noticias de esas provincias en los días de la detección.",
       "links": [
         {
           "title": "Incendio forestal en Pueblo Libre arrasa 150 hectáreas de cobertura natural",
@@ -83,7 +83,7 @@
     },
     "Ayacucho": {
       "status": "anterior",
-      "note": "El Ejército combatió incendios en Santillana, Luricocha, Huaylla y Huanta del 5 al 10 oct; no encontramos noticias de Huamanga ni Lucanas de los días de la detección.",
+      "note": "El Ejército combatió incendios en Santillana, Luricocha, Huaylla y Huanta del 5 al 10 oct; no encontramos noticias de Huanta ni Huamanga de los días de la detección.",
       "links": [
         {
           "title": "Indeci alerta que incendios forestales en Ayacucho, Moquegua y Puno siguen activos y destruyen cobertura natural",
@@ -119,7 +119,7 @@
     },
     "Cusco": {
       "status": "anterior",
-      "note": "Los incendios de octubre reportados fueron en Calca, Chumbivilcas, Limatambo y La Convención, antes del periodo de detección; no hallamos reportes de Espinar (1 foco).",
+      "note": "Los incendios de octubre reportados fueron en Calca, Chumbivilcas, Limatambo y La Convención, antes del periodo de detección; no hallamos reportes posteriores en esas provincias.",
       "links": [
         {
           "title": "Gobierno central articula acciones para reforzar la respuesta ante incendios forestales en Cusco",
@@ -143,7 +143,7 @@
     },
     "Huancavelica": {
       "status": "anterior",
-      "note": "Indeci registró incendios en Pazos (Tayacaja) y en Churcampa a fines de agosto e inicios de setiembre de 2026; no hallamos reportes de octubre.",
+      "note": "Indeci registró incendios en Huaytará, Tayacaja y Churcampa a fines de agosto e inicios de setiembre de 2026; no hallamos reportes de octubre ni de los días de la detección.",
       "links": [
         {
           "title": "Reporte de emergencias complementario (1 de setiembre de 2026)",
@@ -161,7 +161,7 @@
     },
     "Huánuco": {
       "status": "parcial",
-      "note": "SENAMHI registró muchos focos de calor en Huánuco (174 en su boletín del 19 oct), pero no encontramos reportes de incendios en terreno en Ambo ni Puerto Inca.",
+      "note": "SENAMHI registró muchos focos de calor en Huánuco (174 en su boletín del 19 oct), pero no encontramos reportes de incendios en terreno en Yarowilca, Lauricocha ni Dos de Mayo.",
       "links": [
         {
           "title": "SERFOR inaccesible mientras se reportan cientos de focos de calor (cifras SENAMHI por región)",
@@ -184,7 +184,7 @@
     },
     "Junín": {
       "status": "anterior",
-      "note": "Un incendio forestal en Palca (Tarma) estuvo activo hacia el 17 oct y otro en Río Tambo (Satipo) desde el 4 oct; no hallamos reportes de Jauja de los días de la detección.",
+      "note": "Un incendio forestal en Palca (Tarma) estuvo activo hacia el 17 oct y otro en Río Tambo (Satipo) desde el 4 oct; no hallamos reportes de Huancayo, Jauja ni Concepción de los días de la detección.",
       "links": [
         {
           "title": "Perú registra 12 incendios forestales activos; Río Tambo, el caso más crítico",
@@ -208,7 +208,7 @@
     },
     "La Libertad": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Pataz ni Chepén en octubre de 2026.",
+      "note": "No encontramos noticias de incendios forestales en Santiago de Chuco, Virú ni Pacasmayo en octubre de 2026.",
       "links": []
     },
     "Lambayeque": {
@@ -218,12 +218,12 @@
     },
     "Lima": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Yauyos, Cañete ni Huarochirí en octubre de 2026.",
+      "note": "No encontramos noticias de incendios forestales en Huarochirí, Yauyos ni Canta en octubre de 2026.",
       "links": []
     },
     "Loreto": {
       "status": "anterior",
-      "note": "Un balance nacional de mediados de octubre menciona 2 incendios en Loreto sin indicar dónde; no hallamos reportes de Maynas ni Alto Amazonas de los días de la detección.",
+      "note": "Un balance nacional de mediados de octubre menciona 2 incendios en Loreto sin indicar dónde; no hallamos reportes de Alto Amazonas de los días de la detección.",
       "links": [
         {
           "title": "Incendios forestales se incrementan a 66 en 16 regiones",
@@ -235,7 +235,12 @@
     },
     "Madre de Dios": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios en Tahuamanu ni en Madre de Dios en octubre de 2026; en temporada seca son comunes las quemas agrícolas que no llegan a la prensa.",
+      "note": "No encontramos noticias de incendios en Tahuamanu ni Tambopata en octubre de 2026; en temporada seca son comunes las quemas agrícolas que no llegan a la prensa.",
+      "links": []
+    },
+    "Moquegua": {
+      "status": "sin_reportes",
+      "note": "No encontramos noticias de incendios forestales en Mariscal Nieto en octubre de 2026 (solo 2 focos).",
       "links": []
     },
     "Pasco": {
@@ -243,9 +248,14 @@
       "note": "Indeci informó que incendios del 15–16 oct en Pasco (incl. Yanahuanca) fueron extinguidos; no encontramos noticias de Daniel Alcides Carrión de los días de la detección.",
       "links": []
     },
+    "Piura": {
+      "status": "sin_reportes",
+      "note": "No encontramos noticias de incendios forestales en Ayabaca en octubre de 2026; solo 3 focos no GOES, sin respaldo en prensa.",
+      "links": []
+    },
     "Puno": {
       "status": "anterior",
-      "note": "Un incendio de unas 200 ha de totorales cerca de los Uros (Titicaca) se extinguió el 21–22 oct; el COEN citó a Melgar entre las provincias afectadas hasta el 13 oct, antes de nuestros focos.",
+      "note": "El COEN citó a Puno, Lampa, Azángaro y Melgar entre las provincias más afectadas hasta mediados de octubre (Calapuja, 10–12 oct) y un incendio cerca de los Uros se extinguió el 21–22 oct; no hallamos reportes del 30 oct–1 nov.",
       "links": [
         {
           "title": "COEN-Indeci reporta que incendio forestal cerca a las islas de los Uros fue extinguido",
@@ -269,25 +279,8 @@
     },
     "San Martín": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Moyobamba, Bellavista ni Mariscal Cáceres en octubre de 2026 (los reportes hallados son de otros años o sin fecha).",
+      "note": "No encontramos noticias de incendios forestales en Lamas, San Martín ni Picota en octubre de 2026.",
       "links": []
-    },
-    "Tacna": {
-      "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Candarave ni en Tacna en octubre de 2026.",
-      "links": []
-    },
-    "Ucayali": {
-      "status": "anterior",
-      "note": "Hubo un incendio en Yarinacocha (Coronel Portillo) a inicios de octubre; no encontramos noticias de los días de la detección en Coronel Portillo.",
-      "links": [
-        {
-          "title": "Incendio forestal en el distrito de Yarinacocha (Reporte N.° 2)",
-          "source": "COEN-INDECI",
-          "date": "2026-10-08",
-          "url": "https://portal.indeci.gob.pe/emergencias/reporte-complementario-n-o-13679-7-10-2026-coen-indeci-2215-horas-reporte-n-1-incendio-forestal-en-el-distrito-de-yarinacocha-ucayali/"
-        }
-      ]
     }
   }
 }
