@@ -1,7 +1,7 @@
 {
-  "generated": "2026-11-01T16:11:11Z",
+  "generated": "2026-11-01T20:38:04Z",
   "days": 3,
-  "total": 500,
+  "total": 511,
   "by_region": {
     "Jun\u00edn": 49,
     "La Libertad": 42,
@@ -26,14 +26,14 @@
     "Moquegua": 2
   },
   "goes": {
-    "total": 69,
+    "total": 80,
     "corroborated": 24
   },
   "sources": [
     {
       "day": "20261101",
       "ok": true,
-      "peru_rows": 9
+      "peru_rows": 20
     },
     {
       "day": "20261031",
