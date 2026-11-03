@@ -1,6 +1,6 @@
 {
-  "checked": "2026-11-02T12:08:08Z",
-  "period": "30 oct–1 nov 2026",
+  "checked": "2026-11-03T12:08:41Z",
+  "period": "1–3 nov 2026",
   "general": [
     {
       "title": "Perú registra cero incendios forestales activos tras semanas de emergencia",
@@ -15,28 +15,16 @@
       "url": "https://www.infobae.com/peru/2026/10/24/mas-de-cinco-millones-de-peruanos-viven-en-distritos-con-riesgo-alto-ante-incendios-forestales/"
     },
     {
-      "title": "Perú registra cero incendios forestales activos tras semanas de emergencia",
-      "source": "El Peruano",
-      "date": "2026-10-23",
-      "url": "https://elperuano.pe/noticia/307491-peru-registra-cero-incendios-forestales-activos-tras-semanas-de-emergencia"
-    },
-    {
-      "title": "Perú registra cero incendios forestales activos: Apurímac, Cusco y Junín reportan graves daños, según el Ministerio de Defensa",
-      "source": "El Comercio",
-      "date": "2026-10-23",
-      "url": "https://elcomercio.pe/peru/peru-registra-cero-incendios-forestales-activos-apurimac-cusco-y-junin-reportan-graves-danos-segun-el-ministerio-de-defensa-ultimas-noticia/"
-    },
-    {
-      "title": "Mindef: Lluvias en la sierra y selva terminan de extinguir el fuego y el país no reporta incendios activos",
-      "source": "RPP",
-      "date": "2026-10-23",
-      "url": "https://rpp.pe/peru/actualidad/mindef-lluvias-en-la-sierra-y-selva-terminan-de-extinguir-el-fuego-y-el-pais-no-reporta-incendios-activos-noticia-1714202"
+      "title": "Perú extingue cuatro incendios forestales que se desataron en el sur del país",
+      "source": "Infobae (agencias)",
+      "date": "2026-11-03",
+      "url": "https://www.infobae.com/america/agencias/2026/11/03/peru-extingue-cuatro-incendios-forestales-que-se-desataron-en-el-sur-del-pais/"
     }
   ],
   "regions": {
     "Amazonas": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Utcubamba, Bagua ni Condorcanqui del 30 oct al 1 nov de 2026.",
+      "note": "No encontramos noticias de incendios forestales en Utcubamba, Bagua ni Condorcanqui del 1 al 3 nov de 2026.",
       "links": []
     },
     "Ancash": {
@@ -59,8 +47,14 @@
     },
     "Apurímac": {
       "status": "anterior",
-      "note": "El COEN-INDECI reportó a mediados de octubre incendios activos con Apurímac como región más afectada; no hallamos reportes de Andahuaylas ni Abancay para el 27–30 oct.",
+      "note": "Indeci reportó un incendio en Curahuasi (Abancay) hacia el 2 nov, ya extinguido; los focos de la detección están en Andahuaylas, sin noticias específicas de esa provincia.",
       "links": [
+        {
+          "title": "Perú extingue cuatro incendios forestales que se desataron en el sur del país",
+          "source": "Infobae (agencias)",
+          "date": "2026-11-03",
+          "url": "https://www.infobae.com/america/agencias/2026/11/03/peru-extingue-cuatro-incendios-forestales-que-se-desataron-en-el-sur-del-pais/"
+        },
         {
           "title": "Monitoreo de Amenazas Naturales - 16 de octubre del 2026",
           "source": "OPS/OMS",
@@ -118,9 +112,15 @@
       ]
     },
     "Cusco": {
-      "status": "anterior",
-      "note": "Los incendios reportados en Cusco (Calca, Anta, La Convención, Chumbivilcas) fueron hasta mediados de octubre, antes del periodo de detección; no hallamos reportes posteriores en Espinar, Calca ni La Convención.",
+      "status": "coincide",
+      "note": "Indeci reportó el 2 nov incendios en Limatambo (Anta) y Espinar, este último entre las provincias con focos, ya extinguidos según Infobae.",
       "links": [
+        {
+          "title": "Perú extingue cuatro incendios forestales que se desataron en el sur del país",
+          "source": "Infobae (agencias)",
+          "date": "2026-11-03",
+          "url": "https://www.infobae.com/america/agencias/2026/11/03/peru-extingue-cuatro-incendios-forestales-que-se-desataron-en-el-sur-del-pais/"
+        },
         {
           "title": "Gobierno central articula acciones para reforzar la respuesta ante incendios forestales en Cusco",
           "source": "El Peruano",
@@ -132,18 +132,6 @@
           "source": "RPP",
           "date": "2026-10",
           "url": "https://rpp.pe/peru/actualidad/cusco-detienen-a-hombre-acusado-de-provocar-incendio-forestal-en-inmediaciones-del-santuario-del-senor-de-huanca-noticia-1713459"
-        },
-        {
-          "title": "Cusco enfrenta seis incendios forestales simultáneos: Chumbivilcas es la provincia más afectada",
-          "source": "El Tiempo",
-          "date": "2026-10",
-          "url": "https://eltiempo.pe/nacional/cusco-enfrenta-seis-incendios-forestales-simultaneos-chumbivilcas-es-la-provincia-mas-afectada/"
-        },
-        {
-          "title": "Presidenta Fujimori sobrevuela región Cusco para supervisar acciones ante incendios forestales",
-          "source": "El Peruano",
-          "date": "2026-10",
-          "url": "https://elperuano.pe/noticia/306722-presidenta-fujimori-sobrevuela-region-cusco-para-supervisar-acciones-ante-incendios-forestales"
         }
       ]
     },
@@ -245,8 +233,8 @@
       "links": []
     },
     "Moquegua": {
-      "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Mariscal Nieto en octubre de 2026 (solo 2 focos).",
+      "status": "anterior",
+      "note": "Un reporte complementario del COEN-INDECI menciona un incendio forestal en Pacocha (Ilo) el 1 nov, distinto de las provincias con focos (Mariscal Nieto y General Sánchez Cerro).",
       "links": []
     },
     "Pasco": {
@@ -254,15 +242,16 @@
       "note": "Indeci informó que incendios del 15–16 oct en Pasco fueron extinguidos; no encontramos noticias de Oxapampa de los días de la detección (1 foco).",
       "links": []
     },
-    "Piura": {
-      "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Ayabaca para fines de octubre de 2026; solo 2 focos no GOES, sin respaldo en prensa.",
-      "links": []
-    },
     "Puno": {
-      "status": "anterior",
-      "note": "El COEN citó a Puno, Lampa, Azángaro y Melgar entre las provincias más afectadas hasta mediados de octubre (Calapuja, 10–12 oct) y un incendio cerca de los Uros se extinguió el 21–22 oct; no hallamos reportes del 30 oct–1 nov.",
+      "status": "coincide",
+      "note": "Indeci informó el 2 nov de incendios en Santa Lucía (Lampa), donde se concentran los focos de la detección, que según Infobae fueron extinguidos.",
       "links": [
+        {
+          "title": "Perú extingue cuatro incendios forestales que se desataron en el sur del país",
+          "source": "Infobae (agencias)",
+          "date": "2026-11-03",
+          "url": "https://www.infobae.com/america/agencias/2026/11/03/peru-extingue-cuatro-incendios-forestales-que-se-desataron-en-el-sur-del-pais/"
+        },
         {
           "title": "COEN-Indeci reporta que incendio forestal cerca a las islas de los Uros fue extinguido",
           "source": "RPP",
@@ -274,12 +263,6 @@
           "source": "Infobae",
           "date": "2026-10-22",
           "url": "https://www.infobae.com/america/agencias/2026/10/22/incendio-cerca-a-turisticas-islas-peruanas-deja-200-hectareas-y-4-hospedajes-afectados/"
-        },
-        {
-          "title": "Monitoreo de Amenazas Naturales - 16 de octubre del 2026",
-          "source": "OPS/PAHO",
-          "date": "2026-10-16",
-          "url": "https://www.paho.org/es/monitoreo-amenazas-naturales/monitoreo-amenazas-naturales-16-octubre-2026"
         }
       ]
     },
@@ -295,7 +278,7 @@
     },
     "Ucayali": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Coronel Portillo ni Padre Abad para el 30 oct–1 nov de 2026.",
+      "note": "No encontramos noticias de incendios forestales en Coronel Portillo ni Padre Abad para el 1–3 nov de 2026.",
       "links": []
     }
   }
