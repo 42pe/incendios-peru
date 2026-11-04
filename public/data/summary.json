@@ -1,13 +1,13 @@
 {
-  "generated": "2026-11-04T03:25:14Z",
+  "generated": "2026-11-04T11:16:08Z",
   "days": 3,
-  "total": 587,
+  "total": 601,
   "by_region": {
-    "Madre de Dios": 196,
-    "Ucayali": 81,
-    "Jun\u00edn": 39,
+    "Madre de Dios": 206,
+    "Ucayali": 83,
+    "Jun\u00edn": 40,
     "Hu\u00e1nuco": 25,
-    "Cusco": 23,
+    "Cusco": 24,
     "Puno": 22,
     "Loreto": 20,
     "San Mart\u00edn": 12,
@@ -34,7 +34,7 @@
     {
       "day": "20261104",
       "ok": true,
-      "peru_rows": 0
+      "peru_rows": 14
     },
     {
       "day": "20261103",
