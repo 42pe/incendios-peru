@@ -1,19 +1,19 @@
 {
-  "generated": "2026-11-05T12:53:58Z",
+  "generated": "2026-11-05T20:20:22Z",
   "days": 3,
-  "total": 1584,
+  "total": 1699,
   "by_region": {
-    "Madre de Dios": 352,
-    "Ucayali": 253,
-    "Jun\u00edn": 103,
+    "Madre de Dios": 359,
+    "Ucayali": 263,
+    "Jun\u00edn": 105,
     "Loreto": 67,
-    "Cusco": 61,
-    "San Mart\u00edn": 46,
-    "Hu\u00e1nuco": 38,
-    "Puno": 35,
-    "Pasco": 25,
+    "Cusco": 62,
+    "San Mart\u00edn": 47,
+    "Hu\u00e1nuco": 39,
+    "Puno": 38,
+    "Pasco": 27,
     "Amazonas": 15,
-    "Ayacucho": 11,
+    "Ayacucho": 12,
     "Apur\u00edmac": 9,
     "Ancash": 8,
     "Cajamarca": 8,
@@ -25,14 +25,14 @@
     "Tacna": 1
   },
   "goes": {
-    "total": 538,
-    "corroborated": 531
+    "total": 625,
+    "corroborated": 558
   },
   "sources": [
     {
       "day": "20261105",
       "ok": true,
-      "peru_rows": 33
+      "peru_rows": 148
     },
     {
       "day": "20261104",
