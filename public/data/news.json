@@ -1,6 +1,6 @@
 {
-  "checked": "2026-11-04T12:07:13Z",
-  "period": "1–4 nov 2026",
+  "checked": "2026-11-05T12:10:29Z",
+  "period": "3–4 nov 2026",
   "general": [
     {
       "title": "Perú registra cero incendios forestales activos tras semanas de emergencia",
@@ -24,7 +24,7 @@
   "regions": {
     "Amazonas": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Utcubamba, Bagua ni Condorcanqui del 1 al 3 nov de 2026.",
+      "note": "No encontramos noticias de incendios forestales en Utcubamba ni Bagua del 3 al 5 nov de 2026.",
       "links": []
     },
     "Ancash": {
@@ -46,8 +46,8 @@
       ]
     },
     "Apurímac": {
-      "status": "anterior",
-      "note": "Indeci reportó un incendio en Curahuasi (Abancay) hacia el 2 nov, ya extinguido; los focos de la detección están en Andahuaylas, sin noticias específicas de esa provincia.",
+      "status": "coincide",
+      "note": "Indeci reportó un incendio en Curahuasi (Abancay) hacia el 2 nov, ya extinguido; Abancay figura entre las provincias con focos, junto con Andahuaylas.",
       "links": [
         {
           "title": "Perú extingue cuatro incendios forestales que se desataron en el sur del país",
@@ -173,7 +173,7 @@
     },
     "Ica": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Pisco, Ica ni Chincha en octubre de 2026.",
+      "note": "No encontramos noticias de incendios forestales en Nazca ni en otras provincias de Ica a inicios de nov de 2026.",
       "links": []
     },
     "Junín": {
@@ -202,17 +202,12 @@
     },
     "La Libertad": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Santiago de Chuco, Virú ni Pacasmayo en octubre de 2026.",
-      "links": []
-    },
-    "Lambayeque": {
-      "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Lambayeque, Chiclayo ni Ferreñafe en octubre de 2026; al ser zona de costa/desierto, parte de los focos podría ser falsa detección.",
+      "note": "No encontramos noticias de incendios forestales en Santiago de Chuco a inicios de nov de 2026 (1 foco).",
       "links": []
     },
     "Lima": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Huarochirí, Yauyos ni Canta en octubre de 2026.",
+      "note": "No encontramos noticias de incendios forestales en Barranca ni Huarochirí a inicios de nov de 2026.",
       "links": []
     },
     "Loreto": {
@@ -229,12 +224,7 @@
     },
     "Madre de Dios": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios en Tahuamanu, Tambopata ni Manu a inicios de nov de 2026 (206 focos); en temporada seca son comunes las quemas agrícolas que no llegan a la prensa.",
-      "links": []
-    },
-    "Moquegua": {
-      "status": "anterior",
-      "note": "Un reporte complementario del COEN-INDECI menciona un incendio forestal en Pacocha (Ilo) el 1 nov, distinto de las provincias con focos (Mariscal Nieto y General Sánchez Cerro).",
+      "note": "No encontramos noticias de incendios en Tambopata, Manu ni Tahuamanu a inicios de nov de 2026 (352 focos); en temporada seca son comunes las quemas agrícolas que no llegan a la prensa.",
       "links": []
     },
     "Pasco": {
@@ -268,17 +258,17 @@
     },
     "San Martín": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Picota, San Martín ni Lamas en 2026 (59 focos); las notas halladas son de 2023–2024.",
+      "note": "No encontramos noticias de incendios forestales en Lamas ni Moyobamba en 2026 (43 focos); las notas halladas son de 2025 o anteriores.",
       "links": []
     },
     "Tacna": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Candarave a fines de octubre de 2026 (1 foco).",
+      "note": "No encontramos noticias de incendios forestales en Tarata a inicios de nov de 2026 (1 foco).",
       "links": []
     },
     "Ucayali": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Coronel Portillo ni Padre Abad para el 1–3 nov de 2026.",
+      "note": "No encontramos noticias de incendios forestales en Coronel Portillo, Atalaya ni Padre Abad para el 3–5 nov de 2026.",
       "links": []
     }
   }
