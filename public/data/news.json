@@ -1,6 +1,6 @@
 {
-  "checked": "2026-11-05T12:10:29Z",
-  "period": "3–4 nov 2026",
+  "checked": "2026-11-06T12:07:42Z",
+  "period": "3–5 nov 2026",
   "general": [
     {
       "title": "Perú registra cero incendios forestales activos tras semanas de emergencia",
@@ -112,8 +112,8 @@
       ]
     },
     "Cusco": {
-      "status": "coincide",
-      "note": "Indeci reportó el 2 nov incendios en Limatambo (Anta) y Espinar, este último entre las provincias con focos, ya extinguidos según Infobae.",
+      "status": "anterior",
+      "note": "Indeci reportó el 2 nov incendios ya extinguidos en Limatambo (Anta) y Coporaque (Espinar); nuestros focos están en Calca, La Convención y Quispicanchi, sin noticias de esas provincias en los días de la detección.",
       "links": [
         {
           "title": "Perú extingue cuatro incendios forestales que se desataron en el sur del país",
@@ -155,7 +155,7 @@
     },
     "Huánuco": {
       "status": "parcial",
-      "note": "SENAMHI registró muchos focos de calor en Huánuco (174 en su boletín del 19 oct), pero no encontramos reportes de incendios en terreno en Lauricocha, Huánuco ni Yarowilca.",
+      "note": "SENAMHI registró muchos focos de calor en Huánuco (174 en su boletín del 19 oct), pero no encontramos reportes de incendios en terreno en Puerto Inca, Huacaybamba ni Leoncio Prado.",
       "links": [
         {
           "title": "SERFOR inaccesible mientras se reportan cientos de focos de calor (cifras SENAMHI por región)",
@@ -178,7 +178,7 @@
     },
     "Junín": {
       "status": "anterior",
-      "note": "Un incendio en la comunidad asháninka de Cutivireni (Satipo) estaba activo desde el 4 oct y otro en Palca (Tarma) hacia el 17 oct; no hallamos reportes de Satipo, Jauja ni Huancayo de los días de la detección.",
+      "note": "Un incendio en la comunidad asháninka de Cutivireni (Satipo) estaba activo desde el 4 oct y otro en Palca (Tarma) hacia el 17 oct; no hallamos reportes de Satipo, Chanchamayo ni Huancayo de los días de la detección.",
       "links": [
         {
           "title": "Perú registra 12 incendios forestales activos; Río Tambo, el caso más crítico",
@@ -202,7 +202,7 @@
     },
     "La Libertad": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Santiago de Chuco a inicios de nov de 2026 (1 foco).",
+      "note": "No encontramos noticias de incendios forestales en Pataz ni Santiago de Chuco a inicios de nov de 2026 (4 focos).",
       "links": []
     },
     "Lima": {
@@ -224,17 +224,17 @@
     },
     "Madre de Dios": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios en Tambopata, Manu ni Tahuamanu a inicios de nov de 2026 (352 focos); en temporada seca son comunes las quemas agrícolas que no llegan a la prensa.",
+      "note": "No encontramos noticias de incendios en Tambopata, Manu ni Tahuamanu a inicios de nov de 2026 (217 focos); en temporada seca son comunes las quemas agrícolas que no llegan a la prensa.",
       "links": []
     },
     "Pasco": {
       "status": "anterior",
-      "note": "Indeci informó que incendios del 15–16 oct en Pasco fueron extinguidos; no encontramos noticias de Oxapampa de los días de la detección (1 foco).",
+      "note": "Indeci informó que incendios del 15–16 oct en Pasco fueron extinguidos; no encontramos noticias de Oxapampa de los días de la detección (25 focos).",
       "links": []
     },
     "Puno": {
-      "status": "coincide",
-      "note": "Indeci informó el 2 nov de incendios en Santa Lucía (Lampa), donde se concentran los focos de la detección, que según Infobae fueron extinguidos.",
+      "status": "anterior",
+      "note": "Indeci informó el 2 nov de incendios ya extinguidos en Santa Lucía (Lampa) y Pucará; nuestros focos están en Sandia, Lago Titicaca y Carabaya, sin noticias de esas provincias en los días de la detección.",
       "links": [
         {
           "title": "Perú extingue cuatro incendios forestales que se desataron en el sur del país",
@@ -258,12 +258,7 @@
     },
     "San Martín": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Lamas ni Moyobamba en 2026 (43 focos); las notas halladas son de 2025 o anteriores.",
-      "links": []
-    },
-    "Tacna": {
-      "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Tarata a inicios de nov de 2026 (1 foco).",
+      "note": "No encontramos noticias de incendios forestales en Lamas ni Moyobamba en 2026 (39 focos); las notas halladas son de 2025 o anteriores.",
       "links": []
     },
     "Ucayali": {
