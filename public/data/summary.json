@@ -1,10 +1,10 @@
 {
-  "generated": "2026-11-06T07:38:44Z",
+  "generated": "2026-11-06T15:25:44Z",
   "days": 3,
-  "total": 1546,
+  "total": 1553,
   "by_region": {
     "Madre de Dios": 217,
-    "Ucayali": 194,
+    "Ucayali": 201,
     "Jun\u00edn": 103,
     "Loreto": 60,
     "Cusco": 44,
@@ -25,13 +25,13 @@
   },
   "goes": {
     "total": 750,
-    "corroborated": 518
+    "corroborated": 520
   },
   "sources": [
     {
       "day": "20261106",
       "ok": true,
-      "peru_rows": 18
+      "peru_rows": 25
     },
     {
       "day": "20261105",
