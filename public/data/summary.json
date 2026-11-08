@@ -1,7 +1,7 @@
 {
-  "generated": "2026-11-08T15:24:10Z",
+  "generated": "2026-11-08T19:47:36Z",
   "days": 3,
-  "total": 484,
+  "total": 486,
   "by_region": {
     "Madre de Dios": 170,
     "Ucayali": 71,
@@ -24,14 +24,14 @@
     "Arequipa": 2
   },
   "goes": {
-    "total": 29,
+    "total": 31,
     "corroborated": 15
   },
   "sources": [
     {
       "day": "20261108",
       "ok": true,
-      "peru_rows": 15
+      "peru_rows": 17
     },
     {
       "day": "20261107",
