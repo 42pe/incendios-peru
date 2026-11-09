@@ -1,7 +1,7 @@
 {
-  "generated": "2026-11-09T02:46:01Z",
+  "generated": "2026-11-09T10:27:43Z",
   "days": 3,
-  "total": 737,
+  "total": 738,
   "by_region": {
     "Ucayali": 178,
     "Madre de Dios": 105,
@@ -13,7 +13,7 @@
     "Cajamarca": 24,
     "San Mart\u00edn": 19,
     "Puno": 16,
-    "La Libertad": 11,
+    "La Libertad": 12,
     "Amazonas": 10,
     "Ancash": 10,
     "Piura": 9,
@@ -33,7 +33,7 @@
     {
       "day": "20261109",
       "ok": true,
-      "peru_rows": 0
+      "peru_rows": 1
     },
     {
       "day": "20261108",
