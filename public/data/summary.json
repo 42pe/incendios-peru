@@ -1,9 +1,9 @@
 {
-  "generated": "2026-11-10T03:00:34Z",
+  "generated": "2026-11-10T11:26:19Z",
   "days": 3,
-  "total": 405,
+  "total": 413,
   "by_region": {
-    "Ucayali": 115,
+    "Ucayali": 119,
     "Loreto": 70,
     "Jun\u00edn": 47,
     "Hu\u00e1nuco": 45,
@@ -11,18 +11,18 @@
     "San Mart\u00edn": 19,
     "Amazonas": 10,
     "Cusco": 10,
+    "Piura": 9,
     "La Libertad": 8,
-    "Piura": 6,
     "Ancash": 5,
     "Cajamarca": 4,
     "Lambayeque": 4,
     "Puno": 3,
     "Huancavelica": 3,
+    "Ayacucho": 2,
     "Lima": 2,
     "Madre de Dios": 2,
     "Arequipa": 1,
-    "Ica": 1,
-    "Ayacucho": 1
+    "Ica": 1
   },
   "goes": {
     "total": 26,
@@ -32,12 +32,12 @@
     {
       "day": "20261110",
       "ok": true,
-      "peru_rows": 0
+      "peru_rows": 6
     },
     {
       "day": "20261109",
       "ok": true,
-      "peru_rows": 16
+      "peru_rows": 18
     },
     {
       "day": "20261108",
