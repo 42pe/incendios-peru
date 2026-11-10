@@ -1,49 +1,48 @@
 {
-  "generated": "2026-11-09T20:54:45Z",
+  "generated": "2026-11-10T03:00:34Z",
   "days": 3,
-  "total": 738,
+  "total": 405,
   "by_region": {
-    "Ucayali": 178,
-    "Madre de Dios": 105,
-    "Loreto": 95,
-    "Hu\u00e1nuco": 60,
-    "Jun\u00edn": 54,
-    "Cusco": 40,
-    "Pasco": 32,
-    "Cajamarca": 24,
+    "Ucayali": 115,
+    "Loreto": 70,
+    "Jun\u00edn": 47,
+    "Hu\u00e1nuco": 45,
+    "Pasco": 23,
     "San Mart\u00edn": 19,
-    "Puno": 16,
-    "La Libertad": 12,
     "Amazonas": 10,
-    "Ancash": 10,
-    "Piura": 9,
-    "Lambayeque": 9,
-    "Ica": 8,
-    "Apur\u00edmac": 8,
-    "Huancavelica": 6,
-    "Lima": 4,
-    "Arequipa": 2,
+    "Cusco": 10,
+    "La Libertad": 8,
+    "Piura": 6,
+    "Ancash": 5,
+    "Cajamarca": 4,
+    "Lambayeque": 4,
+    "Puno": 3,
+    "Huancavelica": 3,
+    "Lima": 2,
+    "Madre de Dios": 2,
+    "Arequipa": 1,
+    "Ica": 1,
     "Ayacucho": 1
   },
   "goes": {
-    "total": 36,
-    "corroborated": 11
+    "total": 26,
+    "corroborated": 1
   },
   "sources": [
     {
+      "day": "20261110",
+      "ok": true,
+      "peru_rows": 0
+    },
+    {
       "day": "20261109",
       "ok": true,
-      "peru_rows": 1
+      "peru_rows": 16
     },
     {
       "day": "20261108",
       "ok": true,
       "peru_rows": 389
-    },
-    {
-      "day": "20261107",
-      "ok": true,
-      "peru_rows": 348
     }
   ]
 }
