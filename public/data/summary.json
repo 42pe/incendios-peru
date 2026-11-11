@@ -1,7 +1,7 @@
 {
-  "generated": "2026-11-11T11:15:32Z",
+  "generated": "2026-11-11T18:46:37Z",
   "days": 3,
-  "total": 289,
+  "total": 316,
   "by_region": {
     "Ucayali": 91,
     "San Mart\u00edn": 34,
@@ -27,14 +27,14 @@
     "Tacna": 2
   },
   "goes": {
-    "total": 7,
-    "corroborated": 6
+    "total": 34,
+    "corroborated": 9
   },
   "sources": [
     {
       "day": "20261111",
       "ok": true,
-      "peru_rows": 37
+      "peru_rows": 64
     },
     {
       "day": "20261110",
