@@ -1,12 +1,12 @@
 {
-  "generated": "2026-11-12T01:05:47Z",
+  "generated": "2026-11-12T08:27:26Z",
   "days": 3,
-  "total": 692,
+  "total": 715,
   "by_region": {
-    "Ucayali": 236,
-    "Madre de Dios": 51,
+    "Ucayali": 251,
+    "Madre de Dios": 57,
     "San Mart\u00edn": 39,
-    "Jun\u00edn": 26,
+    "Jun\u00edn": 28,
     "Hu\u00e1nuco": 23,
     "Loreto": 21,
     "La Libertad": 21,
@@ -27,18 +27,18 @@
   },
   "goes": {
     "total": 153,
-    "corroborated": 140
+    "corroborated": 145
   },
   "sources": [
     {
       "day": "20261112",
       "ok": true,
-      "peru_rows": 0
+      "peru_rows": 4
     },
     {
       "day": "20261111",
       "ok": true,
-      "peru_rows": 476
+      "peru_rows": 495
     },
     {
       "day": "20261110",
