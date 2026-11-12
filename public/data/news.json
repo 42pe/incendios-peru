@@ -1,7 +1,13 @@
 {
-  "checked": "2026-11-11T12:06:37Z",
+  "checked": "2026-11-12T12:06:24Z",
   "period": "9–11 nov 2026",
   "general": [
+    {
+      "title": "Perú combatió 57 incendios forestales en áreas naturales protegidas desde junio pasado",
+      "source": "Infobae (agencias)",
+      "date": "2026-11-11",
+      "url": "https://www.infobae.com/america/agencias/2026/11/11/peru-combatio-57-incendios-forestales-en-areas-naturales-protegidas-desde-junio-pasado/"
+    },
     {
       "title": "Perú registró 3,9 millones de hectáreas quemadas en 36 años: más de 400 mil solo entre 2025 y 2026",
       "source": "Infobae",
@@ -13,33 +19,34 @@
       "source": "Infobae (agencias)",
       "date": "2026-11-03",
       "url": "https://www.infobae.com/america/agencias/2026/11/03/peru-extingue-cuatro-incendios-forestales-que-se-desataron-en-el-sur-del-pais/"
-    },
-    {
-      "title": "Incendios forestales en Perú: Indeci reporta 58 activos y las Fuerzas Armadas despliegan aviones y helicópteros",
-      "source": "Infobae",
-      "date": "2026-10-12",
-      "url": "https://www.infobae.com/peru/2026/10/12/incendios-forestales-en-peru-indeci-reporta-58-activos-y-las-fuerzas-armadas-despliegan-aviones-y-helicopteros/"
     }
   ],
   "regions": {
     "Amazonas": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Utcubamba ni Condorcanqui del 9 al 11 nov de 2026 (16 focos).",
+      "note": "No encontramos noticias de incendios forestales en Utcubamba del 9 al 11 nov de 2026 (15 focos).",
       "links": []
     },
     "Ancash": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Fitzcarrald ni Yungay del 9 al 11 nov de 2026 (3 focos).",
+      "note": "No encontramos noticias de incendios forestales en Bolognesi, Yungay ni Carlos Fermin Fitzcarrald del 9 al 11 nov de 2026 (11 focos).",
       "links": []
     },
     "Arequipa": {
-      "status": "sin_reportes",
-      "note": "No encontramos reportes de incendios en Camaná, Arequipa ni Castilla del 9 al 11 nov de 2026 (4 focos).",
-      "links": []
+      "status": "anterior",
+      "note": "El gobierno regional informó 71 incendios forestales hasta el 27 oct (6.369 ha); no hallamos reportes puntuales del 9–11 nov en Condesuyos, Camaná, Arequipa (4 focos).",
+      "links": [
+        {
+          "title": "Arequipa: incendios forestales amenazan con una temporada intensa sin ninguna prevención",
+          "source": "El Búho",
+          "date": "2026-11",
+          "url": "https://elbuho.pe/2026/11/arequipa-incendios-forestales-amenazan-con-una-temporada-intensa-son-ninguna-prevencion/"
+        }
+      ]
     },
     "Ayacucho": {
       "status": "anterior",
-      "note": "El Búho informó en noviembre de 2026 de 192 incendios desde junio, 113 de ellos en octubre, con Huanta entre las provincias más afectadas; no hallamos reportes puntuales del 9–11 nov (5 focos, 4 en Huanta).",
+      "note": "El Búho informó en noviembre de 2026 de 192 incendios desde junio, 113 de ellos en octubre, con Huanta entre las provincias más afectadas; no hallamos reportes puntuales del 9–11 nov (3 focos).",
       "links": [
         {
           "title": "Incendios forestales en Ayacucho: el fuego arrasa y amenaza la biodiversidad",
@@ -51,12 +58,12 @@
     },
     "Cajamarca": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Cutervo, Jaén ni Cajabamba del 9 al 11 nov de 2026 (12 focos).",
+      "note": "No encontramos noticias de incendios forestales en Jaén, Cutervo ni Cajabamba del 9 al 11 nov de 2026 (20 focos).",
       "links": []
     },
     "Cusco": {
       "status": "anterior",
-      "note": "Hubo incendios en Calca (más de 600 hectáreas el 12 oct) y La Convención, y el 2 nov Indeci informó la extinción de cuatro incendios en Puno, Cusco y Apurímac; no hallamos reportes del 9–11 nov (13 focos).",
+      "note": "Hubo incendios en Calca (más de 600 hectáreas el 12 oct) y La Convención, y el 2 nov Indeci informó la extinción de cuatro incendios en Puno, Cusco y Apurímac; no hallamos reportes del 9–11 nov (19 focos).",
       "links": [
         {
           "title": "Perú extingue cuatro incendios forestales que se desataron en el sur del país",
@@ -80,7 +87,7 @@
     },
     "Huancavelica": {
       "status": "anterior",
-      "note": "Indeci reportó el 31 ago incendios forestales en Pazos (Tayacaja) y otros distritos de Huancavelica; no hallamos reportes del 9–11 nov (3 focos en Tayacaja).",
+      "note": "Indeci reportó el 31 ago incendios forestales en Pazos (Tayacaja) y otros distritos de Huancavelica; no hallamos reportes del 9–11 nov (3 focos).",
       "links": [
         {
           "title": "Reporte de emergencias complementario (Indeci, 31/08/2026)",
@@ -92,17 +99,17 @@
     },
     "Huánuco": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Pachitea ni Leoncio Prado del 9 al 11 nov de 2026 (2 focos).",
+      "note": "No encontramos noticias de incendios forestales en Lauricocha, Puerto Inca ni Marañón del 9 al 11 nov de 2026 (23 focos).",
       "links": []
     },
     "Ica": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Nazca ni Chincha del 9 al 11 nov de 2026 (2 focos).",
+      "note": "No encontramos noticias de incendios forestales en Chincha ni Nazca del 9 al 11 nov de 2026 (3 focos).",
       "links": []
     },
     "Junín": {
       "status": "anterior",
-      "note": "Un incendio en la comunidad asháninka de Cutivireni (Satipo) afectaba 350 hectáreas desde el 4 oct; no hallamos reportes del 9–11 nov en Satipo (12 focos, 10 en Satipo).",
+      "note": "Un incendio en la comunidad asháninka de Cutivireni (Satipo) afectaba 350 hectáreas desde el 4 oct; no hallamos reportes del 9–11 nov en Satipo (28 focos).",
       "links": [
         {
           "title": "Junín en emergencia: incendio forestal en comunidad asháninka ya afectó 350 hectáreas",
@@ -114,27 +121,27 @@
     },
     "La Libertad": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Ascope, Chepén ni Pacasmayo del 9 al 11 nov de 2026 (17 focos).",
+      "note": "No encontramos noticias de incendios forestales en Ascope, Chepén ni Pacasmayo del 9 al 11 nov de 2026 (21 focos).",
       "links": []
     },
     "Lambayeque": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Ferreñafe ni Chiclayo del 9 al 11 nov de 2026 (4 focos).",
+      "note": "No encontramos noticias de incendios forestales en Ferreñafe, Chiclayo ni Lambayeque del 9 al 11 nov de 2026 (4 focos).",
       "links": []
     },
     "Lima": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Oyón del 9 al 11 nov de 2026 (2 focos).",
+      "note": "No encontramos noticias de incendios forestales en Oyon del 9 al 11 nov de 2026 (2 focos).",
       "links": []
     },
     "Loreto": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Alto Amazonas, Mariscal Ramón Castilla ni Requena del 9 al 11 nov de 2026 (25 focos).",
+      "note": "No encontramos noticias de incendios forestales en Alto Amazonas, Ucayali ni Requena del 9 al 11 nov de 2026 (21 focos).",
       "links": []
     },
     "Madre de Dios": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios en Manu ni Tambopata del 9 al 11 nov de 2026 (5 focos).",
+      "note": "No encontramos noticias de incendios forestales en Tambopata, Manu ni Tahuamanu del 9 al 11 nov de 2026 (57 focos).",
       "links": []
     },
     "Moquegua": {
@@ -151,17 +158,17 @@
     },
     "Pasco": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Oxapampa del 9 al 11 nov de 2026 (3 focos).",
+      "note": "No encontramos noticias de incendios forestales en Oxapampa del 9 al 11 nov de 2026 (10 focos).",
       "links": []
     },
     "Piura": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Ayabaca, Sullana ni Huancabamba del 9 al 11 nov de 2026 (21 focos).",
+      "note": "No encontramos noticias de incendios forestales en Sullana, Ayabaca ni Morropón del 9 al 11 nov de 2026 (19 focos).",
       "links": []
     },
     "Puno": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Huancané, Moho ni Yunguyo del 9 al 11 nov de 2026 (3 focos).",
+      "note": "No encontramos noticias de incendios forestales en Huancane, Azángaro ni Carabaya del 9 al 11 nov de 2026 (6 focos).",
       "links": []
     },
     "San Martín": {
@@ -176,14 +183,9 @@
         }
       ]
     },
-    "Tacna": {
-      "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Tarata del 9 al 11 nov de 2026 (2 focos).",
-      "links": []
-    },
     "Ucayali": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Atalaya ni Coronel Portillo del 9 al 11 nov de 2026 (91 focos).",
+      "note": "No encontramos noticias de incendios forestales en Atalaya, Coronel Portillo ni Padre Abad del 9 al 11 nov de 2026 (251 focos).",
       "links": []
     }
   }
