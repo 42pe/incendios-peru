@@ -1,7 +1,7 @@
 {
-  "generated": "2026-11-14T16:10:45Z",
+  "generated": "2026-11-14T20:48:40Z",
   "days": 3,
-  "total": 1103,
+  "total": 1171,
   "by_region": {
     "Ucayali": 352,
     "Loreto": 75,
@@ -26,14 +26,14 @@
     "Callao": 1
   },
   "goes": {
-    "total": 297,
-    "corroborated": 225
+    "total": 365,
+    "corroborated": 230
   },
   "sources": [
     {
       "day": "20261114",
       "ok": true,
-      "peru_rows": 2
+      "peru_rows": 70
     },
     {
       "day": "20261113",
