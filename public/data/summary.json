@@ -1,7 +1,7 @@
 {
-  "generated": "2026-11-14T09:32:35Z",
+  "generated": "2026-11-14T16:10:45Z",
   "days": 3,
-  "total": 1101,
+  "total": 1103,
   "by_region": {
     "Ucayali": 352,
     "Loreto": 75,
@@ -10,12 +10,12 @@
     "Hu\u00e1nuco": 57,
     "Madre de Dios": 48,
     "La Libertad": 37,
-    "Cajamarca": 16,
+    "Cajamarca": 17,
     "Ancash": 15,
     "Pasco": 12,
     "Ica": 10,
+    "Piura": 8,
     "Puno": 8,
-    "Piura": 7,
     "Huancavelica": 5,
     "Lambayeque": 4,
     "Lima": 4,
@@ -33,7 +33,7 @@
     {
       "day": "20261114",
       "ok": true,
-      "peru_rows": 0
+      "peru_rows": 2
     },
     {
       "day": "20261113",
