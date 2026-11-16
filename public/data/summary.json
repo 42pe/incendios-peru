@@ -1,7 +1,7 @@
 {
-  "generated": "2026-11-16T11:48:38Z",
+  "generated": "2026-11-16T21:17:01Z",
   "days": 3,
-  "total": 487,
+  "total": 596,
   "by_region": {
     "Ucayali": 105,
     "Loreto": 63,
@@ -24,14 +24,14 @@
     "Lambayeque": 1
   },
   "goes": {
-    "total": 90,
-    "corroborated": 12
+    "total": 199,
+    "corroborated": 23
   },
   "sources": [
     {
       "day": "20261116",
       "ok": true,
-      "peru_rows": 15
+      "peru_rows": 124
     },
     {
       "day": "20261115",
