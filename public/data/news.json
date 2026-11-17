@@ -1,6 +1,6 @@
 {
-  "checked": "2026-11-16T12:06:17Z",
-  "period": "14–16 nov 2026",
+  "checked": "2026-11-17T12:06:31Z",
+  "period": "15–16 nov 2026",
   "general": [
     {
       "title": "Perú combatió 57 incendios forestales en áreas naturales protegidas desde junio pasado",
@@ -24,17 +24,17 @@
   "regions": {
     "Amazonas": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Condorcanqui, Bagua, Utcubamba del 14–16 nov de 2026 (23 focos).",
+      "note": "No encontramos noticias de incendios forestales en Utcubamba, Bagua, Condorcanqui del 15–16 nov 2026 (77 focos).",
       "links": []
     },
     "Ancash": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Huari, Santa del 14–16 nov de 2026 (2 focos).",
+      "note": "No encontramos noticias de incendios forestales en Santa, Huari del 15–16 nov 2026 (2 focos).",
       "links": []
     },
     "Apurímac": {
       "status": "anterior",
-      "note": "El 2 nov Indeci informó la extinción de cuatro incendios forestales en Puno, Cusco y Apurímac; no hallamos reportes puntuales del 14–16 nov en Andahuaylas (1 foco).",
+      "note": "El 2 nov Indeci informó la extinción de cuatro incendios forestales en Puno, Cusco y Apurímac; no hallamos reportes puntuales del 15–16 nov 2026 en Andahuaylas, Abancay (6 focos).",
       "links": [
         {
           "title": "Perú extingue cuatro incendios forestales que se desataron en el sur del país",
@@ -44,9 +44,21 @@
         }
       ]
     },
+    "Arequipa": {
+      "status": "anterior",
+      "note": "A inicios de septiembre de 2026 El Búho informó de incendios activos en Caylloma y La Unión y nivel extremo de alerta que incluía distritos de Condesuyos y Camaná; no hallamos reportes puntuales del 15–16 nov en Condesuyos, Camaná (2 focos).",
+      "links": [
+        {
+          "title": "Fuego no da tregua en Arequipa: nivel extremo de alerta por incendios forestales, arden zonas de Caylloma y La Unión",
+          "source": "El Búho",
+          "date": "2026-09",
+          "url": "https://elbuho.pe/?p=434368"
+        }
+      ]
+    },
     "Ayacucho": {
       "status": "anterior",
-      "note": "El Búho informó en noviembre de 2026 de 192 incendios desde junio, 113 de ellos en octubre, con Huanta entre las provincias más afectadas; no hallamos reportes puntuales del 14–16 nov en Huanta, Huanca Sancos, La Mar (9 focos).",
+      "note": "El Búho informó en noviembre de 2026 de 192 incendios desde junio, 113 de ellos en octubre, con Huanta entre las provincias más afectadas; no hallamos reportes puntuales del 15–16 nov 2026 en Huanca Sancos (3 focos).",
       "links": [
         {
           "title": "Incendios forestales en Ayacucho: el fuego arrasa y amenaza la biodiversidad",
@@ -58,12 +70,12 @@
     },
     "Cajamarca": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en San Ignacio, Jaén, Celendín del 14–16 nov de 2026 (20 focos).",
+      "note": "No encontramos noticias de incendios forestales en Jaén, San Ignacio, Cutervo del 15–16 nov 2026 (57 focos).",
       "links": []
     },
     "Cusco": {
       "status": "anterior",
-      "note": "Hubo incendios en Calca (más de 600 hectáreas el 12 oct) y La Convención, y el 2 nov Indeci informó la extinción de cuatro incendios en Puno, Cusco y Apurímac; no hallamos reportes puntuales del 14–16 nov en Paucartambo, Espinar, La Convención (13 focos).",
+      "note": "Hubo incendios en Calca (más de 600 hectáreas el 12 oct) y La Convención, y el 2 nov Indeci informó la extinción de cuatro incendios en Puno, Cusco y Apurímac; no hallamos reportes puntuales del 15–16 nov 2026 en Chumbivilcas, La Convención, Espinar (10 focos).",
       "links": [
         {
           "title": "Perú extingue cuatro incendios forestales que se desataron en el sur del país",
@@ -85,19 +97,31 @@
         }
       ]
     },
+    "Huancavelica": {
+      "status": "anterior",
+      "note": "Un incendio en el sector Yanamonte (Churcampa) bloqueó con humo la carretera Ayacucho–Vraem a fines de julio de 2026; no hallamos reportes puntuales del 15–16 nov en Tayacaja, Churcampa, Acobamba (18 focos).",
+      "links": [
+        {
+          "title": "Incendio forestal afectó con humo la carretera Ayacucho–VRAEM",
+          "source": "América TV",
+          "date": "2026-07-22",
+          "url": "https://www.americatv.com.pe/noticias/actualidad/incendio-forestal-afecto-humo-carretera-ayacucho-al-vraem-n520636"
+        }
+      ]
+    },
     "Huánuco": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Puerto Inca, Huenuco del 14–16 nov de 2026 (2 focos).",
+      "note": "No encontramos noticias de incendios forestales en Ambo, Puerto Inca, Lauricocha del 15–16 nov 2026 (37 focos).",
       "links": []
     },
     "Ica": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Chincha, Pisco del 14–16 nov de 2026 (6 focos).",
+      "note": "No encontramos noticias de incendios forestales en Chincha, Pisco, Palpa del 15–16 nov 2026 (7 focos).",
       "links": []
     },
     "Junín": {
       "status": "anterior",
-      "note": "Un incendio en la comunidad asháninka de Cutivireni (Satipo) afectaba 350 hectáreas desde el 4 oct; no hallamos reportes puntuales del 14–16 nov en Satipo, Chanchamayo, Jauja (22 focos).",
+      "note": "Un incendio en la comunidad asháninka de Cutivireni (Satipo) afectaba 350 hectáreas desde el 4 oct; no hallamos reportes puntuales del 15–16 nov 2026 en Satipo, Huancayo, Chanchamayo (54 focos).",
       "links": [
         {
           "title": "Junín en emergencia: incendio forestal en comunidad asháninka ya afectó 350 hectáreas",
@@ -109,47 +133,52 @@
     },
     "La Libertad": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Viru, Ascope, Pacasmayo del 14–16 nov de 2026 (9 focos).",
+      "note": "No encontramos noticias de incendios forestales en Ascope, Pacasmayo, Chepén del 15–16 nov 2026 (16 focos).",
       "links": []
     },
     "Lambayeque": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Chiclayo del 14–16 nov de 2026 (1 foco).",
+      "note": "No encontramos noticias de incendios forestales en Ferreñafe, Lambayeque, Chiclayo del 15–16 nov 2026 (3 focos).",
       "links": []
     },
     "Lima": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Yauyos, Lima, Cañete del 14–16 nov de 2026 (10 focos).",
+      "note": "No encontramos noticias de incendios forestales en Lima del 15–16 nov 2026 (1 focos).",
       "links": []
     },
     "Loreto": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Alto Amazonas, Ucayali, Maynas del 14–16 nov de 2026 (63 focos).",
+      "note": "No encontramos noticias de incendios forestales en Alto Amazonas, Ucayali, Maynas del 15–16 nov 2026 (160 focos).",
       "links": []
     },
     "Madre de Dios": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Tambopata, Manu, Tahuamanu del 14–16 nov de 2026 (29 focos).",
+      "note": "No encontramos noticias de incendios forestales en Tambopata, Tahuamanu del 15–16 nov 2026 (25 focos).",
+      "links": []
+    },
+    "Moquegua": {
+      "status": "sin_reportes",
+      "note": "No encontramos noticias de incendios forestales en General Sánchez Cerro del 15–16 nov de 2026 (1 foco).",
       "links": []
     },
     "Pasco": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Oxapampa del 14–16 nov de 2026 (2 focos).",
+      "note": "No encontramos noticias de incendios forestales en Pasco, Oxapampa, Daniel Alcides Carrión del 15–16 nov 2026 (5 focos).",
       "links": []
     },
     "Piura": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Ayabaca, Sullana, Piura del 14–16 nov de 2026 (19 focos). Gran parte de las detecciones de la región son del satélite GOES (posibles falsos positivos en la costa desértica).",
+      "note": "No encontramos noticias de incendios forestales en Sullana del 15–16 nov 2026 (2 focos). Gran parte de las detecciones de la región son del satélite GOES (2 de 4; posibles falsos positivos en la costa desértica).",
       "links": []
     },
     "Puno": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Puno, Melgar del 14–16 nov de 2026 (3 focos).",
+      "note": "No encontramos noticias de incendios forestales en Huancane, Lampa del 15–16 nov 2026 (5 focos).",
       "links": []
     },
     "San Martín": {
       "status": "anterior",
-      "note": "La República informó el 6 nov de un incendio forestal de gran magnitud aún activo en San Antonio de Cumbaza (Lamas/San Martín); no hallamos reportes del 14–16 nov en Bellavista, Lamas, Mariscal Cáceres (58 focos).",
+      "note": "La República informó el 6 nov de un incendio forestal de gran magnitud aún activo en San Antonio de Cumbaza (Lamas/San Martín); no hallamos reportes puntuales del 15–16 nov 2026 en Lamas, San Martín, Moyobamba (119 focos).",
       "links": [
         {
           "title": "San Martín en alerta: incendio forestal de gran magnitud continúa activo pese a lluvias",
@@ -161,7 +190,7 @@
     },
     "Ucayali": {
       "status": "sin_reportes",
-      "note": "No encontramos noticias de incendios forestales en Coronel Portillo, Padre Abad, Atalaya del 14–16 nov de 2026 (105 focos).",
+      "note": "No encontramos noticias de incendios forestales en Coronel Portillo, Padre Abad, Atalaya del 15–16 nov 2026 (244 focos).",
       "links": []
     }
   }
