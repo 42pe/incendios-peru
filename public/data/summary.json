@@ -1,15 +1,15 @@
 {
-  "generated": "2026-11-17T13:39:41Z",
+  "generated": "2026-11-17T21:56:01Z",
   "days": 3,
-  "total": 1058,
+  "total": 1289,
   "by_region": {
     "Ucayali": 270,
     "Loreto": 164,
-    "San Mart\u00edn": 120,
+    "San Mart\u00edn": 121,
     "Amazonas": 77,
     "Jun\u00edn": 58,
     "Cajamarca": 57,
-    "Hu\u00e1nuco": 38,
+    "Hu\u00e1nuco": 39,
     "Madre de Dios": 25,
     "Huancavelica": 18,
     "La Libertad": 17,
@@ -27,14 +27,14 @@
     "Lima": 1
   },
   "goes": {
-    "total": 164,
-    "corroborated": 140
+    "total": 393,
+    "corroborated": 214
   },
   "sources": [
     {
       "day": "20261117",
       "ok": true,
-      "peru_rows": 51
+      "peru_rows": 282
     },
     {
       "day": "20261116",
