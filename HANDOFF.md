@@ -56,8 +56,8 @@ public/index.html  ── MapLibre GL + pmtiles, loads the two data files
 | `public/data/summary.json` | Totals, by-region counts without GOES (matches the default view) and GOES confirmed/total (debug/inspection). |
 | `public/data/basemap-peru.pmtiles` | Bundled Peru vector basemap. Static; regenerate only to refresh OSM. |
 | `scripts/build_data.py` | Fetches INPE (last N days), filters Peru, writes `public/data/`. |
-| `.github/workflows/refresh-data.yml` | Cron (`*/30`) + manual dispatch; runs the script, commits if changed. |
-| `wrangler.jsonc` | Cloudflare config: static-assets Worker serving `./public`. |
+| `.github/workflows/refresh-data.yml` | Runs the script, commits if changed. Triggered every 30 min by the Worker cron via `workflow_dispatch`; its own `*/30` schedule is only a backup (GitHub delays it to every 2–7 h). |
+| `wrangler.jsonc` | Cloudflare config: static-assets Worker serving `./public`, plus the `*/30` cron trigger. Needs the `GH_DISPATCH_TOKEN` secret (fine-grained PAT, this repo, Actions read/write). |
 | `.claude/launch.json` | Local preview config (note gotcha below). |
 
 ## Run locally

@@ -309,9 +309,10 @@ function render(){
   const feats=ALL.filter(f=>vis(f)&&inWindow(f));
   document.getElementById("total").textContent=new Set(feats.map(cell)).size.toLocaleString("es-PE");
   document.getElementById("raw").textContent=feats.length.toLocaleString("es-PE")+" detecciones satelitales";
-  const sh=staleH(), stale=sh>2, st=document.getElementById("stale");
+  // Refresh runs every 30 min; 3 h of silence means several runs in a row missed.
+  const sh=staleH(), stale=sh>3, st=document.getElementById("stale");
   st.hidden=!stale;
-  if(stale) st.textContent=`⚠ Datos sin actualizar desde hace ${Math.round(sh)} h. Puede haber un problema con la fuente de datos.`;
+  if(stale) st.textContent=`⚠ La última actualización fue hace ${Math.round(sh)} h (normalmente es cada 30 min). Los focos más recientes pueden no aparecer todavía.`;
   if(loaded){
     ensureLayer();
     feats.forEach(f=>f.properties.a=ageH(f)); // age in h, drives fading

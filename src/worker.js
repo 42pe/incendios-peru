@@ -38,7 +38,40 @@ async function proxyPostHog(request, url) {
   }));
 }
 
+// Data refresh trigger: GitHub's own cron for refresh-data.yml asks for every
+// 30 min but in practice fires every 2–7 h (scheduled workflows are delayed
+// under load). Cloudflare cron triggers are punctual, so this Worker kicks the
+// workflow via workflow_dispatch instead. GH_DISPATCH_TOKEN is a fine-grained
+// PAT scoped to this repo with "Actions: read and write" (wrangler secret).
+const REFRESH_DISPATCH_URL =
+  "https://api.github.com/repos/42pe/incendios-peru/actions/workflows/refresh-data.yml/dispatches";
+
+async function dispatchRefresh(env) {
+  if (!env.GH_DISPATCH_TOKEN) {
+    console.error("GH_DISPATCH_TOKEN not set; skipping refresh dispatch");
+    return;
+  }
+  const resp = await fetch(REFRESH_DISPATCH_URL, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${env.GH_DISPATCH_TOKEN}`,
+      Accept: "application/vnd.github+json",
+      "X-GitHub-Api-Version": "2022-11-28",
+      "User-Agent": "incendios-peru-worker", // GitHub rejects requests without one
+    },
+    body: JSON.stringify({ ref: "main" }),
+  });
+  if (resp.status !== 204) {
+    // Throwing marks the cron invocation as failed in the Cloudflare dashboard.
+    throw new Error(`workflow_dispatch failed: ${resp.status} ${await resp.text()}`);
+  }
+}
+
 export default {
+  async scheduled(controller, env, ctx) {
+    ctx.waitUntil(dispatchRefresh(env));
+  },
+
   async fetch(request, env) {
     const url = new URL(request.url);
 

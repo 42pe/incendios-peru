@@ -14,5 +14,10 @@
     // run first ONLY for the basemap (Range/206 support) and the PostHog proxy
     // (/rx/*). Every other path still skips straight to static-asset serving.
     "run_worker_first": ["/data/basemap-peru.pmtiles", "/rx/*"]
+  },
+  // Every 30 min the Worker's scheduled() handler dispatches the GitHub
+  // refresh-data workflow (GitHub's own schedule runs only every few hours).
+  "triggers": {
+    "crons": ["*/30 * * * *"]
   }
 }

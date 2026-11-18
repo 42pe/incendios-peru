@@ -220,8 +220,8 @@ public/index.html (MapLibre GL + pmtiles)
 | `public/data/news.json` | Contraste con noticias por región. Se edita a mano en cada despliegue (ver Metodología §8). |
 | `public/data/basemap-peru.pmtiles` | Mapa base del Perú (zoom 0–10). El mapa se limita a zoom 8,9 porque los niveles 9–10 del extracto actual tienen artefactos en polígonos de agua. |
 | `scripts/build_data.py` | Descarga INPE, filtra Perú, escribe `public/data/`. |
-| `.github/workflows/refresh-data.yml` | Cron cada 30 min; hace commit si los datos cambian. |
-| `src/worker.js` | Worker de Cloudflare que responde peticiones HTTP Range (206) para el `.pmtiles`. |
+| `.github/workflows/refresh-data.yml` | Regenera los datos; hace commit si cambian. Lo dispara el Worker cada 30 min (el cron propio de GitHub queda de respaldo: GitHub lo retrasa a cada 2–7 h). |
+| `src/worker.js` | Worker de Cloudflare: responde peticiones HTTP Range (206) para el `.pmtiles`, hace de proxy de PostHog y, cada 30 min, dispara `refresh-data.yml`. |
 
 ## Desarrollo local
 
@@ -242,6 +242,13 @@ npx wrangler deploy
 ```
 
 Cada push del cron de datos vuelve a desplegar automáticamente.
+
+El cron del Worker necesita un token de GitHub (fine-grained, solo este repo,
+permiso **Actions: Read and write**):
+
+```bash
+npx wrangler secret put GH_DISPATCH_TOKEN
+```
 
 ## Atribución
 

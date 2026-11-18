@@ -6,8 +6,9 @@ name: Refresh fire data
 
 on:
   schedule:
-    - cron: "*/30 * * * *"   # every 30 minutes (UTC)
-  workflow_dispatch: {}        # manual run button
+    - cron: "*/30 * * * *"   # backup only: GitHub delays this to every 2–7 h
+  workflow_dispatch: {}        # manual run button + the Cloudflare Worker cron
+                               # (src/worker.js), which fires on time every 30 min
 
 permissions:
   contents: write
