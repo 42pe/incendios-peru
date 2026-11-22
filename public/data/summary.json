@@ -1,18 +1,18 @@
 {
-  "generated": "2026-11-22T11:42:57Z",
+  "generated": "2026-11-22T18:42:49Z",
   "days": 3,
-  "total": 1598,
+  "total": 1625,
   "by_region": {
-    "Ucayali": 400,
+    "Ucayali": 404,
     "Hu\u00e1nuco": 157,
     "Loreto": 67,
     "San Mart\u00edn": 64,
-    "Cajamarca": 42,
-    "Amazonas": 36,
-    "Arequipa": 34,
+    "Cajamarca": 43,
+    "Amazonas": 38,
+    "Arequipa": 37,
     "Madre de Dios": 31,
+    "La Libertad": 27,
     "Jun\u00edn": 27,
-    "La Libertad": 26,
     "Cusco": 26,
     "Pasco": 19,
     "Ancash": 18,
@@ -27,14 +27,14 @@
     "Tacna": 1
   },
   "goes": {
-    "total": 603,
-    "corroborated": 564
+    "total": 619,
+    "corroborated": 569
   },
   "sources": [
     {
       "day": "20261122",
       "ok": true,
-      "peru_rows": 35
+      "peru_rows": 62
     },
     {
       "day": "20261121",
