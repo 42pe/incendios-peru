@@ -1,7 +1,7 @@
 {
-  "generated": "2026-11-27T08:50:03Z",
+  "generated": "2026-11-27T18:30:23Z",
   "days": 3,
-  "total": 470,
+  "total": 477,
   "by_region": {
     "Ucayali": 117,
     "San Mart\u00edn": 43,
@@ -10,13 +10,13 @@
     "Huancavelica": 19,
     "Jun\u00edn": 17,
     "Ancash": 13,
-    "Ica": 9,
+    "Ica": 10,
+    "Lima": 8,
+    "Arequipa": 8,
     "La Libertad": 8,
     "Apur\u00edmac": 8,
     "Cusco": 8,
-    "Arequipa": 7,
     "Pasco": 5,
-    "Lima": 4,
     "Ayacucho": 4,
     "Puno": 3,
     "Cajamarca": 3,
@@ -25,14 +25,14 @@
     "Amazonas": 1
   },
   "goes": {
-    "total": 138,
-    "corroborated": 127
+    "total": 139,
+    "corroborated": 128
   },
   "sources": [
     {
       "day": "20261127",
       "ok": true,
-      "peru_rows": 0
+      "peru_rows": 7
     },
     {
       "day": "20261126",
