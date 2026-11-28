@@ -1,20 +1,21 @@
 {
-  "generated": "2026-11-28T09:29:57Z",
+  "generated": "2026-11-28T17:42:54Z",
   "days": 3,
-  "total": 102,
+  "total": 105,
   "by_region": {
     "Ica": 20,
     "Puno": 10,
+    "Loreto": 8,
     "Apur\u00edmac": 8,
     "Lima": 8,
     "Jun\u00edn": 7,
     "Cusco": 7,
-    "Loreto": 6,
     "La Libertad": 5,
     "Arequipa": 4,
     "Ayacucho": 4,
     "Pasco": 3,
     "Huancavelica": 2,
+    "Ucayali": 1,
     "Lambayeque": 1,
     "Hu\u00e1nuco": 1
   },
@@ -26,7 +27,7 @@
     {
       "day": "20261128",
       "ok": true,
-      "peru_rows": 3
+      "peru_rows": 6
     },
     {
       "day": "20261127",
