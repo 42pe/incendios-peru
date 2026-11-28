@@ -1,21 +1,21 @@
 {
-  "generated": "2026-11-28T01:42:02Z",
+  "generated": "2026-11-28T09:29:57Z",
   "days": 3,
-  "total": 82,
+  "total": 102,
   "by_region": {
+    "Ica": 20,
     "Puno": 10,
-    "Ica": 8,
+    "Apur\u00edmac": 8,
     "Lima": 8,
+    "Jun\u00edn": 7,
     "Cusco": 7,
-    "Apur\u00edmac": 6,
-    "Jun\u00edn": 5,
+    "Loreto": 6,
     "La Libertad": 5,
     "Arequipa": 4,
     "Ayacucho": 4,
-    "Loreto": 3,
     "Pasco": 3,
+    "Huancavelica": 2,
     "Lambayeque": 1,
-    "Huancavelica": 1,
     "Hu\u00e1nuco": 1
   },
   "goes": {
@@ -26,12 +26,12 @@
     {
       "day": "20261128",
       "ok": true,
-      "peru_rows": 0
+      "peru_rows": 3
     },
     {
       "day": "20261127",
       "ok": true,
-      "peru_rows": 32
+      "peru_rows": 49
     },
     {
       "day": "20261126",
